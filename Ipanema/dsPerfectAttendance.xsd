@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsPerfectAttendance" targetNamespace="http://tempuri.org/dsPerfectAttendance.xsd" xmlns:mstns="http://tempuri.org/dsPerfectAttendance.xsd" xmlns="http://tempuri.org/dsPerfectAttendance.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="MySTIHQConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="MySTIHQConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Ipanema.Properties.Settings.GlobalReference.Default.MySTIHQConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsPerfectAttendance" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsPerfectAttendance" msprop:Generator_UserDSName="dsPerfectAttendance">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="UserName" msprop:Generator_TableClassName="UserNameDataTable" msprop:Generator_TableVarName="tableUserName" msprop:Generator_TablePropName="UserName" msprop:Generator_RowDeletingName="UserNameRowDeleting" msprop:Generator_UserTableName="UserName" msprop:Generator_RowChangingName="UserNameRowChanging" msprop:Generator_RowEvHandlerName="UserNameRowChangeEventHandler" msprop:Generator_RowDeletedName="UserNameRowDeleted" msprop:Generator_RowEvArgName="UserNameRowChangeEvent" msprop:Generator_RowChangedName="UserNameRowChanged" msprop:Generator_RowClassName="UserNameRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="username" msprop:Generator_ColumnVarNameInTable="columnusername" msprop:Generator_ColumnPropNameInRow="username" msprop:Generator_ColumnPropNameInTable="usernameColumn" msprop:Generator_UserColumnName="username" type="xs:string" />
+              <xs:element name="lastname" msprop:Generator_ColumnVarNameInTable="columnlastname" msprop:Generator_ColumnPropNameInRow="lastname" msprop:Generator_ColumnPropNameInTable="lastnameColumn" msprop:Generator_UserColumnName="lastname" type="xs:string" minOccurs="0" />
+              <xs:element name="firstname" msprop:Generator_ColumnVarNameInTable="columnfirstname" msprop:Generator_ColumnPropNameInRow="firstname" msprop:Generator_ColumnPropNameInTable="firstnameColumn" msprop:Generator_UserColumnName="firstname" type="xs:string" minOccurs="0" />
+              <xs:element name="middlename" msprop:Generator_ColumnVarNameInTable="columnmiddlename" msprop:Generator_ColumnPropNameInRow="middlename" msprop:Generator_ColumnPropNameInTable="middlenameColumn" msprop:Generator_UserColumnName="middlename" type="xs:string" minOccurs="0" />
+              <xs:element name="nickname" msprop:Generator_ColumnVarNameInTable="columnnickname" msprop:Generator_ColumnPropNameInRow="nickname" msprop:Generator_ColumnPropNameInTable="nicknameColumn" msprop:Generator_UserColumnName="nickname" type="xs:string" minOccurs="0" />
+              <xs:element name="division" msprop:Generator_ColumnVarNameInTable="columndivision" msprop:Generator_ColumnPropNameInRow="division" msprop:Generator_ColumnPropNameInTable="divisionColumn" msprop:Generator_UserColumnName="division" type="xs:string" minOccurs="0" />
+              <xs:element name="pimage" msprop:Generator_ColumnVarNameInTable="columnpimage" msprop:Generator_ColumnPropNameInRow="pimage" msprop:Generator_ColumnPropNameInTable="pimageColumn" msprop:Generator_UserColumnName="pimage" type="xs:string" minOccurs="0" />
+              <xs:element name="daterangestart" msprop:Generator_ColumnVarNameInTable="columndaterangestart" msprop:Generator_ColumnPropNameInRow="daterangestart" msprop:Generator_ColumnPropNameInTable="daterangestartColumn" msprop:Generator_UserColumnName="daterangestart" type="xs:string" minOccurs="0" />
+              <xs:element name="daterangeend" msprop:Generator_ColumnVarNameInTable="columndaterangeend" msprop:Generator_ColumnPropNameInRow="daterangeend" msprop:Generator_ColumnPropNameInTable="daterangeendColumn" msprop:Generator_UserColumnName="daterangeend" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="UserNameKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:UserName" />
+      <xs:field xpath="mstns:username" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

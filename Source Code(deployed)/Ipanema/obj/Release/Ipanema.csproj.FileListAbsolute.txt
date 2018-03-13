@@ -1,0 +1,2 @@
+D:\Projects\Ipanema\Ipanema\bin\Release\Ipanema.exe.config
+D:\gbautista\Documents HRMS\Project HRMS\Ipanema\bin\Release\HRMS.exe.config

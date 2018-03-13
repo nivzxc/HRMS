@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsPerfectAttendanceOBDetails" targetNamespace="http://tempuri.org/dsPerfectAttendanceOBDetails.xsd" xmlns:mstns="http://tempuri.org/dsPerfectAttendanceOBDetails.xsd" xmlns="http://tempuri.org/dsPerfectAttendanceOBDetails.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsPerfectAttendanceOBDetails" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsPerfectAttendanceOBDetails" msprop:Generator_UserDSName="dsPerfectAttendanceOBDetails">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="OBDetails" msprop:Generator_TableClassName="OBDetailsDataTable" msprop:Generator_TableVarName="tableOBDetails" msprop:Generator_TablePropName="OBDetails" msprop:Generator_RowDeletingName="OBDetailsRowDeleting" msprop:Generator_UserTableName="OBDetails" msprop:Generator_RowChangingName="OBDetailsRowChanging" msprop:Generator_RowEvHandlerName="OBDetailsRowChangeEventHandler" msprop:Generator_RowDeletedName="OBDetailsRowDeleted" msprop:Generator_RowEvArgName="OBDetailsRowChangeEvent" msprop:Generator_RowChangedName="OBDetailsRowChanged" msprop:Generator_RowClassName="OBDetailsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="employeename" msprop:Generator_ColumnVarNameInTable="columnemployeename" msprop:Generator_ColumnPropNameInRow="employeename" msprop:Generator_ColumnPropNameInTable="employeenameColumn" msprop:Generator_UserColumnName="employeename" type="xs:string" minOccurs="0" />
+              <xs:element name="focsdate" msprop:Generator_ColumnVarNameInTable="columnfocsdate" msprop:Generator_ColumnPropNameInRow="focsdate" msprop:Generator_ColumnPropNameInTable="focsdateColumn" msprop:Generator_UserColumnName="focsdate" type="xs:string" minOccurs="0" />
+              <xs:element name="reason" msprop:Generator_ColumnVarNameInTable="columnreason" msprop:Generator_ColumnPropNameInRow="reason" msprop:Generator_ColumnPropNameInTable="reasonColumn" msprop:Generator_UserColumnName="reason" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

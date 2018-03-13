@@ -1,0 +1,22 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Ipanema.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="MySTIHQConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;data source=hatshepsut.cnwsjht2ssio.ap-southeast-1.rds.amazonaws.com,1433; initial catalog=db_mystihq; user id=rflores; password=1Passw0rd&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">data source=hatshepsut.cnwsjht2ssio.ap-southeast-1.rds.amazonaws.com,1433; initial catalog=db_mystihq; user id=rflores; password=1Passw0rd</Value>
+    </Setting>
+    <Setting Name="MySTIHQ_2ConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;data source=hatshepsut.cnwsjht2ssio.ap-southeast-1.rds.amazonaws.com,1433; initial catalog=db_mystihq; user id=rflores; password=1Passw0rd&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">data source=hatshepsut.cnwsjht2ssio.ap-southeast-1.rds.amazonaws.com,1433; initial catalog=db_mystihq; user id=rflores; password=1Passw0rd</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
