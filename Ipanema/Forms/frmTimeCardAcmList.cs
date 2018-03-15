@@ -27,32 +27,33 @@ namespace Ipanema.Forms
 
   public void BindClusterGrid()
   {   
-   dgTimeCard.AutoGenerateColumns = false;
-   if (chkViewFILO.Checked)
-    dgTimeCard.DataSource = clsTimeCardACM.DSGTimeCardListFILO(dtpFrom.Value, dtpTo.Value, cmbEmployee.SelectedValue.ToString());
-   else
-    dgTimeCard.DataSource = clsTimeCardACM.DSGTimeCardList(dtpFrom.Value, dtpTo.Value, cmbEmployee.SelectedValue.ToString());
-   dgTimeCard.Columns[0].DataPropertyName = "username";
-   dgTimeCard.Columns[1].DataPropertyName = "pname";
-   dgTimeCard.Columns[2].DataPropertyName = "tdate";
-   dgTimeCard.Columns[3].DataPropertyName = "ttime";
-   dgTimeCard.Columns[4].DataPropertyName = "action";
-   dgTimeCard.Columns[5].DataPropertyName = "door";   
-  }
+       dgTimeCard.AutoGenerateColumns = false;
 
+       if (chkViewFILO.Checked)
+            dgTimeCard.DataSource = clsTimeCardACM.DSGTimeCardListFILO(dtpFrom.Value, dtpTo.Value, cmbEmployee.SelectedValue.ToString());
+       else
+            dgTimeCard.DataSource = clsTimeCardACM.DSGTimeCardList(dtpFrom.Value, dtpTo.Value, cmbEmployee.SelectedValue.ToString());
+            dgTimeCard.Columns[0].DataPropertyName = "username";
+            dgTimeCard.Columns[1].DataPropertyName = "empnum";
+            dgTimeCard.Columns[2].DataPropertyName = "pname";
+            dgTimeCard.Columns[3].DataPropertyName = "tdate";
+            dgTimeCard.Columns[4].DataPropertyName = "ttime";
+            dgTimeCard.Columns[5].DataPropertyName = "action";
+            dgTimeCard.Columns[6].DataPropertyName = "door";
+  }
   ///////////////////////////////
   ///////// Form Events /////////
   ///////////////////////////////
 
   private void frmTimeCardAcmList_Load(object sender, EventArgs e)
   {
-   cmbEmployee.DataSource = Employee.DSLActive();
-   cmbEmployee.ValueMember = "pvalue";
-   cmbEmployee.DisplayMember = "ptext";
-
-   LoadCurrentTimeSheetPeriod();
-   BindClusterGrid();
-   this.WindowState = FormWindowState.Maximized;
+    cmbEmployee.DataSource = Employee.DSLActiveAll();
+    cmbEmployee.ValueMember = "pvalue";
+    cmbEmployee.DisplayMember = "ptext";         
+    LoadCurrentTimeSheetPeriod();
+    BindClusterGrid();
+    chkViewFILO.Visible = false;
+    this.WindowState = FormWindowState.Maximized;
   }
 
   private void tbtnClose_Click(object sender, EventArgs e)
@@ -62,8 +63,18 @@ namespace Ipanema.Forms
 
   private void cmbEmployee_SelectedIndexChanged(object sender, EventArgs e)
   {
-   try { BindClusterGrid(); }
-   catch { }
+            if (cmbEmployee.SelectedValue.ToString() == "ALL")
+            {
+                try { BindClusterGrid(); }
+                catch { }
+                chkViewFILO.Visible = false;
+            }
+            else {
+                try { BindClusterGrid(); }
+                catch { }
+                chkViewFILO.Visible = true;
+            }
+
   }
 
   private void dtpFrom_ValueChanged(object sender, EventArgs e)
@@ -104,7 +115,7 @@ namespace Ipanema.Forms
    Color clrBG = Color.LightYellow;
    foreach (DataGridViewRow drw in dgTimeCard.Rows)
    {
-    switch (drw.Cells[4].Value.ToString())
+    switch (drw.Cells[5].Value.ToString())
     {
      case "In":
       clrBG = Color.Honeydew;

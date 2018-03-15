@@ -60,6 +60,7 @@
             this.pnlBody = new System.Windows.Forms.Panel();
             this.dgTimeCard = new System.Windows.Forms.DataGridView();
             this.colUsername = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.empnum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -76,9 +77,9 @@
             // 
             this.dtpTo.CustomFormat = "MMM dd, yyyy";
             this.dtpTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpTo.Location = new System.Drawing.Point(570, 38);
+            this.dtpTo.Location = new System.Drawing.Point(624, 38);
             this.dtpTo.Name = "dtpTo";
-            this.dtpTo.Size = new System.Drawing.Size(101, 21);
+            this.dtpTo.Size = new System.Drawing.Size(150, 21);
             this.dtpTo.TabIndex = 2;
             this.dtpTo.ValueChanged += new System.EventHandler(this.dtpTo_ValueChanged);
             // 
@@ -98,14 +99,14 @@
             this.pnlHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
             this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(1079, 72);
+            this.pnlHeader.Size = new System.Drawing.Size(1079, 102);
             this.pnlHeader.TabIndex = 4;
             // 
             // chkViewFILO
             // 
             this.chkViewFILO.AutoSize = true;
             this.chkViewFILO.BackColor = System.Drawing.Color.Transparent;
-            this.chkViewFILO.Location = new System.Drawing.Point(679, 40);
+            this.chkViewFILO.Location = new System.Drawing.Point(78, 71);
             this.chkViewFILO.Name = "chkViewFILO";
             this.chkViewFILO.Size = new System.Drawing.Size(166, 19);
             this.chkViewFILO.TabIndex = 109;
@@ -119,7 +120,7 @@
             this.cmbEmployee.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEmployee.FormattingEnabled = true;
             this.cmbEmployee.IntegralHeight = false;
-            this.cmbEmployee.Location = new System.Drawing.Point(83, 38);
+            this.cmbEmployee.Location = new System.Drawing.Point(78, 42);
             this.cmbEmployee.Name = "cmbEmployee";
             this.cmbEmployee.Size = new System.Drawing.Size(241, 23);
             this.cmbEmployee.TabIndex = 0;
@@ -130,7 +131,7 @@
             this.label15.AutoSize = true;
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(13, 42);
+            this.label15.Location = new System.Drawing.Point(8, 46);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(65, 15);
             this.label15.TabIndex = 108;
@@ -231,7 +232,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Location = new System.Drawing.Point(556, 42);
+            this.label5.Location = new System.Drawing.Point(607, 42);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(11, 15);
             this.label5.TabIndex = 10;
@@ -253,7 +254,7 @@
             this.dtpFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpFrom.Location = new System.Drawing.Point(451, 38);
             this.dtpFrom.Name = "dtpFrom";
-            this.dtpFrom.Size = new System.Drawing.Size(101, 21);
+            this.dtpFrom.Size = new System.Drawing.Size(150, 21);
             this.dtpFrom.TabIndex = 1;
             this.dtpFrom.ValueChanged += new System.EventHandler(this.dtpFrom_ValueChanged);
             // 
@@ -299,9 +300,9 @@
             // 
             this.pnlBody.Controls.Add(this.dgTimeCard);
             this.pnlBody.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlBody.Location = new System.Drawing.Point(0, 72);
+            this.pnlBody.Location = new System.Drawing.Point(0, 102);
             this.pnlBody.Name = "pnlBody";
-            this.pnlBody.Size = new System.Drawing.Size(1079, 480);
+            this.pnlBody.Size = new System.Drawing.Size(1079, 450);
             this.pnlBody.TabIndex = 6;
             // 
             // dgTimeCard
@@ -316,6 +317,7 @@
             this.dgTimeCard.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgTimeCard.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colUsername,
+            this.empnum,
             this.colName,
             this.colDate,
             this.colTime,
@@ -330,7 +332,7 @@
             this.dgTimeCard.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dgTimeCard.RowHeadersWidth = 20;
             this.dgTimeCard.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgTimeCard.Size = new System.Drawing.Size(1079, 480);
+            this.dgTimeCard.Size = new System.Drawing.Size(1079, 450);
             this.dgTimeCard.TabIndex = 6;
             this.dgTimeCard.VirtualMode = true;
             this.dgTimeCard.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgTimeCard_DataBindingComplete);
@@ -344,6 +346,12 @@
             this.colUsername.ReadOnly = true;
             this.colUsername.Visible = false;
             this.colUsername.Width = 150;
+            // 
+            // empnum
+            // 
+            this.empnum.HeaderText = "Employeer No.";
+            this.empnum.Name = "empnum";
+            this.empnum.ReadOnly = true;
             // 
             // colName
             // 
@@ -436,11 +444,12 @@
   private System.Windows.Forms.Panel pnlBody;
   internal System.Windows.Forms.DataGridView dgTimeCard;
   private System.Windows.Forms.CheckBox chkViewFILO;
-  private System.Windows.Forms.DataGridViewTextBoxColumn colUsername;
-  private System.Windows.Forms.DataGridViewTextBoxColumn colName;
-  private System.Windows.Forms.DataGridViewTextBoxColumn colDate;
-  private System.Windows.Forms.DataGridViewTextBoxColumn colTime;
-  private System.Windows.Forms.DataGridViewTextBoxColumn colEventType;
-  private System.Windows.Forms.DataGridViewTextBoxColumn colDoor;
- }
+        private System.Windows.Forms.DataGridViewTextBoxColumn colUsername;
+        private System.Windows.Forms.DataGridViewTextBoxColumn empnum;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTime;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colEventType;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDoor;
+    }
 }

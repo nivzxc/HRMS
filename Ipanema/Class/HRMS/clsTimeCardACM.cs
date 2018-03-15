@@ -52,6 +52,7 @@ namespace HRMS
   {
    DataTable tblReturn = new DataTable();
    tblReturn.Columns.Add("username");
+   tblReturn.Columns.Add("empnum");
    tblReturn.Columns.Add("pname");
    tblReturn.Columns.Add("tdate", System.Type.GetType("System.DateTime"));
    tblReturn.Columns.Add("ttime", System.Type.GetType("System.DateTime"));
@@ -73,7 +74,9 @@ namespace HRMS
     {
      DataRow drw = tblReturn.NewRow();
      drw["username"] = pUsername;
-     drw["pname"] = Employee.GetName(pUsername, EmployeeNameFormat.LastFirst);
+     //drw["pname"] = Employee.GetName(pUsername, EmployeeNameFormat.LastFirst);
+     drw["empnum"] = dr["StaffID"].ToString();
+     drw["pname"] = Employee.GetName(dr["StaffID"].ToString(), EmployeeWhereParameter.EmployeeNumber);
      drw["tdate"] = clsValidator.CheckDate(dr["TDate"].ToString()).ToString("MMM dd, yyyy");
      drw["ttime"] = clsValidator.CheckDate(dr["TTime"].ToString());
 
@@ -100,94 +103,95 @@ namespace HRMS
      tblReturn.Rows.Add(drw);
      intCounter++;
     }
+    cn.Close();
     dr.Close();
    }
    return tblReturn;
-  }
+  }        
 
   public static DataTable DSGTimeCardListFILO(DateTime pDateStart, DateTime pDateEnd, string pUsername)
   {
-   DataTable tblReturn = new DataTable();
-   tblReturn.Columns.Add("username");
-   tblReturn.Columns.Add("pname");
-   tblReturn.Columns.Add("tdate", System.Type.GetType("System.DateTime"));
-   tblReturn.Columns.Add("ttime", System.Type.GetType("System.DateTime"));
-   tblReturn.Columns.Add("action");
-   tblReturn.Columns.Add("door");
+       DataTable tblReturn = new DataTable();
+       tblReturn.Columns.Add("username");
+       tblReturn.Columns.Add("empnum");
+       tblReturn.Columns.Add("pname");
+       tblReturn.Columns.Add("tdate", System.Type.GetType("System.DateTime"));
+       tblReturn.Columns.Add("ttime", System.Type.GetType("System.DateTime"));
+       tblReturn.Columns.Add("action");
+       tblReturn.Columns.Add("door");
 
-   string strEmployeeName = Employee.GetName(pUsername, EmployeeNameFormat.LastFirst);
-   string strTransIDTemp = "";
-   DateTime dteTemp;
-   //DateTime dteTempIn;
-   //DateTime dteTempOut;
-   using (SqlConnection cn = new SqlConnection(HRMSCore.HrmsConnectionString))
-   {
-    SqlCommand cmd = cn.CreateCommand();
-    cn.Open();
-    for (dteTemp = clsDateTime.GetDateOnly(pDateStart); dteTemp <= pDateEnd; dteTemp = dteTemp.AddDays(1))
-    {
-     strTransIDTemp = clsTimeCardACM.GetInTransactionID(pUsername, dteTemp);
-     if (strTransIDTemp != "")
-     {
-      DataRow drwIn = tblReturn.NewRow();
-      drwIn["username"] = pUsername;
-      drwIn["pname"] = Employee.GetName(pUsername);
-      using (clsTimeCardACM tacm = new clsTimeCardACM())
-      {
-       tacm.TransID = strTransIDTemp;
-       tacm.Fill();
-       drwIn["tdate"] = tacm.TDate;
-       drwIn["ttime"] = tacm.TTime;
-       switch (tacm.EventID)
-       {
-        case "1":
-         drwIn["action"] = "In";
-         break;
-        case "5":
-         drwIn["action"] = "Out";
-         break;
-        default:
-         drwIn["action"] = tacm.EventID;
-         break;
-       }
-       drwIn["door"] = tacm.Door;
-      }
-      tblReturn.Rows.Add(drwIn);
-     }
+       string strEmployeeName = Employee.GetName(pUsername, EmployeeNameFormat.LastFirst);
+       string strTransIDTemp = "";
+       DateTime dteTemp;
+       //DateTime dteTempIn;
+       //DateTime dteTempOut;
+       using (SqlConnection cn = new SqlConnection(HRMSCore.HrmsConnectionString))
+       {    
+            for (dteTemp = clsDateTime.GetDateOnly(pDateStart); dteTemp <= pDateEnd; dteTemp = dteTemp.AddDays(1))
+            {                 
+                 strTransIDTemp = clsTimeCardACM.GetInTransactionID(pUsername, dteTemp);
+                 if (strTransIDTemp != "")
+                 {
+                        using (clsTimeCardACM tacm = new clsTimeCardACM())
+                        {
+                            DataRow drwIn = tblReturn.NewRow();
+                            drwIn["username"] = pUsername;
+                            drwIn["empnum"] = strEmployeeName;
+                            drwIn["pname"] = Employee.GetName(pUsername);
+                            tacm.TransID = strTransIDTemp;
+                            tacm.Fill();
+                            drwIn["tdate"] = tacm.TDate;
+                            drwIn["ttime"] = tacm.TTime;
+                            switch (tacm.EventID)
+                            {
+                                case "1":
+                                    drwIn["action"] = "In";
+                                    break;
+                                case "5":
+                                    drwIn["action"] = "Out";
+                                    break;
+                                default:
+                                    drwIn["action"] = tacm.EventID;
+                                    break;
+                            }
+                            drwIn["door"] = tacm.Door;
+                            tblReturn.Rows.Add(drwIn);
+                        }                                               
+                 }
+                 strTransIDTemp = clsTimeCardACM.GetOutTransactionID(pUsername, dteTemp);
+                 if (strTransIDTemp != "")
+                 {
+                        using (clsTimeCardACM tacm = new clsTimeCardACM())
+                        {
+                            DataRow drwIn = tblReturn.NewRow();
+                            drwIn["username"] = pUsername;
+                            drwIn["empnum"] = strEmployeeName;
+                            drwIn["pname"] = Employee.GetName(pUsername);
+                            tacm.TransID = strTransIDTemp;
+                            tacm.Fill();
+                            drwIn["tdate"] = tacm.TDate;
+                            drwIn["ttime"] = tacm.TTime;
+                            switch (tacm.EventID)
+                            {
+                                case "1":
+                                    drwIn["action"] = "In";
+                                    break;
+                                case "5":
+                                    drwIn["action"] = "Out";
+                                    break;
+                                default:
+                                    drwIn["action"] = tacm.EventID;
+                                    break;
+                            }
+                            drwIn["door"] = tacm.Door;
+                            tblReturn.Rows.Add(drwIn);
+                        }
+                    }
 
-     strTransIDTemp = clsTimeCardACM.GetOutTransactionID(pUsername, dteTemp);
-     if (strTransIDTemp != "")
-     {
-      DataRow drwOut = tblReturn.NewRow();
-      drwOut["username"] = pUsername;
-      drwOut["pname"] = Employee.GetName(pUsername);
-      using (clsTimeCardACM tacm = new clsTimeCardACM())
-      {
-       tacm.TransID = strTransIDTemp;
-       tacm.Fill();
-       drwOut["tdate"] = tacm.TDate;
-       drwOut["ttime"] = tacm.TTime;
-       switch (tacm.EventID)
-       {
-        case "1":
-         drwOut["action"] = "In";
-         break;
-        case "5":
-         drwOut["action"] = "Out";
-         break;
-        default:
-         drwOut["action"] = tacm.EventID;
-         break;
+            }
        }
-       drwOut["door"] = tacm.Door;
-      }
-      tblReturn.Rows.Add(drwOut);
-     }
-    }
-   }
-   return tblReturn;
+       return tblReturn;
   }
-
 
   public static string GetAfterEventType(string pUsername, DateTime pFocusDate)
   {
