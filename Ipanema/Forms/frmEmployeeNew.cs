@@ -187,6 +187,8 @@ namespace Ipanema.Forms
      employee.RecruitmentSourceRemarks = txtRecruitmentRemarks.Text;
      employee.Insert();
     
+    
+
      /// ADDED Jan 12, 2018 /// by calvin cavite
      //frmEmployeeList emp_list = new frmEmployeeList();
      //emp_list.BindEmployeeList();
@@ -196,7 +198,10 @@ namespace Ipanema.Forms
     }
    }
   }
+  private void UpdateKet()
+  {
 
+  }
   private void btnGenerate_Click(object sender, EventArgs e)
   {
    this.GenerateUserName();

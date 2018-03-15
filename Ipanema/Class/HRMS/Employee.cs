@@ -506,7 +506,7 @@ namespace HRMS
    tblReturn.Columns.Add(new DataColumn("ptext"));
    DataRow drw = tblReturn.NewRow();
    drw["pvalue"] = "ALL";
-   drw["ptext"] = "All";
+   drw["ptext"] = "-- ALL --";
    tblReturn.Rows.Add(drw);
 
    using (SqlConnection cn = new SqlConnection(HRMSCore.HrmsConnectionString))
@@ -710,41 +710,52 @@ namespace HRMS
 
    using (SqlConnection cn = new SqlConnection(HRMSCore.HrmsConnectionString))
    {
-    SqlCommand cmd = cn.CreateCommand();
-    cmd.CommandText = "SELECT empnum FROM HR.Employees";
-    SqlDataAdapter da = new SqlDataAdapter(cmd);
-    da.Fill(tblEmployeeNumberCurrent);
+                //SqlCommand cmd = cn.CreateCommand();
+                //cmd.CommandText = "SELECT empnum FROM HR.Employees";
+                //SqlDataAdapter da = new SqlDataAdapter(cmd);
+                //da.Fill(tblEmployeeNumberCurrent);
 
-    cmd.CommandText = "SELECT empnum FROM HR.EmployeeNumber";
-    da.SelectCommand = cmd;
-    da.Fill(tblEmployeeNumberArchive);
+                //cmd.CommandText = "SELECT empnum FROM HR.EmployeeNumber";
+                //da.SelectCommand = cmd;
+                //da.Fill(tblEmployeeNumberArchive);
+
+                SqlCommand cmd = cn.CreateCommand();
+                cmd.CommandText = "SELECT pvalue+1 as EMPLOYEE_ID FROM Speedo.Keys WHERE pkey = 'empcode'";
+                cn.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr.Read())
+                {
+                    strReturn = dr["EMPLOYEE_ID"].ToString();
+                }
+                dr.Close();
+                cn.Close();
    }
 
-   while (blnIsRecordExist)
-   {
-    blnIsRecordExist = false;
-    strReturn = rnd.Next(99999).ToString("00000");
-    foreach (DataRow drw in tblEmployeeNumberCurrent.Rows)
-    {
-     if (drw["empnum"].ToString() == strReturn)
-     {
-      blnIsRecordExist = true;
-      break;
-     }
-    }
-    foreach (DataRow drw in tblEmployeeNumberArchive.Rows)
-    {
-     if (drw["empnum"].ToString() == strReturn)
-     {
-      blnIsRecordExist = true;
-      break;
-     }
-    }
-   }
+       //while (blnIsRecordExist)
+       //{
+       //     blnIsRecordExist = false;
+       //     strReturn = rnd.Next(99999).ToString("00000");
+       //     foreach (DataRow drw in tblEmployeeNumberCurrent.Rows)
+       //     {
+       //      if (drw["empnum"].ToString() == strReturn)
+       //      {
+       //       blnIsRecordExist = true;
+       //       break;
+       //      }
+       //     }
+       //     foreach (DataRow drw in tblEmployeeNumberArchive.Rows)
+       //     {
+       //      if (drw["empnum"].ToString() == strReturn)
+       //      {
+       //       blnIsRecordExist = true;
+       //       break;
+       //      }
+       //     }
+       //}
+       //if (blnIsRecordExist)
+       // strReturn = "";
 
-   if (blnIsRecordExist)
-    strReturn = "";
-   return strReturn;
+       return strReturn;
   }
 
   public static string GetDepartmentCode(string pUsername)
@@ -805,24 +816,26 @@ namespace HRMS
 
   public static string GetName(string pUsername, EmployeeNameFormat pNameFormat)
   {
-   string strReturn = "";
-   string strNameFormat = "";
 
-   if (pNameFormat == EmployeeNameFormat.FirstLast)
-    strNameFormat = "firname + ' ' + midintl + '. ' + lastname";
-   else if (pNameFormat == EmployeeNameFormat.LastFirst)
-    strNameFormat = "lastname + ', ' + firname + ' ' + midintl + '.'";
+       string strReturn = "";
+       string strNameFormat = "";
 
-   using (SqlConnection cn = new SqlConnection(HRMSCore.HrmsConnectionString))
-   {
-    SqlCommand cmd = cn.CreateCommand();
-    cmd.CommandText = "SELECT " + strNameFormat + " FROM HR.Employees WHERE username=@username";
-    cmd.Parameters.Add(new SqlParameter("@username", pUsername));
-    cn.Open();
-    try { strReturn = cmd.ExecuteScalar().ToString(); }
-    catch { }
-   }
-   return strReturn;
+       if (pNameFormat == EmployeeNameFormat.FirstLast)
+        strNameFormat = "firname + ' ' + midintl + '. ' + lastname";
+       else if (pNameFormat == EmployeeNameFormat.LastFirst)
+        strNameFormat = "lastname + ', ' + firname + ' ' + midintl + '.'";
+
+       using (SqlConnection cn = new SqlConnection(HRMSCore.HrmsConnectionString))
+       {
+        SqlCommand cmd = cn.CreateCommand();
+        cmd.CommandText = "SELECT " + strNameFormat + " FROM HR.Employees WHERE username=@username";
+        cmd.Parameters.Add(new SqlParameter("@username", pUsername));
+        cn.Open();
+        try { strReturn = cmd.ExecuteScalar().ToString(); }
+        catch { }
+       }
+       return strReturn;
+
   }
 
   public static string GetName(string pKey, EmployeeWhereParameter pWhere)
