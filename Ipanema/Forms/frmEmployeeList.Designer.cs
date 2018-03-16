@@ -142,7 +142,7 @@
             // 
             // pnlHeader
             // 
-            this.pnlHeader.BackColor = System.Drawing.Color.White;
+            this.pnlHeader.BackColor = System.Drawing.Color.DarkBlue;
             this.pnlHeader.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlHeader.BackgroundImage")));
             this.pnlHeader.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnlHeader.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -177,20 +177,22 @@
             // btnSearch
             // 
             this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
-            this.btnSearch.Location = new System.Drawing.Point(882, 50);
+            this.btnSearch.Location = new System.Drawing.Point(911, 91);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(104, 38);
             this.btnSearch.TabIndex = 29;
             this.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            this.btnSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.btnSearch_KeyPress);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(16, 82);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(43, 83);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(45, 13);
             this.label2.TabIndex = 28;
@@ -201,7 +203,7 @@
             this.cmbGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbGender.FormattingEnabled = true;
-            this.cmbGender.Location = new System.Drawing.Point(78, 78);
+            this.cmbGender.Location = new System.Drawing.Point(105, 79);
             this.cmbGender.Name = "cmbGender";
             this.cmbGender.Size = new System.Drawing.Size(86, 21);
             this.cmbGender.TabIndex = 1;
@@ -211,7 +213,7 @@
             this.cmbDepartment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDepartment.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbDepartment.FormattingEnabled = true;
-            this.cmbDepartment.Location = new System.Drawing.Point(630, 105);
+            this.cmbDepartment.Location = new System.Drawing.Point(655, 100);
             this.cmbDepartment.Name = "cmbDepartment";
             this.cmbDepartment.Size = new System.Drawing.Size(229, 21);
             this.cmbDepartment.TabIndex = 8;
@@ -221,7 +223,8 @@
             this.label27.AutoSize = true;
             this.label27.BackColor = System.Drawing.Color.Transparent;
             this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(558, 110);
+            this.label27.ForeColor = System.Drawing.Color.White;
+            this.label27.Location = new System.Drawing.Point(583, 105);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(65, 13);
             this.label27.TabIndex = 26;
@@ -232,7 +235,7 @@
             this.cmbGroup.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbGroup.FormattingEnabled = true;
-            this.cmbGroup.Location = new System.Drawing.Point(630, 78);
+            this.cmbGroup.Location = new System.Drawing.Point(655, 73);
             this.cmbGroup.Name = "cmbGroup";
             this.cmbGroup.Size = new System.Drawing.Size(229, 21);
             this.cmbGroup.TabIndex = 7;
@@ -243,7 +246,8 @@
             this.label25.AutoSize = true;
             this.label25.BackColor = System.Drawing.Color.Transparent;
             this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(558, 83);
+            this.label25.ForeColor = System.Drawing.Color.White;
+            this.label25.Location = new System.Drawing.Point(583, 78);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(39, 13);
             this.label25.TabIndex = 24;
@@ -252,17 +256,19 @@
             // txtLastName
             // 
             this.txtLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLastName.Location = new System.Drawing.Point(78, 53);
+            this.txtLastName.Location = new System.Drawing.Point(105, 54);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(204, 20);
             this.txtLastName.TabIndex = 0;
+            this.txtLastName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtLastName_KeyDown);
             // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(16, 56);
+            this.label15.ForeColor = System.Drawing.Color.White;
+            this.label15.Location = new System.Drawing.Point(43, 57);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(61, 13);
             this.label15.TabIndex = 22;
@@ -411,7 +417,7 @@
             this.cmbDivision.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDivision.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbDivision.FormattingEnabled = true;
-            this.cmbDivision.Location = new System.Drawing.Point(630, 51);
+            this.cmbDivision.Location = new System.Drawing.Point(655, 46);
             this.cmbDivision.Name = "cmbDivision";
             this.cmbDivision.Size = new System.Drawing.Size(229, 21);
             this.cmbDivision.TabIndex = 6;
@@ -422,7 +428,8 @@
             this.label23.AutoSize = true;
             this.label23.BackColor = System.Drawing.Color.Transparent;
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(558, 56);
+            this.label23.ForeColor = System.Drawing.Color.White;
+            this.label23.Location = new System.Drawing.Point(583, 51);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(47, 13);
             this.label23.TabIndex = 13;
@@ -433,7 +440,8 @@
             this.label21.AutoSize = true;
             this.label21.BackColor = System.Drawing.Color.Transparent;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(16, 108);
+            this.label21.ForeColor = System.Drawing.Color.White;
+            this.label21.Location = new System.Drawing.Point(43, 109);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(40, 13);
             this.label21.TabIndex = 12;
@@ -444,7 +452,7 @@
             this.cmbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbStatus.FormattingEnabled = true;
-            this.cmbStatus.Location = new System.Drawing.Point(78, 104);
+            this.cmbStatus.Location = new System.Drawing.Point(105, 105);
             this.cmbStatus.Name = "cmbStatus";
             this.cmbStatus.Size = new System.Drawing.Size(86, 21);
             this.cmbStatus.TabIndex = 2;
@@ -454,7 +462,8 @@
             this.label19.AutoSize = true;
             this.label19.BackColor = System.Drawing.Color.Transparent;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(302, 110);
+            this.label19.ForeColor = System.Drawing.Color.White;
+            this.label19.Location = new System.Drawing.Point(327, 105);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(59, 13);
             this.label19.TabIndex = 9;
@@ -465,7 +474,7 @@
             this.cmbJobGrade.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbJobGrade.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbJobGrade.FormattingEnabled = true;
-            this.cmbJobGrade.Location = new System.Drawing.Point(407, 105);
+            this.cmbJobGrade.Location = new System.Drawing.Point(432, 100);
             this.cmbJobGrade.Name = "cmbJobGrade";
             this.cmbJobGrade.Size = new System.Drawing.Size(86, 21);
             this.cmbJobGrade.TabIndex = 5;
@@ -475,7 +484,7 @@
             this.cmbEmployeeType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEmployeeType.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbEmployeeType.FormattingEnabled = true;
-            this.cmbEmployeeType.Location = new System.Drawing.Point(407, 51);
+            this.cmbEmployeeType.Location = new System.Drawing.Point(432, 46);
             this.cmbEmployeeType.Name = "cmbEmployeeType";
             this.cmbEmployeeType.Size = new System.Drawing.Size(134, 21);
             this.cmbEmployeeType.TabIndex = 3;
@@ -485,7 +494,7 @@
             this.cmbEmployeeStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEmployeeStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbEmployeeStatus.FormattingEnabled = true;
-            this.cmbEmployeeStatus.Location = new System.Drawing.Point(407, 78);
+            this.cmbEmployeeStatus.Location = new System.Drawing.Point(432, 73);
             this.cmbEmployeeStatus.Name = "cmbEmployeeStatus";
             this.cmbEmployeeStatus.Size = new System.Drawing.Size(134, 21);
             this.cmbEmployeeStatus.TabIndex = 4;
@@ -495,7 +504,8 @@
             this.label17.AutoSize = true;
             this.label17.BackColor = System.Drawing.Color.Transparent;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(302, 82);
+            this.label17.ForeColor = System.Drawing.Color.White;
+            this.label17.Location = new System.Drawing.Point(327, 77);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(100, 13);
             this.label17.TabIndex = 5;
@@ -506,7 +516,8 @@
             this.label16.AutoSize = true;
             this.label16.BackColor = System.Drawing.Color.Transparent;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(302, 56);
+            this.label16.ForeColor = System.Drawing.Color.White;
+            this.label16.Location = new System.Drawing.Point(327, 51);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(83, 13);
             this.label16.TabIndex = 4;
@@ -517,6 +528,7 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(7, 34);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(86, 13);
@@ -550,6 +562,7 @@
             this.dgEmployeeList.AllowUserToOrderColumns = true;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.AliceBlue;
             this.dgEmployeeList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgEmployeeList.BackgroundColor = System.Drawing.Color.White;
             this.dgEmployeeList.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgEmployeeList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dgEmployeeList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -660,13 +673,14 @@
             // 
             // pnlListHeader
             // 
-            this.pnlListHeader.BackColor = System.Drawing.Color.AliceBlue;
+            this.pnlListHeader.BackColor = System.Drawing.Color.DarkBlue;
             this.pnlListHeader.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlListHeader.BackgroundImage")));
             this.pnlListHeader.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnlListHeader.Controls.Add(this.chkShowDetails);
             this.pnlListHeader.Controls.Add(this.pictureBox2);
             this.pnlListHeader.Controls.Add(this.label12);
             this.pnlListHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlListHeader.ForeColor = System.Drawing.Color.White;
             this.pnlListHeader.Location = new System.Drawing.Point(0, 0);
             this.pnlListHeader.Name = "pnlListHeader";
             this.pnlListHeader.Size = new System.Drawing.Size(704, 28);
@@ -711,8 +725,7 @@
             // 
             // pnlEmployeeDetails
             // 
-            this.pnlEmployeeDetails.BackColor = System.Drawing.Color.White;
-            this.pnlEmployeeDetails.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlEmployeeDetails.BackgroundImage")));
+            this.pnlEmployeeDetails.BackColor = System.Drawing.Color.DarkBlue;
             this.pnlEmployeeDetails.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnlEmployeeDetails.Controls.Add(this.lvEmployeeDetails);
             this.pnlEmployeeDetails.Controls.Add(this.picEmployee);
@@ -744,7 +757,7 @@
             listViewItem10,
             listViewItem11,
             listViewItem12});
-            this.lvEmployeeDetails.Location = new System.Drawing.Point(11, 174);
+            this.lvEmployeeDetails.Location = new System.Drawing.Point(7, 191);
             this.lvEmployeeDetails.Name = "lvEmployeeDetails";
             this.lvEmployeeDetails.Size = new System.Drawing.Size(305, 233);
             this.lvEmployeeDetails.TabIndex = 47;
@@ -765,9 +778,9 @@
             // 
             this.picEmployee.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picEmployee.Image = ((System.Drawing.Image)(resources.GetObject("picEmployee.Image")));
-            this.picEmployee.Location = new System.Drawing.Point(13, 29);
+            this.picEmployee.Location = new System.Drawing.Point(79, 31);
             this.picEmployee.Name = "picEmployee";
-            this.picEmployee.Size = new System.Drawing.Size(128, 139);
+            this.picEmployee.Size = new System.Drawing.Size(158, 154);
             this.picEmployee.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picEmployee.TabIndex = 19;
             this.picEmployee.TabStop = false;
@@ -777,7 +790,8 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(10, 12);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(94, 8);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(131, 16);
             this.label1.TabIndex = 0;
@@ -792,6 +806,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.MediumBlue;
             this.ClientSize = new System.Drawing.Size(1028, 563);
             this.Controls.Add(this.pnlBody);
             this.Controls.Add(this.pnlHeader);

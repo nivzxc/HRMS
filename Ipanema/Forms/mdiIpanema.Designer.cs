@@ -100,6 +100,7 @@
             this.tmiReportLeaveWithoutPay = new System.Windows.Forms.ToolStripMenuItem();
             this.tmiReportOBApplication = new System.Windows.Forms.ToolStripMenuItem();
             this.employeeLeave3DaysToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.timesheetProcessToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolsMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.tmiCalculator = new System.Windows.Forms.ToolStripMenuItem();
             this.tmiMSPaint = new System.Windows.Forms.ToolStripMenuItem();
@@ -120,6 +121,7 @@
             this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
             this.tmiAbout = new System.Windows.Forms.ToolStripMenuItem();
+            this.runTimeKeepingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ssMain = new System.Windows.Forms.StatusStrip();
             this.sslFormInfo = new System.Windows.Forms.ToolStripStatusLabel();
             this.sslUsername = new System.Windows.Forms.ToolStripStatusLabel();
@@ -269,6 +271,7 @@
             // 
             // menuStrip
             // 
+            this.menuStrip.BackColor = System.Drawing.Color.White;
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuSystem,
             this.editMenu,
@@ -280,7 +283,8 @@
             this.toolsMenu,
             this.mnuSettings,
             this.windowsMenu,
-            this.helpMenu});
+            this.helpMenu,
+            this.runTimeKeepingToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.MdiWindowListItem = this.windowsMenu;
             this.menuStrip.Name = "menuStrip";
@@ -303,25 +307,25 @@
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(112, 6);
             // 
             // tmiLogout
             // 
             this.tmiLogout.Image = ((System.Drawing.Image)(resources.GetObject("tmiLogout.Image")));
             this.tmiLogout.Name = "tmiLogout";
-            this.tmiLogout.Size = new System.Drawing.Size(152, 22);
+            this.tmiLogout.Size = new System.Drawing.Size(115, 22);
             this.tmiLogout.Text = "Log out";
             this.tmiLogout.Click += new System.EventHandler(this.tmiLogout_Click);
             // 
             // toolStripSeparator10
             // 
             this.toolStripSeparator10.Name = "toolStripSeparator10";
-            this.toolStripSeparator10.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator10.Size = new System.Drawing.Size(112, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
             this.exitToolStripMenuItem.Text = "E&xit";
             // 
             // editMenu
@@ -764,7 +768,8 @@
             // 
             this.mnuReports.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tmiReportTimeAttendance,
-            this.employeeLeave3DaysToolStripMenuItem});
+            this.employeeLeave3DaysToolStripMenuItem,
+            this.timesheetProcessToolStripMenuItem});
             this.mnuReports.Name = "mnuReports";
             this.mnuReports.Size = new System.Drawing.Size(59, 20);
             this.mnuReports.Text = "Reports";
@@ -797,6 +802,13 @@
             this.employeeLeave3DaysToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
             this.employeeLeave3DaysToolStripMenuItem.Text = "Employee Approved Leave";
             this.employeeLeave3DaysToolStripMenuItem.Click += new System.EventHandler(this.employeeLeave3DaysToolStripMenuItem_Click);
+            // 
+            // timesheetProcessToolStripMenuItem
+            // 
+            this.timesheetProcessToolStripMenuItem.Name = "timesheetProcessToolStripMenuItem";
+            this.timesheetProcessToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
+            this.timesheetProcessToolStripMenuItem.Text = "Timesheet Process";
+            this.timesheetProcessToolStripMenuItem.Click += new System.EventHandler(this.timesheetProcessToolStripMenuItem_Click);
             // 
             // toolsMenu
             // 
@@ -879,35 +891,35 @@
             // cascadeToolStripMenuItem
             // 
             this.cascadeToolStripMenuItem.Name = "cascadeToolStripMenuItem";
-            this.cascadeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cascadeToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.cascadeToolStripMenuItem.Text = "&Cascade";
             this.cascadeToolStripMenuItem.Click += new System.EventHandler(this.CascadeToolStripMenuItem_Click);
             // 
             // tileVerticalToolStripMenuItem
             // 
             this.tileVerticalToolStripMenuItem.Name = "tileVerticalToolStripMenuItem";
-            this.tileVerticalToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.tileVerticalToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.tileVerticalToolStripMenuItem.Text = "Tile &Vertical";
             this.tileVerticalToolStripMenuItem.Click += new System.EventHandler(this.TileVerticalToolStripMenuItem_Click);
             // 
             // tileHorizontalToolStripMenuItem
             // 
             this.tileHorizontalToolStripMenuItem.Name = "tileHorizontalToolStripMenuItem";
-            this.tileHorizontalToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.tileHorizontalToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.tileHorizontalToolStripMenuItem.Text = "Tile &Horizontal";
             this.tileHorizontalToolStripMenuItem.Click += new System.EventHandler(this.TileHorizontalToolStripMenuItem_Click);
             // 
             // closeAllToolStripMenuItem
             // 
             this.closeAllToolStripMenuItem.Name = "closeAllToolStripMenuItem";
-            this.closeAllToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.closeAllToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.closeAllToolStripMenuItem.Text = "C&lose All";
             this.closeAllToolStripMenuItem.Click += new System.EventHandler(this.CloseAllToolStripMenuItem_Click);
             // 
             // arrangeIconsToolStripMenuItem
             // 
             this.arrangeIconsToolStripMenuItem.Name = "arrangeIconsToolStripMenuItem";
-            this.arrangeIconsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.arrangeIconsToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.arrangeIconsToolStripMenuItem.Text = "&Arrange Icons";
             this.arrangeIconsToolStripMenuItem.Click += new System.EventHandler(this.ArrangeIconsToolStripMenuItem_Click);
             // 
@@ -956,6 +968,13 @@
             this.tmiAbout.Name = "tmiAbout";
             this.tmiAbout.Size = new System.Drawing.Size(168, 22);
             this.tmiAbout.Text = "&About HRMS";
+            // 
+            // runTimeKeepingToolStripMenuItem
+            // 
+            this.runTimeKeepingToolStripMenuItem.Name = "runTimeKeepingToolStripMenuItem";
+            this.runTimeKeepingToolStripMenuItem.Size = new System.Drawing.Size(180, 20);
+            this.runTimeKeepingToolStripMenuItem.Text = "Run Time Keeping Application";
+            this.runTimeKeepingToolStripMenuItem.Click += new System.EventHandler(this.runTimeKeepingToolStripMenuItem_Click);
             // 
             // ssMain
             // 
@@ -1042,6 +1061,7 @@
             // 
             // tsMain
             // 
+            this.tsMain.BackColor = System.Drawing.Color.White;
             this.tsMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsbLogout,
             this.toolStripSeparator2,
@@ -1135,6 +1155,7 @@
             // 
             // tsMainTimesheet
             // 
+            this.tsMainTimesheet.BackColor = System.Drawing.Color.White;
             this.tsMainTimesheet.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsbHoliday,
             this.toolStripSeparator11,
@@ -2180,7 +2201,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(974, 733);
             this.Controls.Add(this.pnlNotificationoffleave);
             this.Controls.Add(this.pnlNotifyLeaveBalance);
@@ -2419,9 +2442,6 @@
   private System.Windows.Forms.Panel panel5;
   private System.Windows.Forms.Button btnClose;
   private System.Windows.Forms.Label label8;
-  private System.Windows.Forms.Panel panel11;
-  private System.Windows.Forms.PictureBox pictureBox2;
-  private System.Windows.Forms.Label label5;
   private System.Windows.Forms.Button btnClose1;
   private System.Windows.Forms.Panel panel1;
   private System.Windows.Forms.PictureBox pictureBox4;
@@ -2432,16 +2452,11 @@
   private System.Windows.Forms.Panel panel15;
   private System.Windows.Forms.Label label11;
   private System.Windows.Forms.Panel panel16;
-  private System.Windows.Forms.DataGridView dgLeave;
   private System.Windows.Forms.Panel panel17;
   private System.Windows.Forms.Label label12;
   private System.Windows.Forms.Panel panel12;
   private System.Windows.Forms.Panel panel18;
   private System.Windows.Forms.ToolStripMenuItem timexpiredoffleave;
-  private System.Windows.Forms.DataGridViewTextBoxColumn leavecode;
-  private System.Windows.Forms.DataGridViewTextBoxColumn usernameleave;
-  private System.Windows.Forms.DataGridViewTextBoxColumn lastnameleave;
-  private System.Windows.Forms.DataGridViewTextBoxColumn firstnameleave;
   private System.Windows.Forms.DataGridViewTextBoxColumn offensecode;
   private System.Windows.Forms.DataGridViewTextBoxColumn usernameviolation;
   private System.Windows.Forms.DataGridViewTextBoxColumn lastnameviolation;
@@ -2449,7 +2464,17 @@
   private System.Windows.Forms.Button btnRefreshOffense;
   private System.Windows.Forms.Button btnRefreshLeave;
   private System.Windows.Forms.ToolStripMenuItem aCMMigrationToolStripMenuItem;
- }
+        private System.Windows.Forms.DataGridView dgLeave;
+        private System.Windows.Forms.DataGridViewTextBoxColumn leavecode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn usernameleave;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lastnameleave;
+        private System.Windows.Forms.DataGridViewTextBoxColumn firstnameleave;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ToolStripMenuItem runTimeKeepingToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem timesheetProcessToolStripMenuItem;
+    }
 }
 
 

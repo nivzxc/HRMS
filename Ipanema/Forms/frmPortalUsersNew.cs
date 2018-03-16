@@ -51,7 +51,9 @@ namespace Ipanema.Forms
   }
 
   private void InitializeFields()
-  {   
+  {
+ 
+
    DataTable tblSex = new DataTable();
    tblSex.Columns.Add(new DataColumn("pvalue"));
    tblSex.Columns.Add(new DataColumn("ptext"));
@@ -110,10 +112,18 @@ namespace Ipanema.Forms
     users.Status = cmbStatus.SelectedValue.ToString();
     users.Insert();
     _frmPortalUsersList.BindUsersList();
-    if (MessageBox.Show(clsMessageBox.MessageBoxSuccessAddAskNew, clsMessageBox.MessageBoxText, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-     InitializeFields();
-    else
-     this.Close();
+                if (MessageBox.Show(clsMessageBox.MessageBoxSuccessAddAskNew, clsMessageBox.MessageBoxText, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    InitializeFields();
+                    txtPassword.Text = "";
+                    txtFirstname.Text = "";
+                    txtLastname.Text = "";
+                    txtMiddleName.Text = "";
+                    txtNickName.Text = "";
+                    txtEmail.Text = "";
+                    txtTitle.Text = "";
+                }
+                else { this.Close(); }
    }
   }
 

@@ -385,6 +385,12 @@ namespace HRMS
     cmd.Parameters.Add(new SqlParameter("@rsrcrmks", _strRecruitmentSourceRemarks));
     cn.Open();
     intReturn = cmd.ExecuteNonQuery();
+
+    cmd.CommandText = "UPDATE Speedo.Keys SET pvalue = pvalue+1 WHERE pkey='empcode'";
+    cmd.ExecuteNonQuery();
+
+
+
    }
    return intReturn;
   }
