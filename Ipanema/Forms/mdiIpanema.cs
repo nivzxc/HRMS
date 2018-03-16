@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using HRMS;
-
+using Ipanema;
 namespace Ipanema.Forms
 {
  public partial class mdiIpanema : Form
@@ -58,40 +58,34 @@ namespace Ipanema.Forms
   }
 
   private void mdiIpanema_Load(object sender, EventArgs e)
-  {
-           
+  {          
    
    using (clsTimeSheetPeriod tsp = new clsTimeSheetPeriod(clsTimeSheetPeriod.GetCurrentTimeSheetPeriod()))
    {
     tsp.Fill();
     lblPeriodStart.Text = tsp.PeriodFrom.ToString("ddd, MMM dd, yyyy");
     lblPeriodEnd.Text = tsp.PeriodTo.ToString("ddd, MMM dd, yyyy");
-   }
-  
+   }  
    _sslFormInfo = sslFormInfo;
 
    HRMSCore.MDIParentIpanema = this;
    lblUsername.Text = "Welcome! " + HRMSCore.Username;
    tmrMain.Enabled = true;
    sslUsername.Text = "Logged User: " + HRMSCore.Username;
-
-         
+      
             this.DSGZeroEL();
             this.DSGZeroVL();
             this.DSGZeroSL();
 
             LoadDSGLeaveNotification();
-            LoadDSGOffenseNotification();
-       
-
-        }
+            LoadDSGOffenseNotification();      
+  }
         //coders
-        public void LoadDSGLeaveNotification()
-  {
+ public void LoadDSGLeaveNotification()
+ {
       dgLeave.AutoGenerateColumns = false;
       dgLeave.DataSource = clsLeave3Days.GetDSGMainFormNotification();
-  }
-
+ }
   public void LoadDSGOffenseNotification()
   {
       dgOffense.AutoGenerateColumns = false;
@@ -633,6 +627,25 @@ namespace Ipanema.Forms
         private void pnlActiveForm_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void runTimeKeepingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            frmLogInOut employee_log = new frmLogInOut();
+            Form forms = Application.OpenForms["frmLogInOut"];
+            if (forms == null)
+            {
+                employee_log.Show();
+            }
+            else { MessageBox.Show("Time Keeping Application is currently running, Please close it first before running it again", "Application Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+        }
+
+        private void timesheetProcessToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmTimesheetReport pform = new frmTimesheetReport();
+            pform.MdiParent = this;
+            pform.Show();
         }
     } 
 }

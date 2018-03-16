@@ -55,14 +55,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="HRMS.exe" size="5417984">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="HRMS.exe" size="5490688">
       <assemblyIdentity name="HRMS" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>HJXYtwOsblT5O8vlmFuJy+iwZxM=</dsig:DigestValue>
+        <dsig:DigestValue>T+N3kF+LkPmZ+ME8cs0tRIfH3jQ=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Ipanema.exe" size="431104">
+      <assemblyIdentity name="Ipanema" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>lxyePyayU/Wo1BspwdGmrF1pIUU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -114,13 +126,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="HRMS.exe.config" size="1690">
+  <file name="HRMS.exe.config" size="1812">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>PLhR/sJL8s+vxdoCLvdxB6FnV0Y=</dsig:DigestValue>
+      <dsig:DigestValue>07DNNtllAVDFeGVZg/4JfgNyhCc=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Support\2person16.png" size="1164">

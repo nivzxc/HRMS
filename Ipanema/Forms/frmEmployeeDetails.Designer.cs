@@ -401,6 +401,7 @@
             this.label24 = new System.Windows.Forms.Label();
             this.tabGeneral = new System.Windows.Forms.TabPage();
             this.groupBox21 = new System.Windows.Forms.GroupBox();
+            this.label88 = new System.Windows.Forms.Label();
             this.btnPictureSave = new System.Windows.Forms.Button();
             this.btnPictureBrowse = new System.Windows.Forms.Button();
             this.picEmployee = new System.Windows.Forms.PictureBox();
@@ -4402,6 +4403,7 @@
             // 
             // groupBox21
             // 
+            this.groupBox21.Controls.Add(this.label88);
             this.groupBox21.Controls.Add(this.btnPictureSave);
             this.groupBox21.Controls.Add(this.btnPictureBrowse);
             this.groupBox21.Controls.Add(this.picEmployee);
@@ -4413,30 +4415,45 @@
             this.groupBox21.TabStop = false;
             this.groupBox21.Text = "Employee Picture";
             // 
+            // label88
+            // 
+            this.label88.AutoSize = true;
+            this.label88.Location = new System.Drawing.Point(17, 355);
+            this.label88.Name = "label88";
+            this.label88.Size = new System.Drawing.Size(135, 15);
+            this.label88.TabIndex = 21;
+            this.label88.Text = "NOTE: Picture size: 2x2";
+            // 
             // btnPictureSave
             // 
             this.btnPictureSave.Image = ((System.Drawing.Image)(resources.GetObject("btnPictureSave.Image")));
-            this.btnPictureSave.Location = new System.Drawing.Point(47, 341);
+            this.btnPictureSave.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPictureSave.Location = new System.Drawing.Point(119, 383);
             this.btnPictureSave.Name = "btnPictureSave";
-            this.btnPictureSave.Size = new System.Drawing.Size(30, 30);
+            this.btnPictureSave.Size = new System.Drawing.Size(93, 30);
             this.btnPictureSave.TabIndex = 20;
+            this.btnPictureSave.Text = "SAVE";
+            this.btnPictureSave.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPictureSave.UseVisualStyleBackColor = true;
             this.btnPictureSave.Click += new System.EventHandler(this.btnPictureSave_Click);
             // 
             // btnPictureBrowse
             // 
             this.btnPictureBrowse.Image = ((System.Drawing.Image)(resources.GetObject("btnPictureBrowse.Image")));
-            this.btnPictureBrowse.Location = new System.Drawing.Point(14, 341);
+            this.btnPictureBrowse.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPictureBrowse.Location = new System.Drawing.Point(20, 383);
             this.btnPictureBrowse.Name = "btnPictureBrowse";
-            this.btnPictureBrowse.Size = new System.Drawing.Size(30, 30);
+            this.btnPictureBrowse.Size = new System.Drawing.Size(93, 30);
             this.btnPictureBrowse.TabIndex = 19;
+            this.btnPictureBrowse.Text = "BROWSE";
+            this.btnPictureBrowse.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPictureBrowse.UseVisualStyleBackColor = true;
             this.btnPictureBrowse.Click += new System.EventHandler(this.btnPictureBrowse_Click);
             // 
             // picEmployee
             // 
             this.picEmployee.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picEmployee.Location = new System.Drawing.Point(15, 30);
+            this.picEmployee.Location = new System.Drawing.Point(20, 45);
             this.picEmployee.Name = "picEmployee";
             this.picEmployee.Size = new System.Drawing.Size(300, 300);
             this.picEmployee.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -4995,7 +5012,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.AliceBlue;
+            this.BackColor = System.Drawing.Color.DarkBlue;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CancelButton = this.btnClose;
@@ -5064,6 +5081,7 @@
             this.groupBox6.PerformLayout();
             this.tabGeneral.ResumeLayout(false);
             this.groupBox21.ResumeLayout(false);
+            this.groupBox21.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picEmployee)).EndInit();
             this.groupBox20.ResumeLayout(false);
             this.groupBox20.PerformLayout();
@@ -5498,5 +5516,6 @@
   private System.Windows.Forms.Button btnEmploymentStatusAdd;
   private System.Windows.Forms.TextBox txtMiddleInitial;
   private System.Windows.Forms.Label label86;
- }
+        private System.Windows.Forms.Label label88;
+    }
 }

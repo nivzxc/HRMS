@@ -893,14 +893,26 @@ namespace Ipanema.Forms
 
   private void btnPictureBrowse_Click(object sender, EventArgs e)
   {
-   ofdPicture.ShowDialog();
-   picEmployee.ImageLocation = ofdPicture.FileName;
+            if (ofdPicture.ShowDialog() == DialogResult.OK)
+            {
+                System.IO.FileInfo file = new System.IO.FileInfo(ofdPicture.FileName);
+                Bitmap img = new Bitmap(ofdPicture.FileName);
+
+                if (img.Width <= 200 && img.Height <= 200)
+                {
+                    picEmployee.ImageLocation = ofdPicture.FileName;
+                }
+                else { MessageBox.Show("Picture size is not 2x2 ","Size Error!",MessageBoxButtons.OK,MessageBoxIcon.Error); }
+            }
+            
+
   }
 
   private void btnPictureSave_Click(object sender, EventArgs e)
   {
+
             if (ofdPicture.FileName != "")
-            {
+            {                
                 Employee.SaveImage(txtUsername.Text, ofdPicture.FileName);
                 MessageBox.Show("Image has been uploaded successfully", "UPLOAD SUCCESSFULL", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }

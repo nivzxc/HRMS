@@ -1,0 +1,47 @@
+D:\Mean\Projects\Ipanema\Ipanema\Ipanema\obj\Debug\ResolveAssemblyReference.cache
+D:\Mean\Projects\Ipanema\Ipanema\Ipanema\obj\Debug\Ipanema.frmLogInOut.resources
+D:\Mean\Projects\Ipanema\Ipanema\Ipanema\obj\Debug\Ipanema.Properties.Resources.resources
+D:\Mean\Projects\Ipanema\Ipanema\Ipanema\obj\Debug\Ipanema.csproj.GenerateResource.Cache
+D:\Mean\Projects\Ipanema\Ipanema\Ipanema\bin\Debug\Ipanema.exe
+D:\Mean\Projects\Ipanema\Ipanema\Ipanema\bin\Debug\Ipanema.pdb
+D:\Mean\Projects\Ipanema\Ipanema\Ipanema\obj\Debug\Ipanema.exe
+D:\Mean\Projects\Ipanema\Ipanema\Ipanema\obj\Debug\Ipanema.pdb
+D:\Mean\Projects\Ipanema\Ipanema\Ipanema\bin\Debug\Ipanema.exe.config
+D:\Mean\SDKs\Projects\Ipanema\Ipanema\Ipanema\bin\Debug\Ipanema.exe.config
+D:\Mean\SDKs\Projects\Ipanema\Ipanema\Ipanema\obj\Debug\Ipanema.exe
+D:\Mean\SDKs\Projects\Ipanema\Ipanema\Ipanema\obj\Debug\Ipanema.pdb
+D:\Mean\SDKs\Projects\Ipanema\Ipanema\Ipanema\obj\Debug\ResolveAssemblyReference.cache
+D:\Mean\SDKs\Projects\Ipanema\Ipanema\Ipanema\obj\Debug\Ipanema.frmLogInOut.resources
+D:\Mean\SDKs\Projects\Ipanema\Ipanema\Ipanema\obj\Debug\Ipanema.Properties.Resources.resources
+D:\Mean\SDKs\Projects\Ipanema\Ipanema\Ipanema\obj\Debug\Ipanema.csproj.GenerateResource.Cache
+D:\Mean\SDKs\Projects\Ipanema\Ipanema\Ipanema\bin\Debug\Ipanema.exe
+D:\Mean\SDKs\Projects\Ipanema\Ipanema\Ipanema\bin\Debug\Ipanema.pdb
+D:\Lupaine\SDKs\Projects\Ipanema\Ipanema\Ipanema\bin\Debug\Ipanema.exe.config
+D:\Lupaine\SDKs\Projects\Ipanema\Ipanema\Ipanema\obj\Debug\Ipanema.exe
+D:\Lupaine\SDKs\Projects\Ipanema\Ipanema\Ipanema\obj\Debug\Ipanema.pdb
+D:\Lupaine\SDKs\Projects\Ipanema\Ipanema\Ipanema\bin\Debug\Ipanema.exe
+D:\Lupaine\SDKs\Projects\Ipanema\Ipanema\Ipanema\bin\Debug\Ipanema.pdb
+D:\Lupaine\SDKs\Projects\Ipanema\Ipanema\Ipanema\obj\Debug\ResolveAssemblyReference.cache
+D:\Lupaine\SDKs\Projects\Ipanema\Ipanema\Ipanema\obj\Debug\Ipanema.frmLogInOut.resources
+D:\Lupaine\SDKs\Projects\Ipanema\Ipanema\Ipanema\obj\Debug\Ipanema.Properties.Resources.resources
+D:\Lupaine\SDKs\Projects\Ipanema\Ipanema\Ipanema\obj\Debug\Ipanema.csproj.GenerateResource.Cache
+C:\Users\Administrator\Documents\Files\System under revision\Timekeeping Manual Keyin\Ipanema\Ipanema\Ipanema\bin\Debug\Ipanema.exe.config
+C:\Users\Administrator\Documents\Files\System under revision\Timekeeping Manual Keyin\Ipanema\Ipanema\Ipanema\bin\Debug\Ipanema.exe
+C:\Users\Administrator\Documents\Files\System under revision\Timekeeping Manual Keyin\Ipanema\Ipanema\Ipanema\bin\Debug\Ipanema.pdb
+C:\Users\Administrator\Documents\Files\System under revision\Timekeeping Manual Keyin\Ipanema\Ipanema\Ipanema\obj\Debug\Ipanema.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Documents\Files\System under revision\Timekeeping Manual Keyin\Ipanema\Ipanema\Ipanema\obj\Debug\Ipanema.frmLogInOut.resources
+C:\Users\Administrator\Documents\Files\System under revision\Timekeeping Manual Keyin\Ipanema\Ipanema\Ipanema\obj\Debug\Ipanema.Properties.Resources.resources
+C:\Users\Administrator\Documents\Files\System under revision\Timekeeping Manual Keyin\Ipanema\Ipanema\Ipanema\obj\Debug\Ipanema.csproj.GenerateResource.Cache
+C:\Users\Administrator\Documents\Files\System under revision\Timekeeping Manual Keyin\Ipanema\Ipanema\Ipanema\obj\Debug\Ipanema.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Documents\Files\System under revision\Timekeeping Manual Keyin\Ipanema\Ipanema\Ipanema\obj\Debug\Ipanema.exe
+C:\Users\Administrator\Documents\Files\System under revision\Timekeeping Manual Keyin\Ipanema\Ipanema\Ipanema\obj\Debug\Ipanema.pdb
+C:\Users\Administrator\Documents\Files\System-under-revision\Timekeeping Manual Keyin\Ipanema\Ipanema\Ipanema\bin\Debug\Ipanema.exe.config
+C:\Users\Administrator\Documents\Files\System-under-revision\Timekeeping Manual Keyin\Ipanema\Ipanema\Ipanema\bin\Debug\Ipanema.exe
+C:\Users\Administrator\Documents\Files\System-under-revision\Timekeeping Manual Keyin\Ipanema\Ipanema\Ipanema\bin\Debug\Ipanema.pdb
+C:\Users\Administrator\Documents\Files\System-under-revision\Timekeeping Manual Keyin\Ipanema\Ipanema\Ipanema\obj\Debug\Ipanema.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Documents\Files\System-under-revision\Timekeeping Manual Keyin\Ipanema\Ipanema\Ipanema\obj\Debug\Ipanema.frmLogInOut.resources
+C:\Users\Administrator\Documents\Files\System-under-revision\Timekeeping Manual Keyin\Ipanema\Ipanema\Ipanema\obj\Debug\Ipanema.Properties.Resources.resources
+C:\Users\Administrator\Documents\Files\System-under-revision\Timekeeping Manual Keyin\Ipanema\Ipanema\Ipanema\obj\Debug\Ipanema.csproj.GenerateResource.cache
+C:\Users\Administrator\Documents\Files\System-under-revision\Timekeeping Manual Keyin\Ipanema\Ipanema\Ipanema\obj\Debug\Ipanema.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Documents\Files\System-under-revision\Timekeeping Manual Keyin\Ipanema\Ipanema\Ipanema\obj\Debug\Ipanema.exe
+C:\Users\Administrator\Documents\Files\System-under-revision\Timekeeping Manual Keyin\Ipanema\Ipanema\Ipanema\obj\Debug\Ipanema.pdb

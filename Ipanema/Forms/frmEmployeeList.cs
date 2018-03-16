@@ -294,5 +294,16 @@ namespace Ipanema.Forms
    {
    }
   }
- }
+
+        private void btnSearch_KeyPress(object sender, KeyPressEventArgs e)
+        {
+       
+        }
+
+        private void txtLastName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            btnSearch_Click(null, null);
+        }
+    }
 }
