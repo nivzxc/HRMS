@@ -161,3 +161,12 @@ C:\Users\Administrator\Documents\Files\System-under-revision\HRMS\Ipanema\bin\De
 C:\Users\Administrator\Documents\Files\System-under-revision\HRMS\Ipanema\bin\Debug\Ipanema.pdb
 C:\Users\Administrator\Documents\Files\System-under-revision\HRMS\Ipanema\bin\Debug\Ipanema.exe.config
 C:\Users\Administrator\Documents\Files\System-under-revision\HRMS\Ipanema\obj\Debug\Ipanema.Forms.frmTimesheetReport.resources
+C:\Users\Administrator\Documents\Files\System-under-revision\HRMS\Ipanema\bin\Debug\MigraDoc.DocumentObjectModel-WPF.dll
+C:\Users\Administrator\Documents\Files\System-under-revision\HRMS\Ipanema\bin\Debug\MigraDoc.DocumentObjectModel-WPF.resources.dll
+C:\Users\Administrator\Documents\Files\System-under-revision\HRMS\Ipanema\bin\Debug\MigraDoc.Rendering-WPF.dll
+C:\Users\Administrator\Documents\Files\System-under-revision\HRMS\Ipanema\bin\Debug\MigraDoc.Rendering-WPF.resources.dll
+C:\Users\Administrator\Documents\Files\System-under-revision\HRMS\Ipanema\bin\Debug\MigraDoc.RtfRendering-WPF.dll
+C:\Users\Administrator\Documents\Files\System-under-revision\HRMS\Ipanema\bin\Debug\MigraDoc.RtfRendering-WPF.resources.dll
+C:\Users\Administrator\Documents\Files\System-under-revision\HRMS\Ipanema\bin\Debug\PdfSharp-WPF.dll
+C:\Users\Administrator\Documents\Files\System-under-revision\HRMS\Ipanema\bin\Debug\PdfSharp-WPF.resources.dll
+C:\Users\Administrator\Documents\Files\System-under-revision\HRMS\Ipanema\bin\Debug\PdfSharp.Charting-WPF.dll

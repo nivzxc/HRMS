@@ -61,26 +61,26 @@ namespace Ipanema.Forms
             int intSeed = 0;
             SqlConnection cn = new SqlConnection(HRMSCore.HrmsConnectionString);
             SqlCommand cmd = cn.CreateCommand();
-            cmd.CommandText = "SELECT TOP 1 utcode from HR.UnderTime ORDER BY utcode DESC";
+            cmd.CommandText = "SELECT pvalue FROM Speedo.Keys WHERE pkey='utcode'";
             cn.Open();
             SqlDataReader dr = cmd.ExecuteReader();
             if (dr.Read())
             {
-                UT_Code = dr["utcode"].ToString();
+                UT_Code = dr["pvalue"].ToString();
             }
             dr.Close();
             if (UT_Code == null || UT_Code == "")
             {
                 get_code = UT_Code;
                 intSeed = clsValidator.CheckInteger(UT_Code) + 1;
-                UT_Code = ("UT00" + intSeed.ToString()).Substring(intSeed.ToString().Length - 1);
+                UT_Code = ("UT" + intSeed.ToString());
                 txtUndertimeCode.Text = UT_Code;
             }
             else {
                 char[] removeChar = { 'U', 'T' };
                 string digits = UT_Code.TrimStart(removeChar);
                 intSeed = clsValidator.CheckInteger(digits) + 1;
-                digits = ("UT00" + intSeed.ToString()).Substring(intSeed.ToString().Length - 1);
+                digits = ("UT" + intSeed.ToString());
                 txtUndertimeCode.Text = digits;
 
             }
@@ -115,6 +115,7 @@ namespace Ipanema.Forms
     }
     _frmUndertimeList.BindUndertimeList();
     this.Close();
+                MessageBox.Show("Undertime has been filed successfully","Undertime File", MessageBoxButtons.OK,MessageBoxIcon.Information);
    }
   }
 

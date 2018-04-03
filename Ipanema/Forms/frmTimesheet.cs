@@ -384,5 +384,20 @@ namespace Ipanema.Forms
         {
 
         }
+
+        private void cmsTimesheet_Opening(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void dgvTimeSheet_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void txtName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

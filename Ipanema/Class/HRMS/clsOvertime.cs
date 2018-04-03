@@ -88,6 +88,7 @@ namespace HRMS
    using (SqlConnection cn = new SqlConnection(HRMSCore.HrmsConnectionString))
    {
     //added JAN 18, 2017 by: calvin
+    cn.Open();
     string insert_OT_query = "INSERT INTO HR.Overtime (otcode," +
                                                "username," +
                                                "datefile," +
@@ -151,14 +152,17 @@ namespace HRMS
                 cmd.Parameters.Add(new SqlParameter("@apphrem",_strHeadApproverRemarks));
                 cmd.Parameters.Add(new SqlParameter("@apphstat",_strHeadApproverStatus));
                 cmd.Parameters.Add(new SqlParameter("@otstat",_strStatus));
-                cn.Open();
+                
                 intReturn = cmd.ExecuteNonQuery();
+
+                cmd.CommandText = "UPDATE Speedo.Keys SET pvalue=pvalue+1 WHERE pkey='otcode'";
+                cmd.ExecuteNonQuery();
                 if (intReturn == 1)
                 {
                     _strMessageAlert = 1;
                 }
                 else { _strMessageAlert = 0; }
-
+                cn.Close();
                 /*EDIT Jan 18, 2017 by: calvin
                 SqlCommand cmd = cn.CreateCommand();
                 cmd.CommandText = "";
