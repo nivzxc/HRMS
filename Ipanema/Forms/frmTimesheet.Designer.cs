@@ -205,6 +205,7 @@
             this.txtName.Size = new System.Drawing.Size(286, 21);
             this.txtName.TabIndex = 117;
             this.txtName.TabStop = false;
+            this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
             // 
             // label3
             // 
@@ -680,6 +681,7 @@
             this.dgvTimeSheet.Size = new System.Drawing.Size(1028, 382);
             this.dgvTimeSheet.TabIndex = 2;
             this.dgvTimeSheet.TabStop = false;
+            this.dgvTimeSheet.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTimeSheet_CellContentClick);
             this.dgvTimeSheet.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTimeSheet_CellContentDoubleClick);
             this.dgvTimeSheet.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvTimeSheet_ColumnHeaderMouseClick);
             // 
@@ -1023,6 +1025,7 @@
             this.tsmiShowLegend});
             this.cmsTimesheet.Name = "cmsTimesheet";
             this.cmsTimesheet.Size = new System.Drawing.Size(169, 120);
+            this.cmsTimesheet.Opening += new System.ComponentModel.CancelEventHandler(this.cmsTimesheet_Opening);
             // 
             // tmiViewApplications
             // 

@@ -121,7 +121,8 @@ namespace HRMS
        tblReturn.Columns.Add("door");
 
        string strEmployeeName = Employee.GetName(pUsername, EmployeeNameFormat.LastFirst);
-       string strTransIDTemp = "";
+            string strEmployeeNumber = Employee.GetEmployeeNumber(pUsername);
+            string strTransIDTemp = "";
        DateTime dteTemp;
        //DateTime dteTempIn;
        //DateTime dteTempOut;
@@ -136,7 +137,7 @@ namespace HRMS
                         {
                             DataRow drwIn = tblReturn.NewRow();
                             drwIn["username"] = pUsername;
-                            drwIn["empnum"] = strEmployeeName;
+                            drwIn["empnum"] = strEmployeeNumber;
                             drwIn["pname"] = Employee.GetName(pUsername);
                             tacm.TransID = strTransIDTemp;
                             tacm.Fill();
@@ -165,7 +166,7 @@ namespace HRMS
                         {
                             DataRow drwIn = tblReturn.NewRow();
                             drwIn["username"] = pUsername;
-                            drwIn["empnum"] = strEmployeeName;
+                            drwIn["empnum"] = strEmployeeNumber;
                             drwIn["pname"] = Employee.GetName(pUsername);
                             tacm.TransID = strTransIDTemp;
                             tacm.Fill();

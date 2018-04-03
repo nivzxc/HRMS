@@ -99,6 +99,37 @@
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0" />
+    <Reference Include="MigraDoc.DocumentObjectModel-WPF">
+      <HintPath>..\..\..\PDFSharp library\PDFSharp &amp; MigraDoc (.NET PDF Reports)-20180314T002705Z-001\PDFSharp _ MigraDoc (.NET PDF Reports)\MigraDoc.DocumentObjectModel-WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="MigraDoc.DocumentObjectModel-WPF.resources">
+      <HintPath>..\..\..\PDFSharp library\PDFSharp &amp; MigraDoc (.NET PDF Reports)-20180314T002705Z-001\PDFSharp _ MigraDoc (.NET PDF Reports)\MigraDoc.DocumentObjectModel-WPF.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="MigraDoc.Rendering-WPF">
+      <HintPath>..\..\..\PDFSharp library\PDFSharp &amp; MigraDoc (.NET PDF Reports)-20180314T002705Z-001\PDFSharp _ MigraDoc (.NET PDF Reports)\MigraDoc.Rendering-WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="MigraDoc.Rendering-WPF.resources">
+      <HintPath>..\..\..\PDFSharp library\PDFSharp &amp; MigraDoc (.NET PDF Reports)-20180314T002705Z-001\PDFSharp _ MigraDoc (.NET PDF Reports)\MigraDoc.Rendering-WPF.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="MigraDoc.RtfRendering-WPF">
+      <HintPath>..\..\..\PDFSharp library\PDFSharp &amp; MigraDoc (.NET PDF Reports)-20180314T002705Z-001\PDFSharp _ MigraDoc (.NET PDF Reports)\MigraDoc.RtfRendering-WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="MigraDoc.RtfRendering-WPF.resources">
+      <HintPath>..\..\..\PDFSharp library\PDFSharp &amp; MigraDoc (.NET PDF Reports)-20180314T002705Z-001\PDFSharp _ MigraDoc (.NET PDF Reports)\MigraDoc.RtfRendering-WPF.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfLib">
+      <HintPath>..\..\..\PDFSharp library\PDFSharp &amp; MigraDoc (.NET PDF Reports)-20180314T002705Z-001\PDFSharp _ MigraDoc (.NET PDF Reports)\PdfLib.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="PdfSharp-WPF">
+      <HintPath>..\..\..\PDFSharp library\PDFSharp &amp; MigraDoc (.NET PDF Reports)-20180314T002705Z-001\PDFSharp _ MigraDoc (.NET PDF Reports)\PdfSharp-WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp-WPF.resources">
+      <HintPath>..\..\..\PDFSharp library\PDFSharp &amp; MigraDoc (.NET PDF Reports)-20180314T002705Z-001\PDFSharp _ MigraDoc (.NET PDF Reports)\PdfSharp-WPF.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp.Charting-WPF">
+      <HintPath>..\..\..\PDFSharp library\PDFSharp &amp; MigraDoc (.NET PDF Reports)-20180314T002705Z-001\PDFSharp _ MigraDoc (.NET PDF Reports)\PdfSharp.Charting-WPF.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core">
@@ -129,6 +160,7 @@
     <Compile Include="Class\clsShell.cs" />
     <Compile Include="Class\clsSystemSettings.cs" />
     <Compile Include="Class\HRMS\CDL.cs" />
+    <Compile Include="Class\HRMS\Class1.cs" />
     <Compile Include="Class\HRMS\clsChangeShiftBatch.cs" />
     <Compile Include="Class\HRMS\clsCity.cs" />
     <Compile Include="Class\HRMS\clsCluster.cs" />
@@ -187,6 +219,7 @@
     <Compile Include="Class\HRMS\clsUndertime.cs" />
     <Compile Include="Class\HRMS\clsUsers.cs" />
     <Compile Include="Class\HRMS\TimeSheetAccess.cs" />
+    <Compile Include="Class\HRMS\PDFReport.cs" />
     <Compile Include="dsLeaveOffense.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -1691,6 +1724,7 @@
     <None Include="Resources\personal16.png" />
     <None Include="Resources\emerg.jpg" />
     <None Include="Resources\default.bmp" />
+    <Content Include="Resources\logo.jpg" />
     <Content Include="Support\2person16.png" />
     <Content Include="Support\2rightarrow16.png" />
     <Content Include="Support\add16.png" />

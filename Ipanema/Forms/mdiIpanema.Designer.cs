@@ -807,7 +807,7 @@
             // 
             this.timesheetProcessToolStripMenuItem.Name = "timesheetProcessToolStripMenuItem";
             this.timesheetProcessToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
-            this.timesheetProcessToolStripMenuItem.Text = "Timesheet Process";
+            this.timesheetProcessToolStripMenuItem.Text = "Lates and Absences";
             this.timesheetProcessToolStripMenuItem.Click += new System.EventHandler(this.timesheetProcessToolStripMenuItem_Click);
             // 
             // toolsMenu
@@ -1284,6 +1284,7 @@
             this.pnlLeft.Size = new System.Drawing.Size(210, 634);
             this.pnlLeft.TabIndex = 10;
             this.pnlLeft.Visible = false;
+            this.pnlLeft.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlLeft_Paint);
             // 
             // pnlActiveForm
             // 

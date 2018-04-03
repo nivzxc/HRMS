@@ -67,18 +67,18 @@ namespace Ipanema.Forms
             
     SqlConnection cn = new SqlConnection(HRMSCore.HrmsConnectionString);
     SqlCommand cmd = cn.CreateCommand();
-    cmd.CommandText = "SELECT TOP 1 otcode from HR.OverTime ORDER BY otcode DESC";
+    cmd.CommandText = "SELECT pvalue from Speedo.Keys WHERE pkey ='otcode'";
     cn.Open();
     SqlDataReader dr = cmd.ExecuteReader();
 
             if (dr.Read()){
-                OT_code = dr["otcode"].ToString();
+                OT_code = dr["pvalue"].ToString();
             }
             dr.Close();
             if (OT_code == null || OT_code == ""){
                 get_code = OT_code;
                 intSeed = clsValidator.CheckInteger(OT_code) + 1;
-                OT_code = ("OT00" + intSeed.ToString()).Substring(intSeed.ToString().Length - 1);
+                OT_code = ("OT" + intSeed.ToString()).Substring(intSeed.ToString().Length - 1);
                 txtOBCode.Text = OT_code;
             }
             else{
@@ -86,7 +86,7 @@ namespace Ipanema.Forms
                 string code_on = OT_code.TrimStart(removeChar);               
                 get_code = code_on;               
                 intSeed = clsValidator.CheckInteger(code_on) + 1;              
-                code_on = ("OT00" + intSeed.ToString()).Substring(intSeed.ToString().Length - 1);
+                code_on = ("OT" + intSeed.ToString());
                 txtOBCode.Text = code_on;   
             }
 

@@ -84,7 +84,7 @@ namespace HRMS
                 cn.Open();
                 intReturn = cmd.ExecuteNonQuery();
                 */
-
+                cn.Open();
                 string quiry = "INSERT INTO HR.UnderTime (utcode,username,datefile,dateapp,reason,apphname,apphdate,apphrem,utstat) "
                                +"VALUES (@utcode,@username,@datefile,@dateapp,@reason,@apphname,@apphdate,@apphrem,@utstat)";
                 SqlCommand cmd = new SqlCommand(quiry, cn);
@@ -96,10 +96,13 @@ namespace HRMS
                 cmd.Parameters.Add(new SqlParameter("@apphname", _strApproverUsername));
                 cmd.Parameters.Add(new SqlParameter("@apphdate", _dteApproverDate));
                 cmd.Parameters.Add(new SqlParameter("@apphrem", _strApproverRemarks));
-                cmd.Parameters.Add(new SqlParameter("@utstat", _strUTStatus));
-                cn.Open();
+                cmd.Parameters.Add(new SqlParameter("@utstat", _strUTStatus));                
                 intReturn = cmd.ExecuteNonQuery();
-   }
+                cmd.CommandText = "UPDATE Speedo.Keys SET pvalue=pvalue+1 WHERE pkey='utcode'";
+                cmd.ExecuteNonQuery();
+                cn.Close();
+               
+   }    
    return intReturn;
   }
 

@@ -647,5 +647,10 @@ namespace Ipanema.Forms
             pform.MdiParent = this;
             pform.Show();
         }
+
+        private void pnlLeft_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     } 
 }

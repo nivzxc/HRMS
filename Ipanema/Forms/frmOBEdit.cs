@@ -180,6 +180,7 @@ namespace Ipanema.Forms
   {
    using (OfficialBusiness ob = new OfficialBusiness())
    {
+    
     ob.OBCode = _strOBCode;
     ob.Fill();
     ob.DateFile = clsDateTime.CombineDateTime(dtpFileDate.Value, dtpFileTime.Value);
@@ -198,6 +199,7 @@ namespace Ipanema.Forms
     {
      _frmOBList.BindOBList();
      this.Close();
+     MessageBox.Show("Official Business Leave has been filed successfully","OB Leave" , MessageBoxButtons.OK,MessageBoxIcon.Information);
     }
    }
   }
@@ -209,7 +211,7 @@ namespace Ipanema.Forms
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
     }
 }

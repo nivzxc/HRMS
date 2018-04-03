@@ -81,6 +81,8 @@ namespace HRMS
    using (SqlConnection cn = new SqlConnection(HRMSCore.HrmsConnectionString))
    {
     //ADDED JAN 19, 2018 by: Calvin
+
+    cn.Open();
     string insertOB_query = "INSERT INTO HR.OB (obcode,"+
                                              "username,"+
                                              "datefile,"+
@@ -136,10 +138,13 @@ namespace HRMS
                 cmd.Parameters.Add(new SqlParameter("@apphdate",_dteHADate));
                 cmd.Parameters.Add(new SqlParameter("@apphrem",_strHARemarks));
                 cmd.Parameters.Add(new SqlParameter("@apphstat",_strHAStatus));
-                cmd.Parameters.Add(new SqlParameter("@obstat",_strStatus));
-                cn.Open();
+                cmd.Parameters.Add(new SqlParameter("@obstat",_strStatus));               
+
                 intReturn = cmd.ExecuteNonQuery();
 
+                cmd.CommandText = "UPDATE Speedo.Keys SET pvalue=pvalue+1 WHERE pkey='obcode'";
+                cmd.ExecuteNonQuery();
+                
                 /* EDIT: JAN 19, 2018 by:Calvin
                 SqlCommand cmd = cn.CreateCommand();
                 cmd.CommandText = "spOBInsertAdmin";
@@ -189,6 +194,8 @@ namespace HRMS
                 intReturn = cmd.ExecuteNonQuery();
                 _strOBCode = cmd.Parameters["@obcode"].Value.ToString();
                 */
+
+
             }
    return intReturn;
   }

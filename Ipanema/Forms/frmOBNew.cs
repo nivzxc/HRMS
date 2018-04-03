@@ -214,19 +214,19 @@ namespace Ipanema.Forms
             int intSeed = 0;
             SqlConnection cn = new SqlConnection(HRMSCore.HrmsConnectionString);
             SqlCommand cmd = cn.CreateCommand();
-            cmd.CommandText = "SELECT TOP 1 obcode from HR.OB ORDER BY obcode DESC";
+            cmd.CommandText = "SELECT pvalue from Speedo.Keys WHERE pkey='obcode'";
             cn.Open();
             SqlDataReader dr = cmd.ExecuteReader();
             if (dr.Read())
             {
-                OB_code = dr["obcode"].ToString();
+                OB_code = dr["pvalue"].ToString();
             }
             dr.Close();
             if (OB_code == null || OB_code == "")
             {
                 get_code = OB_code;
                 intSeed = clsValidator.CheckInteger(OB_code) + 1;
-                OB_code = ("OB00" + intSeed.ToString()).Substring(intSeed.ToString().Length - 1);
+                OB_code = ("OB" + intSeed.ToString()).Substring(intSeed.ToString().Length - 1);
                 txtOBCode.Text = OB_code;
             }
             else
@@ -234,7 +234,7 @@ namespace Ipanema.Forms
                 char[] removeChar = { 'O', 'B' };
                 string digits = OB_code.TrimStart(removeChar);
                 intSeed = clsValidator.CheckInteger(digits) + 1;
-                digits = ("OB00" + intSeed.ToString()).Substring(intSeed.ToString().Length - 1);
+                digits = ("OB" + intSeed.ToString());
                 txtOBCode.Text = digits;
 
             }

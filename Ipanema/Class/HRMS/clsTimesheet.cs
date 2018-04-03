@@ -6,6 +6,8 @@ using System.Drawing;
 using System.Windows.Forms;
 using Ipanema.Forms;
 
+
+
 namespace HRMS
 {
 
@@ -1182,6 +1184,35 @@ namespace HRMS
    }
   }
 
+  public static string getDates(string username, DateTime dtFrom, DateTime dtTo) {
+            string _dates = "";
+            using (SqlConnection cn = new SqlConnection(HRMSCore.HrmsConnectionString)) {
+                cn.Open();
+                SqlCommand cmd = cn.CreateCommand();
+                cmd.CommandText = "SELECT focsdate, username FROM HR.TimeSheet WHERE username='"+username+"' AND focsdate between '"+dtFrom+"' AND '"+dtTo+"' AND (absunit>0 OR lateunit > 0 OR undrunit > 0 OR lateunit>0)";
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read()) {
+                    DateTime _dt = Convert.ToDateTime(dr["focsdate"].ToString());                
+                _dates += _dt.ToString("MMM dd") + ", ";
+                }
+                cn.Close();
+                dr.Close();
+            }
+            return _dates;
+  }
+  public static DataTable TimesheetReport(DateTime dtFrom, DateTime dtTo)
+  {
+            DataTable tblReturn = new DataTable();
+            using (SqlConnection cn = new SqlConnection(HRMSCore.HrmsConnectionString))
+            {
+                SqlCommand cmd = cn.CreateCommand();
+                cmd.CommandText = "select HR.Employees.username AS EMPLOYEE_USER, HR.Employees.empnum AS EMPLOYEE_NUM, HR.Employees.firname +' '+HR.Employees.lastname as EMPLOYEE_NAME,SUM(ttalunit) as TOTAL_WORK_HR, sum(lateunit) as TOTAL_LATE, sum(absunit) as TOTAL_ABSENT, sum(undrunit) AS TOTAL_UNDERTIME, sum(lwithpay) as LV_W_PAY, sum(lwoutpay) as LV_NO_PAY, sum(obunit) as TOTAL_OB_UNIT, sum(xcssunit) as TOTAL_HR_EXCESS " +
+                                  "from HR.TimeSheet INNER JOIN HR.Employees ON HR.TimeSheet.username = HR.Employees.username where HR.TimeSheet.focsdate between '"+dtFrom+"' and '"+dtTo+ "' group by HR.Employees.empnum, HR.employees.firname, HR.Employees.lastname, HR.Employees.username";
+                SqlDataAdapter dr = new SqlDataAdapter(cmd);
+                dr.Fill(tblReturn);
+            }
+            return tblReturn;
+  }
   public static DataTable DSGFormTimeSheet(string pUsername,DateTime pDateFrom, DateTime pDateTo)
   {
    DataTable tblReturn = new DataTable();
@@ -1686,5 +1717,6 @@ namespace HRMS
   //}
 
  }
+   
 
 }

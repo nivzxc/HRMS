@@ -243,20 +243,20 @@ namespace Ipanema.Forms
 
             SqlConnection cn = new SqlConnection(HRMSCore.HrmsConnectionString);
             SqlCommand cmd = cn.CreateCommand();
-            cmd.CommandText = "SELECT TOP 1 leavcode from HR.Leave ORDER BY leavcode DESC";
+            cmd.CommandText = "SELECT pvalue from Speedo.Keys WHERE pkey='leavcode' order by pvalue DESC";
             cn.Open();
             SqlDataReader dr = cmd.ExecuteReader();
 
             if (dr.Read())
             {
-                Lv_code = dr["leavcode"].ToString();
+                Lv_code = dr["pvalue"].ToString();
             }
             dr.Close();
             if (Lv_code == null || Lv_code == "")
             {
                 get_code = Lv_code;
                 intSeed = clsValidator.CheckInteger(Lv_code) + 1;
-                Lv_code = ("LV00" + intSeed.ToString()).Substring(intSeed.ToString().Length - 1);
+                Lv_code = ("LV" + intSeed.ToString()).Substring(intSeed.ToString().Length - 1);
                 txtLeaveCode.Text = Lv_code;
             }
             else
@@ -265,7 +265,7 @@ namespace Ipanema.Forms
                 string code_on = Lv_code.TrimStart(removeChar);
                 get_code = code_on;
                 intSeed = clsValidator.CheckInteger(code_on) + 1;
-                code_on = ("LV00" + intSeed.ToString()).Substring(intSeed.ToString().Length - 1);
+                code_on = ("LV" + intSeed.ToString());
                 txtLeaveCode.Text = code_on;
             }
   }
