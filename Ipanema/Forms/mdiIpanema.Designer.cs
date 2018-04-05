@@ -225,6 +225,7 @@
             this.panel11 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.ssMain.SuspendLayout();
             this.tsMain.SuspendLayout();
@@ -283,7 +284,8 @@
             this.mnuSettings,
             this.windowsMenu,
             this.helpMenu,
-            this.runTimeKeepingToolStripMenuItem});
+            this.runTimeKeepingToolStripMenuItem,
+            this.toolStripMenuItem3});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.MdiWindowListItem = this.windowsMenu;
             this.menuStrip.Name = "menuStrip";
@@ -771,7 +773,7 @@
             this.employeeLeave3DaysToolStripMenuItem});
             this.mnuReports.Name = "mnuReports";
             this.mnuReports.Size = new System.Drawing.Size(59, 20);
-            this.mnuReports.Text = "Reports";           
+            this.mnuReports.Text = "Reports";
             // 
             // tmiReportTimeAttendance
             // 
@@ -785,14 +787,14 @@
             // tmiReportLeaveWithoutPay
             // 
             this.tmiReportLeaveWithoutPay.Name = "tmiReportLeaveWithoutPay";
-            this.tmiReportLeaveWithoutPay.Size = new System.Drawing.Size(180, 22);
+            this.tmiReportLeaveWithoutPay.Size = new System.Drawing.Size(172, 22);
             this.tmiReportLeaveWithoutPay.Text = "Leave Without Pay";
             this.tmiReportLeaveWithoutPay.Click += new System.EventHandler(this.tmiReportLeaveWithoutPay_Click);
             // 
             // tmiReportOBApplication
             // 
             this.tmiReportOBApplication.Name = "tmiReportOBApplication";
-            this.tmiReportOBApplication.Size = new System.Drawing.Size(180, 22);
+            this.tmiReportOBApplication.Size = new System.Drawing.Size(172, 22);
             this.tmiReportOBApplication.Text = "OB Application";
             // 
             // employeeLeave3DaysToolStripMenuItem
@@ -2190,6 +2192,12 @@
             this.label5.TabIndex = 16;
             this.label5.Text = "Employees with zero balance";
             // 
+            // toolStripMenuItem3
+            // 
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(38, 20);
+            this.toolStripMenuItem3.Text = "test";
+            // 
             // mdiIpanema
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2466,6 +2474,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ToolStripMenuItem runTimeKeepingToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
     }
 }
 
