@@ -30,13 +30,13 @@
   {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mdiIpanema));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.mnuSystem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
@@ -225,7 +225,6 @@
             this.panel11 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.ssMain.SuspendLayout();
             this.tsMain.SuspendLayout();
@@ -284,8 +283,7 @@
             this.mnuSettings,
             this.windowsMenu,
             this.helpMenu,
-            this.runTimeKeepingToolStripMenuItem,
-            this.toolStripMenuItem3});
+            this.runTimeKeepingToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.MdiWindowListItem = this.windowsMenu;
             this.menuStrip.Name = "menuStrip";
@@ -315,7 +313,7 @@
             // 
             this.tmiLogout.Image = ((System.Drawing.Image)(resources.GetObject("tmiLogout.Image")));
             this.tmiLogout.Name = "tmiLogout";
-            this.tmiLogout.Size = new System.Drawing.Size(115, 22);
+            this.tmiLogout.Size = new System.Drawing.Size(180, 22);
             this.tmiLogout.Text = "Log out";
             this.tmiLogout.Click += new System.EventHandler(this.tmiLogout_Click);
             // 
@@ -1504,8 +1502,8 @@
             this.dgOffense.AllowUserToDeleteRows = false;
             this.dgOffense.AllowUserToOrderColumns = true;
             this.dgOffense.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.AliceBlue;
-            this.dgOffense.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.AliceBlue;
+            this.dgOffense.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dgOffense.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgOffense.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgOffense.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -1624,8 +1622,8 @@
             this.dgLeave.AllowUserToDeleteRows = false;
             this.dgLeave.AllowUserToOrderColumns = true;
             this.dgLeave.AllowUserToResizeRows = false;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.AliceBlue;
-            this.dgLeave.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.AliceBlue;
+            this.dgLeave.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
             this.dgLeave.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgLeave.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgLeave.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -1856,8 +1854,8 @@
             this.dgNotify1.AllowUserToAddRows = false;
             this.dgNotify1.AllowUserToDeleteRows = false;
             this.dgNotify1.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.AliceBlue;
-            this.dgNotify1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.AliceBlue;
+            this.dgNotify1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
             this.dgNotify1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgNotify1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dgNotify1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -1950,22 +1948,22 @@
             this.dgNotify.AllowUserToAddRows = false;
             this.dgNotify.AllowUserToDeleteRows = false;
             this.dgNotify.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.AliceBlue;
-            this.dgNotify.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.AliceBlue;
+            this.dgNotify.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
             this.dgNotify.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgNotify.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dgNotify.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgNotify.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.lastname,
             this.firname});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgNotify.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgNotify.DefaultCellStyle = dataGridViewCellStyle12;
             this.dgNotify.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgNotify.Location = new System.Drawing.Point(0, 27);
             this.dgNotify.Margin = new System.Windows.Forms.Padding(0);
@@ -2052,22 +2050,22 @@
             this.dgNotify2.AllowUserToAddRows = false;
             this.dgNotify2.AllowUserToDeleteRows = false;
             this.dgNotify2.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.AliceBlue;
-            this.dgNotify2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.AliceBlue;
+            this.dgNotify2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
             this.dgNotify2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgNotify2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dgNotify2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgNotify2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4});
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgNotify2.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgNotify2.DefaultCellStyle = dataGridViewCellStyle14;
             this.dgNotify2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgNotify2.Location = new System.Drawing.Point(0, 28);
             this.dgNotify2.Margin = new System.Windows.Forms.Padding(0);
@@ -2191,12 +2189,6 @@
             this.label5.Size = new System.Drawing.Size(194, 15);
             this.label5.TabIndex = 16;
             this.label5.Text = "Employees with zero balance";
-            // 
-            // toolStripMenuItem3
-            // 
-            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(38, 20);
-            this.toolStripMenuItem3.Text = "test";
             // 
             // mdiIpanema
             // 
@@ -2474,7 +2466,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ToolStripMenuItem runTimeKeepingToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
     }
 }
 
