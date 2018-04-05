@@ -26,21 +26,21 @@ namespace HRMS
 
   public void Fill()
   {
-   using (SqlConnection cn = new SqlConnection(HRMSCore.HrmsConnectionString))
-   {
-    SqlCommand cmd = cn.CreateCommand();
-    cmd.CommandText = "SELECT * FROM ACM.TimeCard WHERE transid='" + _strTransID + "'";
-    cn.Open();
-    SqlDataReader dr = cmd.ExecuteReader();
-    if (dr.Read())
-    {
-     _dteTDate = clsValidator.CheckDate(dr["TDate"].ToString());
-     _dteTTime = clsValidator.CheckDate(dr["TTime"].ToString());
-     _strEventID = dr["EventID"].ToString();
-     _strStaffID = dr["StaffID"].ToString();
-     _strDoor = dr["Door"].ToString();
-    }
-    dr.Close();
+       using (SqlConnection cn = new SqlConnection(HRMSCore.HrmsConnectionString))
+       {
+        SqlCommand cmd = cn.CreateCommand();
+        cmd.CommandText = "SELECT * FROM ACM.TimeCard WHERE transid='" + _strTransID + "'";
+        cn.Open();
+        SqlDataReader dr = cmd.ExecuteReader();
+        if (dr.Read())
+        {
+         _dteTDate = clsValidator.CheckDate(dr["TDate"].ToString());
+         _dteTTime = clsValidator.CheckDate(dr["TTime"].ToString());
+         _strEventID = dr["EventID"].ToString();
+         _strStaffID = dr["StaffID"].ToString();
+         _strDoor = dr["Door"].ToString();
+        }
+        dr.Close();
    }
   }
 

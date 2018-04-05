@@ -100,7 +100,6 @@
             this.tmiReportLeaveWithoutPay = new System.Windows.Forms.ToolStripMenuItem();
             this.tmiReportOBApplication = new System.Windows.Forms.ToolStripMenuItem();
             this.employeeLeave3DaysToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.timesheetProcessToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolsMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.tmiCalculator = new System.Windows.Forms.ToolStripMenuItem();
             this.tmiMSPaint = new System.Windows.Forms.ToolStripMenuItem();
@@ -291,6 +290,7 @@
             this.menuStrip.Size = new System.Drawing.Size(974, 24);
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "MenuStrip";
+            this.menuStrip.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip_ItemClicked);
             // 
             // mnuSystem
             // 
@@ -768,11 +768,10 @@
             // 
             this.mnuReports.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tmiReportTimeAttendance,
-            this.employeeLeave3DaysToolStripMenuItem,
-            this.timesheetProcessToolStripMenuItem});
+            this.employeeLeave3DaysToolStripMenuItem});
             this.mnuReports.Name = "mnuReports";
             this.mnuReports.Size = new System.Drawing.Size(59, 20);
-            this.mnuReports.Text = "Reports";
+            this.mnuReports.Text = "Reports";           
             // 
             // tmiReportTimeAttendance
             // 
@@ -786,14 +785,14 @@
             // tmiReportLeaveWithoutPay
             // 
             this.tmiReportLeaveWithoutPay.Name = "tmiReportLeaveWithoutPay";
-            this.tmiReportLeaveWithoutPay.Size = new System.Drawing.Size(172, 22);
+            this.tmiReportLeaveWithoutPay.Size = new System.Drawing.Size(180, 22);
             this.tmiReportLeaveWithoutPay.Text = "Leave Without Pay";
             this.tmiReportLeaveWithoutPay.Click += new System.EventHandler(this.tmiReportLeaveWithoutPay_Click);
             // 
             // tmiReportOBApplication
             // 
             this.tmiReportOBApplication.Name = "tmiReportOBApplication";
-            this.tmiReportOBApplication.Size = new System.Drawing.Size(172, 22);
+            this.tmiReportOBApplication.Size = new System.Drawing.Size(180, 22);
             this.tmiReportOBApplication.Text = "OB Application";
             // 
             // employeeLeave3DaysToolStripMenuItem
@@ -802,13 +801,6 @@
             this.employeeLeave3DaysToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
             this.employeeLeave3DaysToolStripMenuItem.Text = "Employee Approved Leave";
             this.employeeLeave3DaysToolStripMenuItem.Click += new System.EventHandler(this.employeeLeave3DaysToolStripMenuItem_Click);
-            // 
-            // timesheetProcessToolStripMenuItem
-            // 
-            this.timesheetProcessToolStripMenuItem.Name = "timesheetProcessToolStripMenuItem";
-            this.timesheetProcessToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
-            this.timesheetProcessToolStripMenuItem.Text = "Lates and Absences";
-            this.timesheetProcessToolStripMenuItem.Click += new System.EventHandler(this.timesheetProcessToolStripMenuItem_Click);
             // 
             // toolsMenu
             // 
@@ -2474,7 +2466,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ToolStripMenuItem runTimeKeepingToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem timesheetProcessToolStripMenuItem;
     }
 }
 

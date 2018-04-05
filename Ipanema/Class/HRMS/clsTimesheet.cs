@@ -444,6 +444,7 @@ namespace HRMS
    float fltAbsentUnit = 0;
    float fltLateUnit = 0;
    float fltUndertimeUnit = 0;
+   float flt_UndertimeUnit = 0;
    float fltTCUnit = 0;
    float fltOBUnit = 0;
    float fltExcessUnit = 0;
@@ -588,10 +589,10 @@ namespace HRMS
       fltLateUnit = GetLateUnit(strShiftMode, dteTimeIn, dteTimeOut, dteShiftIn, dteShiftHalf, dteShiftOut, dteShiftLate, dteShiftUndertime, fltLeaveAM, fltLeavePM);
      else
       fltLateUnit = 0;
-     if (fltLeavePM == 0)
-      fltUndertimeUnit = GetUndertimeUnit(strShiftMode, dteTimeIn, dteTimeOut, dteShiftIn, dteShiftOut, dteShiftUndertime, fltLeavePM);
-     else
-      fltUndertimeUnit = 0;
+                    if (fltLeavePM == 0)
+                        fltUndertimeUnit = GetUndertimeUnit(strShiftMode, dteTimeIn, dteTimeOut, dteShiftIn, dteShiftOut, dteShiftUndertime, fltLeavePM) + _GetUndertime(strShiftMode, dteTimeIn, dteTimeOut, dteShiftIn, dteShiftOut, dteShiftUndertime, fltLeavePM);  
+                    else
+                        fltUndertimeUnit = 0;
 
      fltTotalUnit = GetTimeAllUnit(dteTimeIn, dteTimeOut, dteShiftBreakStart, dteShiftBreakEnd);
      fltWorkUnit = GetWorkUnit(dteTimeIn, dteTimeOut, strShiftMode, dteShiftIn, dteShiftHalf, dteShiftOut, dteShiftBreakStart, dteShiftBreakEnd, dteShiftLate, dteShiftUndertime, fltLeaveAM, fltLeavePM);
@@ -699,13 +700,27 @@ namespace HRMS
      {
       ts.Username = strUsername;
       ts.FocusDate = dteFocusDate;
+
       ts.TimeIn = dteTimeIn;
       ts.TimeOut = dteTimeOut;
+
       ts.ShiftCode = strShiftCode;
       ts.ShiftIn = dteShiftIn;
       ts.ShiftOut = dteShiftOut;
+
+                        //ADDED by calvin April 4, 2018//
+                        //// Removing 1 hr work time for lunchbreak ////
+                        if ((float)Math.Round(fltWorkUnit, 2) > 1)
+                        {
+
+                            ts.WorkUnit = (float)Math.Round(fltWorkUnit, 2) - 1;
+                        }
+                        else
+                        {
+                            ts.WorkUnit = (float)Math.Round(fltWorkUnit, 2);
+                        }
+                       
       ts.TotalUnit = (float)Math.Round(fltTotalUnit, 2);
-      ts.WorkUnit = (float)Math.Round(fltWorkUnit, 2);
       ts.AbsentUnit = (float)Math.Round(fltAbsentUnit, 2);
       ts.LeaveWithPay = (float)Math.Round(fltLeaveWithPay, 2);
       ts.LeaveWithoutPay = (float)Math.Round(fltLeaveWithOutPay, 2);
@@ -1681,6 +1696,29 @@ namespace HRMS
    return (float)Math.Round(fltReturn, RoundDecimal);
   }
 
+ //added by calvin April 4, 2018
+ //(8:00-8:15) 15 MINS TIME IF NOT OFFSET TO TIMEOUT WILL BE CONSIDER AS UNDERTIME
+ private static float _GetUndertime(string pShiftMode, DateTime pTimeIn, DateTime pTimeOut, DateTime pShiftIn, DateTime pShiftOut, DateTime pShiftUndertime, float pLeavePM)
+ {
+    float fltReturn = 0;
+    float fltTimein = 0;
+    float fltTimeout=0;
+
+    if (pShiftMode == "W")
+    {
+       if(pTimeIn>pShiftIn ) {
+
+        fltTimeout = clsDateTime.DateDiff(pDateFormat.Hour, clsDateTime.RemoveSeconds(pShiftOut), pTimeOut);    
+        fltTimein = clsDateTime.DateDiff(pDateFormat.Hour, clsDateTime.RemoveSeconds(pShiftIn), pTimeIn);
+
+                    if (fltTimein > fltTimeout && fltTimein < 0.27 && pTimeOut>=pShiftOut && fltTimeout< 0.27) {
+                        fltReturn = fltTimein - fltTimeout;
+                    }
+       }       
+    }
+    return (float)Math.Round(fltReturn, RoundDecimal);
+ }
+
   private static float GetExcess(string pShiftMode, DateTime pTimeIn, DateTime pTimeOut, DateTime pShiftIn, DateTime pShiftOut)
   {
    float fltReturn = 0;
@@ -1693,6 +1731,7 @@ namespace HRMS
    }
    return fltReturn;
   }
+ 
 
   //private static float GetOverTimeUnit(DataTable ptblOvertimeApplications, DateTime pTimeIn, DateTime pTimeOut)
   //{

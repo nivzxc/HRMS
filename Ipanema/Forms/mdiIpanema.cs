@@ -506,10 +506,11 @@ namespace Ipanema.Forms
   }
 
   private void employeeLeave3DaysToolStripMenuItem_Click(object sender, EventArgs e)
-  {
-      frmLeave3DayOffence objfrmLeave3offense = new frmLeave3DayOffence();
-      objfrmLeave3offense.MdiParent = this;
-      objfrmLeave3offense.Show();
+  {      
+
+      //frmLeave3DayOffence objfrmLeave3offense = new frmLeave3DayOffence();
+      //objfrmLeave3offense.MdiParent = this;
+      //objfrmLeave3offense.Show();
   }
 
   private void btnClose_Click_2(object sender, EventArgs e)
@@ -639,18 +640,17 @@ namespace Ipanema.Forms
                 employee_log.Show();
             }
             else { MessageBox.Show("Time Keeping Application is currently running, Please close it first before running it again", "Application Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
-        }
-
-        private void timesheetProcessToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmTimesheetReport pform = new frmTimesheetReport();
-            pform.MdiParent = this;
-            pform.Show();
-        }
+        }             
 
         private void pnlLeft_Paint(object sender, PaintEventArgs e)
         {
 
+        }      
+
+        private void menuStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
+       
     } 
 }
