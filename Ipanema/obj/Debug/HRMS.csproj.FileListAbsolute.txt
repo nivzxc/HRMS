@@ -170,3 +170,4 @@ C:\Users\Administrator\Documents\Files\System-under-revision\HRMS\Ipanema\bin\De
 C:\Users\Administrator\Documents\Files\System-under-revision\HRMS\Ipanema\bin\Debug\PdfSharp-WPF.dll
 C:\Users\Administrator\Documents\Files\System-under-revision\HRMS\Ipanema\bin\Debug\PdfSharp-WPF.resources.dll
 C:\Users\Administrator\Documents\Files\System-under-revision\HRMS\Ipanema\bin\Debug\PdfSharp.Charting-WPF.dll
+C:\Users\Administrator\Documents\Files\System-under-revision\HRMS\Ipanema\obj\Debug\Ipanema.Forms.frmOvertimeSummaryReport.resources

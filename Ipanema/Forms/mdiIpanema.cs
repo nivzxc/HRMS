@@ -651,6 +651,19 @@ namespace Ipanema.Forms
         {
 
         }
-       
+
+        private void lateAndAbsencesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmTimesheetReport timesheet_report = new frmTimesheetReport();
+            timesheet_report.MdiParent = this;
+            timesheet_report.Show();
+        }
+
+        private void overtimeSummaryReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmOvertimeSummaryReport ot_report = new frmOvertimeSummaryReport();
+            ot_report.MdiParent = this;
+            ot_report.Show();
+        }
     } 
 }

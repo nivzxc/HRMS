@@ -138,6 +138,8 @@ namespace Ipanema.Forms
         private void frmTimesheetReport_Load(object sender, EventArgs e)
         {   
             this.WindowState = FormWindowState.Maximized;
+            dtpFrom.Value = DateTime.Now;
+            dtpTo.Value = DateTime.Now;
         }
     }
 }
