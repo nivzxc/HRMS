@@ -197,10 +197,10 @@ namespace HRMS
             table2.Borders.Right.Width = 0.5;
             table2.Rows.LeftIndent = 0;
 
-            Column column1 = table2.AddColumn("1cm");
+            Column column1 = table2.AddColumn("2cm");
             column1.Format.Alignment = ParagraphAlignment.Center;
 
-            column1 = table2.AddColumn("4cm");
+            column1 = table2.AddColumn("3cm");
             column1.Format.Alignment = ParagraphAlignment.Center;
 
             column1 = table2.AddColumn("2cm");
@@ -283,8 +283,8 @@ namespace HRMS
                 contents.Cells[0].AddParagraph(empNum[i]);
                 contents.Cells[0].Format.Font.Bold = false;
                 contents.Cells[0].Format.Font.Size = 7;
-                contents.Cells[0].Format.Alignment = ParagraphAlignment.Right;
-                contents.Cells[0].VerticalAlignment = VerticalAlignment.Bottom;
+                contents.Cells[0].Format.Alignment = ParagraphAlignment.Left;
+                contents.Cells[0].VerticalAlignment = VerticalAlignment.Center;
 
                 contents.Cells[1].AddParagraph(empName[i]);
                 contents.Cells[1].Format.Font.Bold = false;

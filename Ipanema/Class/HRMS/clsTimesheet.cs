@@ -1215,16 +1215,30 @@ namespace HRMS
             }
             return _dates;
   }
+  //ADDED BY CALVIN CAVITE 3/26/2018
+  //FOR LATER & ABSENCES SUMMARY REPORT
   public static DataTable TimesheetReport(DateTime dtFrom, DateTime dtTo)
   {
             DataTable tblReturn = new DataTable();
             using (SqlConnection cn = new SqlConnection(HRMSCore.HrmsConnectionString))
             {
                 SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = "select HR.Employees.username AS EMPLOYEE_USER, HR.Employees.empnum AS EMPLOYEE_NUM, HR.Employees.firname +' '+HR.Employees.lastname as EMPLOYEE_NAME,SUM(ttalunit) as TOTAL_WORK_HR, sum(lateunit) as TOTAL_LATE, sum(absunit) as TOTAL_ABSENT, sum(undrunit) AS TOTAL_UNDERTIME, sum(lwithpay) as LV_W_PAY, sum(lwoutpay) as LV_NO_PAY, sum(obunit) as TOTAL_OB_UNIT, sum(xcssunit) as TOTAL_HR_EXCESS " +
-                                  "from HR.TimeSheet INNER JOIN HR.Employees ON HR.TimeSheet.username = HR.Employees.username where HR.TimeSheet.focsdate between '"+dtFrom+"' and '"+dtTo+ "' group by HR.Employees.empnum, HR.employees.firname, HR.Employees.lastname, HR.Employees.username";
+                cmd.CommandText = "select HR.EmployeeCluster.cluscode as CLUSTER, HR.Employees.username AS EMPLOYEE_USER, HR.Employees.empnum AS EMPLOYEE_NUM, HR.Employees.firname +' '+HR.Employees.lastname as EMPLOYEE_NAME,SUM(ttalunit) as TOTAL_WORK_HR, sum(lateunit) as TOTAL_LATE, sum(absunit) as TOTAL_ABSENT, sum(undrunit) AS TOTAL_UNDERTIME, sum(lwithpay) as LV_W_PAY, sum(lwoutpay) as LV_NO_PAY, sum(obunit) as TOTAL_OB_UNIT, sum(xcssunit) as TOTAL_HR_EXCESS from HR.TimeSheet INNER JOIN HR.Employees ON HR.TimeSheet.username = HR.Employees.username INNER JOIN HR.EmployeeCluster on HR.EmployeeCluster.username=HR.Employees.username where HR.TimeSheet.focsdate between '"+dtFrom+"' and '"+dtTo+"' group by HR.Employees.empnum, HR.employees.firname, HR.Employees.lastname, HR.Employees.username, HR.EmployeeCluster.cluscode";
                 SqlDataAdapter dr = new SqlDataAdapter(cmd);
                 dr.Fill(tblReturn);
+            }
+            return tblReturn;
+  }
+  public static DataTable OvertimeReport(DateTime dtFrom, DateTime dtTo)
+  {
+            DataTable tblReturn = new DataTable();
+            using (SqlConnection cn = new SqlConnection(HRMSCore.HrmsConnectionString))
+            {
+                SqlCommand cmd = cn.CreateCommand();
+                cmd.CommandText = "SELECT HR.EmployeeCluster.cluscode as CLUSTER, HR.Employees.empnum as EMP_NO, HR.Employees.firname as first_name, HR.Employees.lastname as last_name, sum(HR.TimeSheet.reguxcss) as REG_OT, sum(HR.TimeSheet.regunght) AS REG_ND, sum(HR.TimeSheet.restover) AS RESTD_OT, sum(HR.TimeSheet.restnght) AS RESTD_ND, sum(HR.TimeSheet.spclover) as SPECIAL_NONW_OT, sum(HR.TimeSheet.spclnght) as SPECIAL_NONW_ND, sum(HR.TimeSheet.leglover) as REG_HOLIDAY_OT, sum(HR.TimeSheet.leglnght) as REG_HOLIDAY_ND " +
+                                 " FROM HR.TimeSheet INNER JOIN HR.Employees ON HR.TimeSheet.username=HR.Employees.username INNER JOIN HR.EmployeeCluster ON HR.Employees.username = HR.EmployeeCluster.username WHERE HR.TimeSheet.focsdate between '" + dtFrom + "' and '" + dtTo + "' group by HR.Employees.firname , HR.Employees.lastname, HR.Employees.empnum, HR.EmployeeCluster.cluscode";
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(tblReturn);
             }
             return tblReturn;
   }
