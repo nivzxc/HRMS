@@ -280,7 +280,7 @@
             // columnHeader2
             // 
             this.columnHeader2.Text = "EMPLOYEE NAME";
-            this.columnHeader2.Width = 331;
+            this.columnHeader2.Width = 293;
             // 
             // columnHeader3
             // 

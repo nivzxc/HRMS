@@ -40,7 +40,6 @@ namespace Ipanema.Forms
                 var totalut_min = new List<string>();
                 var render_date = new List<string>();
 
-                DataTable tblTimesheet = clsTimesheet.TimesheetReport(dtpFrom.Value, dtpTo.Value);
 
 
 
@@ -63,7 +62,7 @@ namespace Ipanema.Forms
                 pdfrender.Document = document;
                 pdfrender.RenderDocument();
 
-                const string filename = "testPDF.pdf";
+                const string filename = "Late_and_Absences_SUMMARY.pdf";
                 pdfrender.PdfDocument.Save(filename);
                 Process.Start(filename);
             }

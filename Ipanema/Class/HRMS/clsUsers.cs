@@ -153,7 +153,23 @@ namespace HRMS
    }
    return tblReturn;
   }
-
+  public static string getLoginDetails(string UserNM)
+  {
+   string ReturnDetails="";
+            using (SqlConnection cn = new SqlConnection(HRMSCore.HrmsConnectionString))
+            {
+                SqlCommand cmd = cn.CreateCommand();
+                cmd.CommandText="SELECT firname + ' ' + lastname AS USER_DETAILS FROM Users.Users WHERE username ='"+UserNM+"'";
+                cn.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr.Read()) {
+                    ReturnDetails = dr["USER_DETAILS"].ToString();
+                }
+                dr.Close();
+                cn.Close();
+            }
+             return ReturnDetails;
+  }
   public static DataTable GetDSLStatusAll()
   {
    DataTable tblReturn = new DataTable();
