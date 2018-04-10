@@ -40,11 +40,11 @@ namespace Ipanema.Forms
                 var totalut_min = new List<string>();
                 var render_date = new List<string>();
 
-                DataTable tblTimesheet = clsTimesheet.TimesheetReport(dtpFrom.Value, dtpTo.Value);
+
+
 
                 foreach (ListViewItem items in listView1.Items)
                 {
-
                     empNum.Add(items.SubItems[0].Text);
                     empName.Add(items.SubItems[1].Text);
                     totalabs.Add(items.SubItems[2].Text);
@@ -62,7 +62,7 @@ namespace Ipanema.Forms
                 pdfrender.Document = document;
                 pdfrender.RenderDocument();
 
-                const string filename = "testPDF.pdf";
+                const string filename = "Late_and_Absences_SUMMARY.pdf";
                 pdfrender.PdfDocument.Save(filename);
                 Process.Start(filename);
             }
@@ -87,57 +87,59 @@ namespace Ipanema.Forms
         {
             DataTable tblTimesheet = clsTimesheet.TimesheetReport(dtpFrom.Value,dtpTo.Value);
             listView1.Items.Clear();
-            foreach (DataRow rows in tblTimesheet.Rows)
-            {
-                var late_in_mins = float.Parse(rows["TOTAL_LATE"].ToString()) - Math.Truncate(float.Parse(rows["TOTAL_LATE"].ToString()));
-                late_in_mins = late_in_mins * 60;
-                var late_mins = decimal.Truncate(decimal.Parse(late_in_mins.ToString()));
-                var late_in_hrs = decimal.Truncate(decimal.Parse(rows["TOTAL_LATE"].ToString()));
+            DataTable tblCluster = clsCluster.GetDdlDs();
 
-                var undertime_in_mins = float.Parse(rows["TOTAL_UNDERTIME"].ToString()) - Math.Truncate(float.Parse(rows["TOTAL_UNDERTIME"].ToString()));
-                undertime_in_mins = undertime_in_mins * 60;
-                var ut_mins = decimal.Truncate(decimal.Parse(undertime_in_mins.ToString()));
-                var undertime_in_hrs = decimal.Truncate(decimal.Parse(rows["TOTAL_UNDERTIME"].ToString()));
+            foreach (DataRow cluster_row in tblCluster.Rows) {
+                ListViewItem branchName = new ListViewItem(cluster_row["ptext"].ToString());
+                branchName.Font = new System.Drawing.Font(branchName.Font, FontStyle.Bold);
+                branchName.BackColor = System.Drawing.Color.WhiteSmoke;
+                branchName.ForeColor = System.Drawing.Color.Black;
+                branchName.SubItems.Add("");
+                branchName.SubItems.Add("");
+                branchName.SubItems.Add(""); 
+                branchName.SubItems.Add(""); 
+                branchName.SubItems.Add(""); 
+                branchName.SubItems.Add(""); 
+                branchName.SubItems.Add("");
+                listView1.Items.Add(branchName);
 
-                ListViewItem item = new ListViewItem(rows["EMPLOYEE_NUM"].ToString());
-                item.SubItems.Add(rows["EMPLOYEE_NAME"].ToString());
-                item.SubItems.Add(rows["TOTAL_ABSENT"].ToString());
-                item.SubItems.Add(late_in_hrs.ToString()); // late in hrs
-                item.SubItems.Add(late_mins.ToString()); // late in mins
-                item.SubItems.Add(undertime_in_hrs.ToString()); // undertime in hrs
-                item.SubItems.Add(ut_mins.ToString()); // undertime in mins
-                item.SubItems.Add(clsTimesheet.getDates(rows["EMPLOYEE_USER"].ToString(),dtpFrom.Value,dtpTo.Value));
-                listView1.Items.Add(item);
+                foreach (DataRow rows in tblTimesheet.Rows)
+                {
+                    if (cluster_row["pvalue"].ToString() == rows["CLUSTER"].ToString())
+                    {
+                        var late_in_mins = float.Parse(rows["TOTAL_LATE"].ToString()) - Math.Truncate(float.Parse(rows["TOTAL_LATE"].ToString()));
+                        late_in_mins = late_in_mins * 60;
+                        var late_mins = decimal.Truncate(decimal.Parse(late_in_mins.ToString()));
+                        var late_in_hrs = decimal.Truncate(decimal.Parse(rows["TOTAL_LATE"].ToString()));
 
-            }           
+                        var undertime_in_mins = float.Parse(rows["TOTAL_UNDERTIME"].ToString()) - Math.Truncate(float.Parse(rows["TOTAL_UNDERTIME"].ToString()));
+                        undertime_in_mins = undertime_in_mins * 60;
+                        var ut_mins = decimal.Truncate(decimal.Parse(undertime_in_mins.ToString()));
+                        var undertime_in_hrs = decimal.Truncate(decimal.Parse(rows["TOTAL_UNDERTIME"].ToString()));
 
-            //dataGridView1.DataSource = tblTimesheet;
-            //dataGridView1.Columns[0].DataPropertyName = "EMPLOYEE_NUM";
-            //dataGridView1.Columns[1].DataPropertyName = "EMPLOYEE_NAME";
+                        ListViewItem item = new ListViewItem(rows["EMPLOYEE_NUM"].ToString());
+                        item.SubItems.Add(rows["EMPLOYEE_NAME"].ToString());
+                        item.SubItems.Add(rows["TOTAL_ABSENT"].ToString());
+                        item.SubItems.Add(late_in_hrs.ToString()); // late in hrs
+                        item.SubItems.Add(late_mins.ToString()); // late in mins
+                        item.SubItems.Add(undertime_in_hrs.ToString()); // undertime in hrs
+                        item.SubItems.Add(ut_mins.ToString()); // undertime in mins
+                        item.SubItems.Add(clsTimesheet.getDates(rows["EMPLOYEE_USER"].ToString(), dtpFrom.Value, dtpTo.Value));
+                        listView1.Items.Add(item);
 
-            ////absent
-            //dataGridView1.Columns[2].DataPropertyName = "TOTAL_ABSENT";
-            
-            ////tardiness
-            //dataGridView1.Columns[3].DataPropertyName = "TOTAL_LATE";
-            //dataGridView1.Columns[4].DataPropertyName = "TOTAL_LATE";
+                    }
+                }
 
 
-
-            ////Undertime
-            //dataGridView1.Columns[5].DataPropertyName = "TOTAL_UNDERTIME";
-            //dataGridView1.Columns[6].DataPropertyName = "";
-
-            //dataGridView1.Columns[6].DataPropertyName = "LV_W_PAY";
-            //dataGridView1.Columns[7].DataPropertyName = "LV_NO_PAY";
-            //dataGridView1.Columns[8].DataPropertyName = "TOTAL_OB_UNIT";
-            //dataGridView1.Columns[9].DataPropertyName = "TOTAL_HR_EXCESS";
+            }
 
         }
 
         private void frmTimesheetReport_Load(object sender, EventArgs e)
         {   
             this.WindowState = FormWindowState.Maximized;
+            dtpFrom.Value = DateTime.Now;
+            dtpTo.Value = DateTime.Now;
         }
     }
 }

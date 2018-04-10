@@ -444,6 +444,7 @@ namespace HRMS
    float fltAbsentUnit = 0;
    float fltLateUnit = 0;
    float fltUndertimeUnit = 0;
+   float flt_UndertimeUnit = 0;
    float fltTCUnit = 0;
    float fltOBUnit = 0;
    float fltExcessUnit = 0;
@@ -588,10 +589,10 @@ namespace HRMS
       fltLateUnit = GetLateUnit(strShiftMode, dteTimeIn, dteTimeOut, dteShiftIn, dteShiftHalf, dteShiftOut, dteShiftLate, dteShiftUndertime, fltLeaveAM, fltLeavePM);
      else
       fltLateUnit = 0;
-     if (fltLeavePM == 0)
-      fltUndertimeUnit = GetUndertimeUnit(strShiftMode, dteTimeIn, dteTimeOut, dteShiftIn, dteShiftOut, dteShiftUndertime, fltLeavePM);
-     else
-      fltUndertimeUnit = 0;
+                    if (fltLeavePM == 0)
+                        fltUndertimeUnit = GetUndertimeUnit(strShiftMode, dteTimeIn, dteTimeOut, dteShiftIn, dteShiftOut, dteShiftUndertime, fltLeavePM) + _GetUndertime(strShiftMode, dteTimeIn, dteTimeOut, dteShiftIn, dteShiftOut, dteShiftUndertime, fltLeavePM);  
+                    else
+                        fltUndertimeUnit = 0;
 
      fltTotalUnit = GetTimeAllUnit(dteTimeIn, dteTimeOut, dteShiftBreakStart, dteShiftBreakEnd);
      fltWorkUnit = GetWorkUnit(dteTimeIn, dteTimeOut, strShiftMode, dteShiftIn, dteShiftHalf, dteShiftOut, dteShiftBreakStart, dteShiftBreakEnd, dteShiftLate, dteShiftUndertime, fltLeaveAM, fltLeavePM);
@@ -699,13 +700,27 @@ namespace HRMS
      {
       ts.Username = strUsername;
       ts.FocusDate = dteFocusDate;
+
       ts.TimeIn = dteTimeIn;
       ts.TimeOut = dteTimeOut;
+
       ts.ShiftCode = strShiftCode;
       ts.ShiftIn = dteShiftIn;
       ts.ShiftOut = dteShiftOut;
+
+                        //ADDED by calvin April 4, 2018//
+                        //// Removing 1 hr work time for lunchbreak ////
+                        if ((float)Math.Round(fltWorkUnit, 2) > 1)
+                        {
+
+                            ts.WorkUnit = (float)Math.Round(fltWorkUnit, 2) - 1;
+                        }
+                        else
+                        {
+                            ts.WorkUnit = (float)Math.Round(fltWorkUnit, 2);
+                        }
+                       
       ts.TotalUnit = (float)Math.Round(fltTotalUnit, 2);
-      ts.WorkUnit = (float)Math.Round(fltWorkUnit, 2);
       ts.AbsentUnit = (float)Math.Round(fltAbsentUnit, 2);
       ts.LeaveWithPay = (float)Math.Round(fltLeaveWithPay, 2);
       ts.LeaveWithoutPay = (float)Math.Round(fltLeaveWithOutPay, 2);
@@ -1200,16 +1215,30 @@ namespace HRMS
             }
             return _dates;
   }
+  //ADDED BY CALVIN CAVITE 3/26/2018
+  //FOR LATER & ABSENCES SUMMARY REPORT
   public static DataTable TimesheetReport(DateTime dtFrom, DateTime dtTo)
   {
             DataTable tblReturn = new DataTable();
             using (SqlConnection cn = new SqlConnection(HRMSCore.HrmsConnectionString))
             {
                 SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = "select HR.Employees.username AS EMPLOYEE_USER, HR.Employees.empnum AS EMPLOYEE_NUM, HR.Employees.firname +' '+HR.Employees.lastname as EMPLOYEE_NAME,SUM(ttalunit) as TOTAL_WORK_HR, sum(lateunit) as TOTAL_LATE, sum(absunit) as TOTAL_ABSENT, sum(undrunit) AS TOTAL_UNDERTIME, sum(lwithpay) as LV_W_PAY, sum(lwoutpay) as LV_NO_PAY, sum(obunit) as TOTAL_OB_UNIT, sum(xcssunit) as TOTAL_HR_EXCESS " +
-                                  "from HR.TimeSheet INNER JOIN HR.Employees ON HR.TimeSheet.username = HR.Employees.username where HR.TimeSheet.focsdate between '"+dtFrom+"' and '"+dtTo+ "' group by HR.Employees.empnum, HR.employees.firname, HR.Employees.lastname, HR.Employees.username";
+                cmd.CommandText = "select HR.EmployeeCluster.cluscode as CLUSTER, HR.Employees.username AS EMPLOYEE_USER, HR.Employees.empnum AS EMPLOYEE_NUM, HR.Employees.firname +' '+HR.Employees.lastname as EMPLOYEE_NAME,SUM(ttalunit) as TOTAL_WORK_HR, sum(lateunit) as TOTAL_LATE, sum(absunit) as TOTAL_ABSENT, sum(undrunit) AS TOTAL_UNDERTIME, sum(lwithpay) as LV_W_PAY, sum(lwoutpay) as LV_NO_PAY, sum(obunit) as TOTAL_OB_UNIT, sum(xcssunit) as TOTAL_HR_EXCESS from HR.TimeSheet INNER JOIN HR.Employees ON HR.TimeSheet.username = HR.Employees.username INNER JOIN HR.EmployeeCluster on HR.EmployeeCluster.username=HR.Employees.username where HR.TimeSheet.focsdate between '"+dtFrom+"' and '"+dtTo+"' group by HR.Employees.empnum, HR.employees.firname, HR.Employees.lastname, HR.Employees.username, HR.EmployeeCluster.cluscode";
                 SqlDataAdapter dr = new SqlDataAdapter(cmd);
                 dr.Fill(tblReturn);
+            }
+            return tblReturn;
+  }
+  public static DataTable OvertimeReport(DateTime dtFrom, DateTime dtTo)
+  {
+            DataTable tblReturn = new DataTable();
+            using (SqlConnection cn = new SqlConnection(HRMSCore.HrmsConnectionString))
+            {
+                SqlCommand cmd = cn.CreateCommand();
+                cmd.CommandText = "SELECT HR.EmployeeCluster.cluscode as CLUSTER, HR.Employees.empnum as EMP_NO, HR.Employees.firname as first_name, HR.Employees.lastname as last_name, sum(HR.TimeSheet.reguxcss) as REG_OT, sum(HR.TimeSheet.regunght) AS REG_ND, sum(HR.TimeSheet.restover) AS RESTD_OT, sum(HR.TimeSheet.restnght) AS RESTD_ND, sum(HR.TimeSheet.spclover) as SPECIAL_NONW_OT, sum(HR.TimeSheet.spclnght) as SPECIAL_NONW_ND, sum(HR.TimeSheet.leglover) as REG_HOLIDAY_OT, sum(HR.TimeSheet.leglnght) as REG_HOLIDAY_ND " +
+                                 " FROM HR.TimeSheet INNER JOIN HR.Employees ON HR.TimeSheet.username=HR.Employees.username INNER JOIN HR.EmployeeCluster ON HR.Employees.username = HR.EmployeeCluster.username WHERE HR.TimeSheet.focsdate between '" + dtFrom + "' and '" + dtTo + "' group by HR.Employees.firname , HR.Employees.lastname, HR.Employees.empnum, HR.EmployeeCluster.cluscode";
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(tblReturn);
             }
             return tblReturn;
   }
@@ -1681,6 +1710,29 @@ namespace HRMS
    return (float)Math.Round(fltReturn, RoundDecimal);
   }
 
+ //added by calvin April 4, 2018
+ //(8:00-8:15) 15 MINS TIME IF NOT OFFSET TO TIMEOUT WILL BE CONSIDER AS UNDERTIME
+ private static float _GetUndertime(string pShiftMode, DateTime pTimeIn, DateTime pTimeOut, DateTime pShiftIn, DateTime pShiftOut, DateTime pShiftUndertime, float pLeavePM)
+ {
+    float fltReturn = 0;
+    float fltTimein = 0;
+    float fltTimeout=0;
+
+    if (pShiftMode == "W")
+    {
+       if(pTimeIn>pShiftIn ) {
+
+        fltTimeout = clsDateTime.DateDiff(pDateFormat.Hour, clsDateTime.RemoveSeconds(pShiftOut), pTimeOut);    
+        fltTimein = clsDateTime.DateDiff(pDateFormat.Hour, clsDateTime.RemoveSeconds(pShiftIn), pTimeIn);
+
+                    if (fltTimein > fltTimeout && fltTimein < 0.27 && pTimeOut>=pShiftOut && fltTimeout< 0.27) {
+                        fltReturn = fltTimein - fltTimeout;
+                    }
+       }       
+    }
+    return (float)Math.Round(fltReturn, RoundDecimal);
+ }
+
   private static float GetExcess(string pShiftMode, DateTime pTimeIn, DateTime pTimeOut, DateTime pShiftIn, DateTime pShiftOut)
   {
    float fltReturn = 0;
@@ -1693,6 +1745,7 @@ namespace HRMS
    }
    return fltReturn;
   }
+ 
 
   //private static float GetOverTimeUnit(DataTable ptblOvertimeApplications, DateTime pTimeIn, DateTime pTimeOut)
   //{

@@ -196,6 +196,25 @@ namespace HRMS
    }
    return tblReturn;
   }
+  
+        //ADDED BY CALVIN CAVITE DATE: 4/10/2018
+  public static string getClusterName(string clustname) 
+  {
+            string clustName = "";
+            using (SqlConnection cn = new SqlConnection(HRMSCore.HrmsConnectionString)) {
+                SqlCommand cmd = cn.CreateCommand();
+                cmd.CommandText = "SELECT clusname FROM HR.Cluster WHERE clusname='" + clustname + "'";
+                cn.Open();
+                SqlDataReader dr = cmd.ExecuteReader();                
+                if (dr.Read())
+                {
+                    clustName = dr["clusname"].ToString();
+                }
+                dr.Close();
+                cn.Close();
+            }
+            return clustName;
+  }
 
  }
 }

@@ -64,6 +64,21 @@ public static class clsDateTime
   return fltReturn;
  }
 
+    // ADDED by calvin cavite DATE: 4/10/2018
+ public static float convert_min(string units)
+ {
+        float fltReturn = 0;
+        float hrs = (float)(Math.Truncate(float.Parse(units)));
+        float mins =0;
+        float actual_time = 0;
+
+        mins = float.Parse(units) - (hrs);
+        mins = (mins * 60)/100 ;
+        actual_time = hrs + mins;
+        fltReturn = (float)Math.Round(actual_time,2);
+
+        return fltReturn;
+ }
  public static DateTime CombineDateTime(DateTime pDate, DateTime pTime)
  {
   return new DateTime(pDate.Year, pDate.Month, pDate.Day, pTime.Hour, pTime.Minute, pTime.Second);

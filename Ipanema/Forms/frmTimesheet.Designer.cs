@@ -232,9 +232,9 @@
             this.dtpTo.CustomFormat = "MMM dd, yyyy";
             this.dtpTo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpTo.Location = new System.Drawing.Point(206, 76);
+            this.dtpTo.Location = new System.Drawing.Point(239, 77);
             this.dtpTo.Name = "dtpTo";
-            this.dtpTo.Size = new System.Drawing.Size(99, 21);
+            this.dtpTo.Size = new System.Drawing.Size(131, 21);
             this.dtpTo.TabIndex = 3;
             this.dtpTo.Value = new System.DateTime(2015, 11, 5, 23, 59, 0, 0);
             this.dtpTo.ValueChanged += new System.EventHandler(this.dtpTo_ValueChanged);
@@ -257,7 +257,7 @@
             this.dtpFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpFrom.Location = new System.Drawing.Point(84, 76);
             this.dtpFrom.Name = "dtpFrom";
-            this.dtpFrom.Size = new System.Drawing.Size(99, 21);
+            this.dtpFrom.Size = new System.Drawing.Size(131, 21);
             this.dtpFrom.TabIndex = 2;
             this.dtpFrom.Value = new System.DateTime(2015, 11, 5, 0, 1, 0, 0);
             this.dtpFrom.ValueChanged += new System.EventHandler(this.dtpFrom_ValueChanged);
@@ -267,7 +267,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(188, 79);
+            this.label5.Location = new System.Drawing.Point(221, 81);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(17, 15);
             this.label5.TabIndex = 6;
