@@ -170,10 +170,12 @@
             this.txtEmployeeNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmployeeNumber.Location = new System.Drawing.Point(95, 17);
             this.txtEmployeeNumber.Name = "txtEmployeeNumber";
-            this.txtEmployeeNumber.ReadOnly = true;
             this.txtEmployeeNumber.Size = new System.Drawing.Size(90, 21);
             this.txtEmployeeNumber.TabIndex = 0;
             this.txtEmployeeNumber.TabStop = false;
+            this.txtEmployeeNumber.TextChanged += new System.EventHandler(this.txtEmployeeNumber_TextChanged);
+            this.txtEmployeeNumber.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtEmployeeNumber_KeyDown);
+            this.txtEmployeeNumber.Leave += new System.EventHandler(this.txtEmployeeNumber_Leave);
             // 
             // label2
             // 
@@ -489,10 +491,11 @@
             this.cmbDivision.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDivision.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbDivision.FormattingEnabled = true;
-            this.cmbDivision.Location = new System.Drawing.Point(578, 196);
+            this.cmbDivision.Location = new System.Drawing.Point(578, 167);
             this.cmbDivision.Name = "cmbDivision";
             this.cmbDivision.Size = new System.Drawing.Size(320, 23);
             this.cmbDivision.TabIndex = 15;
+            this.cmbDivision.SelectedIndexChanged += new System.EventHandler(this.cmbDivision_SelectedIndexChanged);
             // 
             // cmbRC
             // 
@@ -511,7 +514,7 @@
             this.label60.AutoSize = true;
             this.label60.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label60.ForeColor = System.Drawing.Color.Black;
-            this.label60.Location = new System.Drawing.Point(491, 204);
+            this.label60.Location = new System.Drawing.Point(491, 175);
             this.label60.Name = "label60";
             this.label60.Size = new System.Drawing.Size(53, 15);
             this.label60.TabIndex = 29;
@@ -533,7 +536,7 @@
             this.label61.AutoSize = true;
             this.label61.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label61.ForeColor = System.Drawing.Color.Black;
-            this.label61.Location = new System.Drawing.Point(491, 232);
+            this.label61.Location = new System.Drawing.Point(491, 204);
             this.label61.Name = "label61";
             this.label61.Size = new System.Drawing.Size(44, 15);
             this.label61.TabIndex = 31;
@@ -545,7 +548,7 @@
             this.cmbDepartment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDepartment.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbDepartment.FormattingEnabled = true;
-            this.cmbDepartment.Location = new System.Drawing.Point(578, 167);
+            this.cmbDepartment.Location = new System.Drawing.Point(577, 225);
             this.cmbDepartment.Name = "cmbDepartment";
             this.cmbDepartment.Size = new System.Drawing.Size(321, 23);
             this.cmbDepartment.TabIndex = 16;
@@ -556,17 +559,18 @@
             this.cmbGroup.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbGroup.FormattingEnabled = true;
-            this.cmbGroup.Location = new System.Drawing.Point(578, 224);
+            this.cmbGroup.Location = new System.Drawing.Point(578, 196);
             this.cmbGroup.Name = "cmbGroup";
             this.cmbGroup.Size = new System.Drawing.Size(320, 23);
             this.cmbGroup.TabIndex = 23;
+            this.cmbGroup.SelectedIndexChanged += new System.EventHandler(this.cmbGroup_SelectedIndexChanged);
             // 
             // label62
             // 
             this.label62.AutoSize = true;
             this.label62.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label62.ForeColor = System.Drawing.Color.Black;
-            this.label62.Location = new System.Drawing.Point(491, 175);
+            this.label62.Location = new System.Drawing.Point(490, 233);
             this.label62.Name = "label62";
             this.label62.Size = new System.Drawing.Size(75, 15);
             this.label62.TabIndex = 33;

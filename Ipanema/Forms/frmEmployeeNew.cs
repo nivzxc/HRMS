@@ -95,19 +95,19 @@ namespace Ipanema.Forms
    cmbJGCode.DisplayMember = "ptext";
    cmbJGCode.ValueMember = "pvalue";
 
-   cmbDivision.DataSource = Division.GetDSL();
-   cmbDivision.DisplayMember = "ptext";
-   cmbDivision.ValueMember = "pvalue";
+            cmbDivision.DataSource = Division.GetDSL();
+            cmbDivision.DisplayMember = "ptext";
+            cmbDivision.ValueMember = "pvalue";
 
-   cmbGroup.DataSource = Group.GetDSL();
-   cmbGroup.DisplayMember = "ptext";
-   cmbGroup.ValueMember = "pvalue";
+            //cmbGroup.DataSource = Group.GetDSL();
+            //cmbGroup.DisplayMember = "ptext";
+            //cmbGroup.ValueMember = "pvalue";
 
-   cmbDepartment.DataSource = Department.GetDSL();
-   cmbDepartment.DisplayMember = "ptext";
-   cmbDepartment.ValueMember = "pvalue";
+            //cmbDepartment.DataSource = Department.GetDSL();
+            //cmbDepartment.DisplayMember = "ptext";
+            //cmbDepartment.ValueMember = "pvalue";
 
-   cmbRC.DataSource = clsRC.GetDdlDs();
+            cmbRC.DataSource = clsRC.GetDdlDs();
    cmbRC.DisplayMember = "ptext";
    cmbRC.ValueMember = "pvalue";
 
@@ -240,6 +240,52 @@ namespace Ipanema.Forms
         private void label92_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtEmployeeNumber_KeyDown(object sender, KeyEventArgs e)
+        {
+       
+        }
+
+        private void txtEmployeeNumber_Leave(object sender, EventArgs e)
+        {
+            if (Employee.IsEmployeeExistByNumber(txtEmployeeNumber.Text) == true )
+            {
+                //TextBox tb = (TextBox)sender;
+                //int visibletime = 10000;
+                //ToolTip tt = new ToolTip();
+                //tt.Show("Employee Number " + txtEmployeeNumber.Text + " is already assigned to " + Employee.checkEmployeeNumber(txtEmployeeNumber.Text), tb,0,0,visibletime);
+
+                MessageBox.Show("Employee Number " +txtEmployeeNumber.Text + " is already assigned to " + Employee.checkEmployeeNumber(txtEmployeeNumber.Text),"Employee Number already Taken", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                txtEmployeeNumber.Clear();
+                this.ActiveControl = txtEmployeeNumber;
+            }
+        }
+
+        private void txtEmployeeNumber_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbDivision_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbDivision.Text != "") {
+                cmbGroup.DataSource = Group.GetGroup(cmbDivision.SelectedValue.ToString());
+                cmbGroup.DisplayMember = "ptext";
+                cmbGroup.ValueMember = "pvalue";
+                this.ActiveControl = cmbGroup;
+            }
+        }
+
+        private void cmbGroup_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbGroup.SelectedValue.ToString() !="")
+            {
+                cmbDepartment.DataSource = Department.GetDepartment(cmbGroup.SelectedValue.ToString());
+                cmbDepartment.DisplayMember = "ptext";
+                cmbDepartment.ValueMember = "pvalue";
+                this.ActiveControl = cmbDepartment;
+            }
         }
     }
 }

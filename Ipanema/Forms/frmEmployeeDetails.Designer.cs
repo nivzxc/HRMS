@@ -4790,6 +4790,7 @@
             this.cmbCompany.Name = "cmbCompany";
             this.cmbCompany.Size = new System.Drawing.Size(301, 23);
             this.cmbCompany.TabIndex = 8;
+            this.cmbCompany.SelectedIndexChanged += new System.EventHandler(this.cmbCompany_SelectedIndexChanged);
             // 
             // txtRemarks
             // 

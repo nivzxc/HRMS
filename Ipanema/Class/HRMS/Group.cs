@@ -131,6 +131,18 @@ namespace HRMS
    }
    return tblReturn;
   }
+        //ADDED BY CALVIN April 13, 2018
+  public static DataTable GetGroup(string divCode)
+  {
+            DataTable tblreturn = new DataTable();
+            using (SqlConnection cn = new SqlConnection(HRMSCore.HrmsConnectionString)) {
+                SqlCommand cmd = cn.CreateCommand();
+                cmd.CommandText = "SELECT grpcode AS pvalue, grpname AS ptext FROM HR.Groups WHERE divicode='"+ divCode +"' ORDER BY grpname";
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(tblreturn);
+            }
+            return tblreturn;
+  }
 
   public static DataTable GetDSL(string pDivisionCode)
   {

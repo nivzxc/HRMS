@@ -1025,6 +1025,24 @@ namespace HRMS
    }
    return intReturn;
   }
+  public static string checkEmployeeNumber(string checkNum)
+  {
+            string EmpNumReturn ="";
+            using (SqlConnection cn = new SqlConnection(HRMSCore.HrmsConnectionString))
+            {
+                SqlCommand cmd = cn.CreateCommand();
+                cmd.CommandText = "select firname +' '+ lastname as EMPLOYEE from HR.Employees where empnum='" + checkNum + "'";
+                cn.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr.Read()) {
+                    EmpNumReturn = dr["EMPLOYEE"].ToString(); 
+                }
+                dr.Close();
+                cn.Close();
+            }
+            return EmpNumReturn;
+  }
+
 
  }
 }

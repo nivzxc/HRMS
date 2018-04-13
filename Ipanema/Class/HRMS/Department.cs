@@ -125,6 +125,20 @@ namespace HRMS
    return tblReturn;
   }
 
+            //ADDED BY CALVIN April 13, 2018
+  public static DataTable GetDepartment(string grpCode)
+  {
+            DataTable tblreturn = new DataTable();
+            using (SqlConnection cn = new SqlConnection(HRMSCore.HrmsConnectionString)) {
+                SqlCommand cmd = cn.CreateCommand();
+                cmd.CommandText = "SELECT deptcode AS pvalue, deptname AS ptext FROM HR.Department WHERE grpcode='"+ grpCode+"' ORDER BY deptname";
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(tblreturn);
+            }
+            return tblreturn;
+  }
+
+
   public static DataTable GetDSL(string pGroupCode)
   {
    DataTable tblReturn = new DataTable();

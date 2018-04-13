@@ -129,9 +129,10 @@ namespace HRMS
             rendered_dt = render_dt;
 
             this.document = new Document();
+            document.DefaultPageSetup.Orientation = Orientation.Portrait;
             document.DefaultPageSetup.TopMargin = 20;
             document.DefaultPageSetup.LeftMargin = 40;
-            document.DefaultPageSetup.RightMargin = 20;            
+            document.DefaultPageSetup.RightMargin = 40;            
             document.DefaultPageSetup.BottomMargin = 20;
             this.document.Info.Title = "HRMS Report";
             this.document.Info.Subject = "HR reports";
@@ -197,7 +198,7 @@ namespace HRMS
             paragraph.Format.SpaceBefore = "3.0cm";
             paragraph.Style = "Reference";
             paragraph.AddFormattedText("Date:", TextFormat.Bold);
-            paragraph.AddText(DateTime.Now.ToString(" MMM dd, yyyy, hh:MM tt"));
+            paragraph.AddText(DateTime.Now.ToString(" MMM dd, yyyy"));
             paragraph.Format.Alignment = ParagraphAlignment.Right;
 
             paragraph = section.AddParagraph();

@@ -1563,5 +1563,10 @@ namespace Ipanema.Forms
                 MessageBox.Show(lvLeaveTypes.SelectedItems[0].Tag.ToString());  
             }
         }
+
+        private void cmbCompany_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+        }
     }
 }
