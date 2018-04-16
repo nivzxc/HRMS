@@ -14,14 +14,14 @@
     <framework targetVersion="4.0" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="HRMS.exe.manifest" size="45752">
+    <dependentAssembly dependencyType="install" codebase="HRMS.exe.manifest" size="53103">
       <assemblyIdentity name="HRMS.exe" version="1.0.0.16" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>fa9t4XslmlB3iGgm97C0lZnexX8=</dsig:DigestValue>
+        <dsig:DigestValue>l4vtJvQJ/kWL/yX3TmJ7X3aYUNo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -36,12 +36,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.picTime = new System.Windows.Forms.PictureBox();
             this.lblDate = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.picEmp = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.tmrLabel = new System.Windows.Forms.Timer(this.components);
             this.pnlRemarks = new System.Windows.Forms.Panel();
             this.lblRemarks = new System.Windows.Forms.Label();
@@ -121,13 +121,14 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.lblTime);
             this.panel1.Controls.Add(this.picTime);
             this.panel1.Controls.Add(this.lblDate);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1370, 226);
+            this.panel1.Size = new System.Drawing.Size(1300, 226);
             this.panel1.TabIndex = 13;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -140,6 +141,19 @@
             this.pictureBox1.Size = new System.Drawing.Size(706, 154);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Red;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(1111, 6);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(63, 46);
+            this.button1.TabIndex = 18;
+            this.button1.Text = "EXIT";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // picTime
             // 
@@ -198,19 +212,6 @@
             this.picEmp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picEmp.TabIndex = 1;
             this.picEmp.TabStop = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Red;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(627, 449);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(138, 46);
-            this.button1.TabIndex = 18;
-            this.button1.Text = "EXIT";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // tmrLabel
             // 
@@ -289,7 +290,6 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.DarkBlue;
             this.panel3.Controls.Add(this.label4);
-            this.panel3.Controls.Add(this.button1);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.pnlRemarks);
             this.panel3.Controls.Add(this.lvwHistory);
@@ -315,7 +315,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1370, 750);
+            this.ClientSize = new System.Drawing.Size(1300, 750);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
