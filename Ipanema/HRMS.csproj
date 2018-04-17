@@ -227,9 +227,11 @@
     </Compile>
     <Compile Include="dsPerfectAttendance.cs">
       <DependentUpon>dsPerfectAttendance.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="dsPerfectAttendanceDetails.cs">
       <DependentUpon>dsPerfectAttendanceDetails.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="dsPerfectAttendanceDetails.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -238,6 +240,7 @@
     </Compile>
     <Compile Include="dsPerfectAttendanceOBDetails.cs">
       <DependentUpon>dsPerfectAttendanceOBDetails.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="dsPerfectAttendanceOBDetails.Designer.cs">
       <AutoGen>True</AutoGen>

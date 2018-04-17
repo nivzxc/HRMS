@@ -30,12 +30,12 @@
   {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEmployeeDetails));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.imlTabIcons = new System.Windows.Forms.ImageList(this.components);
@@ -1472,8 +1472,8 @@
             this.dgMovementList.AllowUserToAddRows = false;
             this.dgMovementList.AllowUserToDeleteRows = false;
             this.dgMovementList.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.AliceBlue;
-            this.dgMovementList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.AliceBlue;
+            this.dgMovementList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dgMovementList.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgMovementList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dgMovementList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -1508,18 +1508,18 @@
             // 
             // colDateFrom
             // 
-            dataGridViewCellStyle2.Format = "MMM dd, yyyy";
-            dataGridViewCellStyle2.NullValue = null;
-            this.colDateFrom.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Format = "MMM dd, yyyy";
+            dataGridViewCellStyle8.NullValue = null;
+            this.colDateFrom.DefaultCellStyle = dataGridViewCellStyle8;
             this.colDateFrom.HeaderText = "Date From";
             this.colDateFrom.Name = "colDateFrom";
             this.colDateFrom.ReadOnly = true;
             // 
             // colDateTo
             // 
-            dataGridViewCellStyle3.Format = "MMM dd, yyyy";
-            dataGridViewCellStyle3.NullValue = null;
-            this.colDateTo.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Format = "MMM dd, yyyy";
+            dataGridViewCellStyle9.NullValue = null;
+            this.colDateTo.DefaultCellStyle = dataGridViewCellStyle9;
             this.colDateTo.HeaderText = "Date To";
             this.colDateTo.Name = "colDateTo";
             this.colDateTo.ReadOnly = true;
@@ -2022,6 +2022,7 @@
             this.cmbDivision.Name = "cmbDivision";
             this.cmbDivision.Size = new System.Drawing.Size(463, 23);
             this.cmbDivision.TabIndex = 1;
+            this.cmbDivision.SelectedIndexChanged += new System.EventHandler(this.cmbDivision_SelectedIndexChanged);
             // 
             // cmbRC
             // 
@@ -2089,6 +2090,7 @@
             this.cmbGroup.Name = "cmbGroup";
             this.cmbGroup.Size = new System.Drawing.Size(463, 23);
             this.cmbGroup.TabIndex = 2;
+            this.cmbGroup.SelectedIndexChanged += new System.EventHandler(this.cmbGroup_SelectedIndexChanged);
             // 
             // label62
             // 
@@ -4852,8 +4854,8 @@
             this.dgEmploymentHistoryList.AllowUserToAddRows = false;
             this.dgEmploymentHistoryList.AllowUserToDeleteRows = false;
             this.dgEmploymentHistoryList.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.AliceBlue;
-            this.dgEmploymentHistoryList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.AliceBlue;
+            this.dgEmploymentHistoryList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
             this.dgEmploymentHistoryList.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgEmploymentHistoryList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dgEmploymentHistoryList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -4886,9 +4888,9 @@
             // 
             // colInclusiveDate
             // 
-            dataGridViewCellStyle5.Format = "MMM dd, yyyy";
-            dataGridViewCellStyle5.NullValue = null;
-            this.colInclusiveDate.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle11.Format = "MMM dd, yyyy";
+            dataGridViewCellStyle11.NullValue = null;
+            this.colInclusiveDate.DefaultCellStyle = dataGridViewCellStyle11;
             this.colInclusiveDate.HeaderText = "Inclusive Dates";
             this.colInclusiveDate.Name = "colInclusiveDate";
             this.colInclusiveDate.ReadOnly = true;
@@ -4903,9 +4905,9 @@
             // 
             // colPositionHeld
             // 
-            dataGridViewCellStyle6.Format = "MMM dd, yyyy";
-            dataGridViewCellStyle6.NullValue = null;
-            this.colPositionHeld.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle12.Format = "MMM dd, yyyy";
+            dataGridViewCellStyle12.NullValue = null;
+            this.colPositionHeld.DefaultCellStyle = dataGridViewCellStyle12;
             this.colPositionHeld.HeaderText = "Position Held";
             this.colPositionHeld.Name = "colPositionHeld";
             this.colPositionHeld.ReadOnly = true;

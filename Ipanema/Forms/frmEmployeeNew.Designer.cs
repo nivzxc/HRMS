@@ -166,7 +166,7 @@
             // 
             // txtEmployeeNumber
             // 
-            this.txtEmployeeNumber.BackColor = System.Drawing.Color.AliceBlue;
+            this.txtEmployeeNumber.BackColor = System.Drawing.Color.White;
             this.txtEmployeeNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmployeeNumber.Location = new System.Drawing.Point(95, 17);
             this.txtEmployeeNumber.Name = "txtEmployeeNumber";

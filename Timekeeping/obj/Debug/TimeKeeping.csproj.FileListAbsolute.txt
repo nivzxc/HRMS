@@ -20,3 +20,13 @@ C:\Users\Administrator\Documents\Files\System-under-revision\HRMS\Timekeeping\ob
 C:\Users\Administrator\Documents\Files\System-under-revision\HRMS\Timekeeping\obj\Debug\TimeKeeping.csproj.CoreCompileInputs.cache
 C:\Users\Administrator\Documents\Files\System-under-revision\HRMS\Timekeeping\obj\Debug\Ipanema.exe
 C:\Users\Administrator\Documents\Files\System-under-revision\HRMS\Timekeeping\obj\Debug\Ipanema.pdb
+C:\hrisPackage\HR_APPLICATION\HRMS\HRMS\Timekeeping\bin\Debug\Ipanema.exe.config
+C:\hrisPackage\HR_APPLICATION\HRMS\HRMS\Timekeeping\bin\Debug\Ipanema.exe
+C:\hrisPackage\HR_APPLICATION\HRMS\HRMS\Timekeeping\bin\Debug\Ipanema.pdb
+C:\hrisPackage\HR_APPLICATION\HRMS\HRMS\Timekeeping\obj\Debug\TimeKeeping.csprojResolveAssemblyReference.cache
+C:\hrisPackage\HR_APPLICATION\HRMS\HRMS\Timekeeping\obj\Debug\Ipanema.Login.resources
+C:\hrisPackage\HR_APPLICATION\HRMS\HRMS\Timekeeping\obj\Debug\Ipanema.frmLogInOut.resources
+C:\hrisPackage\HR_APPLICATION\HRMS\HRMS\Timekeeping\obj\Debug\Ipanema.Properties.Resources.resources
+C:\hrisPackage\HR_APPLICATION\HRMS\HRMS\Timekeeping\obj\Debug\TimeKeeping.csproj.GenerateResource.Cache
+C:\hrisPackage\HR_APPLICATION\HRMS\HRMS\Timekeeping\obj\Debug\Ipanema.exe
+C:\hrisPackage\HR_APPLICATION\HRMS\HRMS\Timekeeping\obj\Debug\Ipanema.pdb

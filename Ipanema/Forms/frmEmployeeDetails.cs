@@ -735,8 +735,8 @@ namespace Ipanema.Forms
    BindEmployeeSuffix();
    BindCompanyList();
    BindDivisionList();
-   BindGroupList();
-   BindDepartmentList();
+   //BindGroupList();
+   //BindDepartmentList();
    BindRcList();
    LoadDependentsList();
    LoadChildrenList();
@@ -1567,6 +1567,28 @@ namespace Ipanema.Forms
         private void cmbCompany_SelectedIndexChanged(object sender, EventArgs e)
         {
            
+        }
+
+        private void cmbDivision_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbDivision.Text != "")
+            {
+                cmbGroup.DataSource = Group.GetGroup(cmbDivision.SelectedValue.ToString());
+                cmbGroup.DisplayMember = "ptext";
+                cmbGroup.ValueMember = "pvalue";
+                this.ActiveControl = cmbGroup;
+            }
+        }
+
+        private void cmbGroup_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbGroup.SelectedValue.ToString() != "")
+            {
+                cmbDepartment.DataSource = Department.GetDepartment(cmbGroup.SelectedValue.ToString());
+                cmbDepartment.DisplayMember = "ptext";
+                cmbDepartment.ValueMember = "pvalue";
+                this.ActiveControl = cmbDepartment;
+            }
         }
     }
 }

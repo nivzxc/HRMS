@@ -133,7 +133,7 @@ namespace Ipanema.Forms
 
   private void frmEmployeeNew_Load(object sender, EventArgs e)
   {
-   txtEmployeeNumber.Text = Employee.GenerateEmployeeNumber();
+   //txtEmployeeNumber.Text = Employee.GenerateEmployeeNumber();
    InitializeFields(); 
   }
 
@@ -185,7 +185,11 @@ namespace Ipanema.Forms
      employee.IsBillable = (chkBillable.Checked ? "1" : "0");
      employee.RecruitmentSourceCode = cmbRecruitmentSource.SelectedValue.ToString();
      employee.RecruitmentSourceRemarks = txtRecruitmentRemarks.Text;
-     employee.Insert();
+     if (employee.Insert() !=0)
+     {
+         MessageBox.Show("New Employee Added Successfully", "NEW EMPLOYEE", MessageBoxButtons.OK, MessageBoxIcon.Information);
+     }
+     
     
     
 

@@ -60,18 +60,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="HRMS.exe" size="5371904">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="HRMS.exe" size="5371392">
       <assemblyIdentity name="HRMS" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-<<<<<<< HEAD
-        <dsig:DigestValue>veHVFWUMMLycpXdieBZxFEJ/py0=</dsig:DigestValue>
-=======
-        <dsig:DigestValue>qLWiEGpOTpd4XL24gIHrH0HBeqM=</dsig:DigestValue>
->>>>>>> 33cc2caaa48b37d1da40cf60b59474d4ed308e42
+        <dsig:DigestValue>la7dDXVtXBNtLtipkoYtUYYJ7CU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
