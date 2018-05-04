@@ -12,7 +12,7 @@ namespace Ipanema.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.3.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.6.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -42,6 +42,18 @@ namespace Ipanema.Properties {
         public string MySTIHQ_2ConnectionString {
             get {
                 return ((string)(this["MySTIHQ_2ConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=\"C:\\Program Files (x86)\\Microsoft SQ" +
+            "L Server\\MSSQL10_50.SQLEXPRESS2008R2\\MSSQL\\Backup\\data.mdb\";Jet OLEDB:Database P" +
+            "assword=6eds97")]
+        public string dataConnectionString {
+            get {
+                return ((string)(this["dataConnectionString"]));
             }
         }
     }

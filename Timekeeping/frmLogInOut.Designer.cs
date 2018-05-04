@@ -73,6 +73,7 @@
             this.txtEmpNum.Name = "txtEmpNum";
             this.txtEmpNum.Size = new System.Drawing.Size(318, 62);
             this.txtEmpNum.TabIndex = 0;
+            this.txtEmpNum.TextChanged += new System.EventHandler(this.txtEmpNum_TextChanged);
             this.txtEmpNum.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtEmpNum_KeyDown);
             // 
             // txtEmpName

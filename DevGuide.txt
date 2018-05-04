@@ -1,0 +1,95 @@
+/////////////////////////////////////////////////////////
+//////////////////// HRMS GUIDE /////////////////////////
+/////////////////////////////////////////////////////////
+
+####################################################################################################################################################################################################################################################	
+	
+	////////////////////////////////////
+	///			        ////
+	///  DATABASE CONNECTION PATHS  ////
+	/// 			        ////
+	////////////////////////////////////
+
+#I. SQL EXPRESS SERVER 2008 R2
+   SERVER: 	W2K12R2-MIS
+   ID:		sa
+   PASSWORD:	H1!dm2017
+   DATABASE:	PFIC_HRMS (Live)
+   DATABASE:	HR_TEST_DB (demo/test)
+   Source: 
+   	\HRMS\Ipanema\Class\HRMS\HRMSCore.cs
+   Connection String: 
+   	TEST connection:public static string HrmsConnectionString { get { return @"data source=W2K12R2-MIS; initial catalog=HR_TEST_DB; user id=sa; password=H1!dm2017"; } }
+	LIVE connection:public static string HrmsConnectionString { get { return @"data source=W2K12R2-MIS; initial catalog=PFIC_HRMS; user id=sa; password=H1!dm2017"; } }
+
+#II.BIOMETRICS ACCESS DATABASE (HQ)
+   SERVER:	JOVELLE-PC
+   PATH:	\\JOVELLE-PC\eds ars\data.mdb
+   PASSWORD:	6eds97
+   PROVIDER:	Microsoft.ACE.OLEDB.12.0
+   Source: 
+   	\HRMS\Ipanema\Class\HRMS\HRMSCore.cs
+   Connection String: 
+   	public static string BiometricConnectionString { get { return @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=\\JOVELLE-PC\eds ars\data.mdb;Jet OLEDB:Database Password=6eds97"; } }
+
+#III. BIOMETRICS ACCESS DATABASE (BRANCHES: Cebu/Manila)
+   SERVER:	JOVELLE-PC
+   PATH:	\\JOVELLE-PC\TIME MASTER Timekeeping System (X639 - PRO)\TIMEMASTER.MDB
+   PROVIDER:	Microsoft.ACE.OLEDB.12.0
+   Source: 
+   	\HRMS\Ipanema\Class\HRMS\HRMSCore.cs
+   Connection String: 
+   	public static string BranchBiometricConnectionString { get { return @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=\\JOVELLE-PC\TIME MASTER Timekeeping System (X639 - PRO)\TIMEMASTER.MDB;Jet OLEDB:Database Password="; } }
+
+#app.config
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+ <appSettings>
+  <add key="cnSpeedo" value="data source=W2K12R2-MIS; initial catalog=PFIC_HRMS; user id=sa; password=H1!dm2017"/>  
+ </appSettings>
+</configuration>
+####################################################################################################################################################################################################################################################
+	
+	////////////////////////////////////
+	///			        ////
+	///  DATABASE CONNECTION PATHS  ////
+	/// 			        ////
+	////////////////////////////////////
+
+#HOW TO BACKUP SQL DATABASE
+	Step 1. Open "SQL Server Management Studio"
+	Step 2. Connect to server
+			- Server Type:		Database Engine
+			- Server name: 		W2K12R2-MIS
+			- Authentication:	SQL Server Authentication
+			- Login:		sa
+			- Password:		H1!dm2017
+	Step 3. Select "Databases"
+	Step 4. Right click "PFIC_HRMS"
+	Step 5. Go "Task" then select "Back Up" then click "Ok"
+
+	Backup database Path: C:\Program Files (x86)\Microsoft SQL Server\MSSQL10_50.SQLEXPRESS2008R2\MSSQL\Backup
+
+####################################################################################################################################################################################################################################################
+
+	////////////////////////////////////
+	///			        ////
+	///    System Requirments	////
+	/// 			        ////
+	////////////////////////////////////
+
+#HRMS (Human Resource Management System) REQUIREMENTS
+
+	System Requirements:
+		I. 	Win 7 or Higher 
+		II. 	RAM 2GB or Higher
+		III.	Crystal Reports Package
+		IV.	Microsoft Access Database Engine 2010 or Higher (For 64-bit) - OLEDB Driver
+
+	Dev. Requirements:
+		I.	Visual Studio 2015 or Higher
+		II.	Microsoft Access Database Engine 2010 or Higher (For 64-bit) - OLEDB Driver
+		III.	Microsoft SQL Server 2008 R2
+
+
+

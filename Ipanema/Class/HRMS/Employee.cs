@@ -2,6 +2,7 @@ using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Data.OleDb;
 
 namespace HRMS
 {
@@ -504,7 +505,7 @@ namespace HRMS
    }
    return tblReturn;
   }
-
+    
   public static DataTable DSLActiveAll()
   {
    DataTable tblReturn = new DataTable();
@@ -533,7 +534,7 @@ namespace HRMS
 
    return tblReturn;
   }
-
+   
   public static DataTable DSLAll()
   {
    DataTable tblReturn = new DataTable();
@@ -1042,7 +1043,109 @@ namespace HRMS
             }
             return EmpNumReturn;
   }
+  //ADDED BY CALVIN CAVITE 
+  public static DataTable ClusterEmployee(string cluster_code)
+  {
+            DataTable tblReturn = new DataTable();
+            tblReturn.Columns.Add(new DataColumn("pvalue"));
+            tblReturn.Columns.Add(new DataColumn("ptext"));
+            DataRow drw = tblReturn.NewRow();
+            drw["pvalue"] = "ALL";
+            drw["ptext"] = "-- ALL --";
+            tblReturn.Rows.Add(drw);
 
+            using (SqlConnection cn = new SqlConnection(HRMSCore.HrmsConnectionString))
+            {
+                SqlCommand cmd = cn.CreateCommand();
+                cmd.CommandText = "SELECT HR.EmployeeCluster.username AS pvalue, HR.Employees.firname + ' ' + HR.Employees.lastname AS ptext,  HR.EmployeeCluster.cluscode AS CLUSTER_CODE FROM HR.Employees INNER JOIN HR.EmployeeCluster ON HR.Employees.username = HR.EmployeeCluster.username " +
+                                  "WHERE HR.EmployeeCluster.cluscode = '" + cluster_code + "'";
+                cn.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    drw = tblReturn.NewRow();
+                    drw["pvalue"] = dr["pvalue"].ToString();
+                    drw["ptext"] = dr["ptext"].ToString();
+                    tblReturn.Rows.Add(drw);
+                }
+                dr.Close();
+            }
 
+            return tblReturn;
+  }
+  public static DataTable BranchEmployee(string Branch)
+  {
+            DataTable TblReturn = new DataTable();
+            TblReturn.Columns.Add(new DataColumn("emp_nm"));
+            TblReturn.Columns.Add(new DataColumn("emp_id"));
+            DataRow drw = TblReturn.NewRow();
+
+            using (OleDbConnection cn = new OleDbConnection(HRMSCore.BranchBiometricConnectionString))
+            {
+                OleDbCommand cmd = cn.CreateCommand();
+                cmd.CommandText="SELECT EMPNAME as emp_nm, EMPID as emp_id FROM EMPLOYEES WHERE DEPARTMENT='"+Branch+"' ORDER BY EMPID ASC";
+                cn.Open();
+                OleDbDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    drw = TblReturn.NewRow();
+                    drw["emp_nm"] = dr["emp_nm"].ToString();
+                    drw["emp_id"] = dr["emp_id"].ToString();
+                    TblReturn.Rows.Add(drw);
+                }
+                dr.Close();
+                cn.Close();
+            }
+           
+            return TblReturn;
+  }
+  public static string BranchEmpIDconvert(string emp_id)
+  {
+            string strReturn = "";
+            switch (emp_id)
+            {
+                case "00000001":
+                    strReturn = "0258";
+                    break;
+                case "00000002":
+                    strReturn = "0259";
+                    break;
+                case "00000004":
+                    strReturn = "0088";
+                    break;
+                case "00000005":
+                    strReturn = "0198";
+                    break;
+                case "00000008":
+                    strReturn = "0173";
+                    break;
+                case "00000009":
+                    strReturn = "0159";
+                    break;
+                case "00000010":
+                    strReturn = "0251";
+                    break;
+                case "00000011":
+                    strReturn = "0353";
+                    break;
+                case "00000012":
+                    strReturn = "0361";
+                    break;
+                case "00000013":
+                    strReturn = "0368";
+                    break;
+                default:
+                    int indx = 4;
+                    string new_num = "";
+                    for (int i=0; i<4;i++)
+                    {
+                        new_num += emp_id[indx++];
+                    }
+                    strReturn = new_num;
+                    break;
+            }          
+            return strReturn;
+               
+  }
  }
 }

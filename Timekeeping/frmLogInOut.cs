@@ -184,34 +184,35 @@ namespace Ipanema
 
      if (blnValidUser)
      {
-      cmd.Parameters.Clear();
-      cmd.CommandText = "SELECT TOP 1 focsdate,keyin FROM HR.TimeCard WHERE username='" + strUserName + "' AND keyout is null ORDER BY focsdate,keyin DESC";
-      dr = cmd.ExecuteReader();
-      blnHasLoginRecord = dr.Read();
-      if (blnHasLoginRecord)
-      {
-       dteLatestKeyIn = Convert.ToDateTime(dr["keyin"].ToString());
-       dteFocusDate = Convert.ToDateTime(dr["focsdate"].ToString());
-      }
-      dr.Close();
+          cmd.Parameters.Clear();
+          cmd.CommandText = "SELECT TOP 1 focsdate,keyin FROM HR.TimeCard WHERE username='" + strUserName + "' AND keyout is null ORDER BY focsdate,keyin DESC";
+          dr = cmd.ExecuteReader();
+          blnHasLoginRecord = dr.Read();
+          if (blnHasLoginRecord)
+          {
+           dteLatestKeyIn = Convert.ToDateTime(dr["keyin"].ToString());
+           dteFocusDate = Convert.ToDateTime(dr["focsdate"].ToString());
+          }
+          dr.Close();
 
-      if (blnHasLoginRecord)
-      {
-       cmd.CommandText = "UPDATE HR.TimeCard SET keyout='" + DateTime.Now + "' WHERE username='" + strUserName + "' AND focsdate='" + dteFocusDate + "' AND keyin='" + dteLatestKeyIn + "'";
-       lblRemarks.ForeColor = Color.RoyalBlue;
-       lblRemarks.Text = "OUT";
-       ACMTimeOut(); //ADDED by Calvin 03142018
-      }
-      else
-      {
-       cmd.CommandText = "INSERT INTO HR.TimeCard(username,focsdate,keyin,updateby,updateon) VALUES('" + strUserName + "','" + DateTime.Now.Date + "','" + DateTime.Now + "','" + strUserName + "','" + DateTime.Now + "')";
-       lblRemarks.ForeColor = Color.LimeGreen;
-       lblRemarks.Text = "IN";
-       ACMTimeIN(); //ADDED by Calvin 03142018
-                        }
-      cmd.ExecuteNonQuery();
+          if (blnHasLoginRecord)
+          {
+           cmd.CommandText = "UPDATE HR.TimeCard SET keyout='" + DateTime.Now + "' WHERE username='" + strUserName + "' AND focsdate='" + dteFocusDate + "' AND keyin='" + dteLatestKeyIn + "'";
+           lblRemarks.ForeColor = Color.RoyalBlue;
+           lblRemarks.Text = "OUT";
+           ACMTimeOut(); //ADDED by Calvin 03142018
+          }
+          else
+          {
+           cmd.CommandText = "INSERT INTO HR.TimeCard(username,focsdate,keyin,updateby,updateon) VALUES('" + strUserName + "','" + DateTime.Now.Date + "','" + DateTime.Now + "','" + strUserName + "','" + DateTime.Now + "')";
+           lblRemarks.ForeColor = Color.LimeGreen;
+           lblRemarks.Text = "IN";
+           ACMTimeIN(); //ADDED by Calvin 03142018
+          }
+          cmd.ExecuteNonQuery();
      }
-     tran.Commit();
+
+        tran.Commit();
     }
     catch (Exception exp)
     { 
@@ -308,6 +309,11 @@ namespace Ipanema
         }
 
         private void lblDate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtEmpNum_TextChanged(object sender, EventArgs e)
         {
 
         }

@@ -110,8 +110,9 @@ namespace Ipanema.Forms
   private void tbtnClose_Click(object sender, EventArgs e)
   {
       mdiIpanema objmdi = new mdiIpanema();
-      objmdi.DSGZeroEL();
+      objmdi.DSGZeroEL();            
       Close();
+      
   }
 
   private void tbtnAdd_Click(object sender, EventArgs e)

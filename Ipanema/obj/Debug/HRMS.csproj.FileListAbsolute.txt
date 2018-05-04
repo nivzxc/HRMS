@@ -334,3 +334,4 @@ C:\hrisPackage\HR_APPLICATION\HRMS\HRMS\Ipanema\obj\Debug\RdlCompile.compiled
 C:\hrisPackage\HR_APPLICATION\HRMS\HRMS\Ipanema\obj\Debug\HRMS.TrustInfo.xml
 C:\hrisPackage\HR_APPLICATION\HRMS\HRMS\Ipanema\obj\Debug\HRMS.exe.manifest
 C:\hrisPackage\HR_APPLICATION\HRMS\HRMS\Ipanema\obj\Debug\HRMS.application
+C:\Users\Administrator\Documents\Files\System-under-revision\HRMS\Ipanema\obj\Debug\HRMS.csproj.ResolveComReference.cache

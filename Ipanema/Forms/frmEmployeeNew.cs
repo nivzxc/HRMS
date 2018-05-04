@@ -291,5 +291,15 @@ namespace Ipanema.Forms
                 this.ActiveControl = cmbDepartment;
             }
         }
+
+        private void chkBillable_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chkEnabled_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

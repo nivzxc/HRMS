@@ -58,8 +58,27 @@ namespace Ipanema.Forms
   }
 
   private void mdiIpanema_Load(object sender, EventArgs e)
-  {          
-   
+  {
+            MdiClient ctlMDI;
+            // Loop through all of the form's controls looking
+            // for the control of type MdiClient.
+            foreach (Control ctl in this.Controls)
+            {
+                try
+                {
+                    // Attempt to cast the control to type MdiClient.
+                    ctlMDI = (MdiClient)ctl;
+
+                    // Set the BackColor of the MdiClient control.
+                    ctlMDI.BackColor = this.BackColor;
+                }
+                catch (InvalidCastException exc)
+                {
+                    // Catch and ignore the error if casting failed.
+                }
+            }
+
+
    using (clsTimeSheetPeriod tsp = new clsTimeSheetPeriod(clsTimeSheetPeriod.GetCurrentTimeSheetPeriod()))
    {
     tsp.Fill();
@@ -78,7 +97,8 @@ namespace Ipanema.Forms
             this.DSGZeroSL();
 
             LoadDSGLeaveNotification();
-            LoadDSGOffenseNotification();      
+            LoadDSGOffenseNotification();
+     
   }
         //coders
  public void LoadDSGLeaveNotification()
@@ -131,6 +151,7 @@ namespace Ipanema.Forms
 
   private void tmiEmployee_Click(object sender, EventArgs e)
   {
+  
    this.Cursor = Cursors.WaitCursor;
    frmEmployeeList pForm = new frmEmployeeList();
    pForm.MdiParent = this;
@@ -264,6 +285,7 @@ namespace Ipanema.Forms
 
   private void tmiGroupList_Click(object sender, EventArgs e)
   {
+
    this.Cursor = Cursors.WaitCursor;
    frmGroupList pForm = new frmGroupList();
    pForm.MdiParent = this;
@@ -664,6 +686,16 @@ namespace Ipanema.Forms
             frmOvertimeSummaryReport ot_report = new frmOvertimeSummaryReport();
             ot_report.MdiParent = this;
             ot_report.Show();
+        }
+
+        private void mnuTimeAttendance_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     } 
 }

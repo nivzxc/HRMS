@@ -65,6 +65,7 @@ public static class clsDateTime
  }
 
     // ADDED by calvin cavite DATE: 4/10/2018
+    // USE FOR OVERTIME SUMMERY REPORT
  public static float convert_min(string units)
  {
         float fltReturn = 0;

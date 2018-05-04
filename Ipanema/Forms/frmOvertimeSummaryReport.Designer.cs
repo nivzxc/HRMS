@@ -717,7 +717,7 @@
             this.listView1.GridLines = true;
             this.listView1.Location = new System.Drawing.Point(13, 185);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(1189, 564);
+            this.listView1.Size = new System.Drawing.Size(1189, 417);
             this.listView1.TabIndex = 100;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -849,7 +849,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1219, 751);
+            this.ClientSize = new System.Drawing.Size(1219, 733);
             this.Controls.Add(this.pnlHeader);
             this.Controls.Add(this.tsButtons);
             this.Controls.Add(this.panel1);

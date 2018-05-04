@@ -183,29 +183,67 @@ namespace HRMS
    }
    return intReturn;
   }
-
+         
   public static DataTable GetDdlDs()
   {
-   DataTable tblReturn = new DataTable();
+   DataTable tblReturn = new DataTable();          
+   tblReturn.Columns.Add(new DataColumn("pvalue"));
+   tblReturn.Columns.Add(new DataColumn("ptext"));
+   tblReturn.Columns.Add(new DataColumn("pclusdesc"));
+   DataRow drw = tblReturn.NewRow();
+   drw["pvalue"] = "ALL";
+   drw["ptext"] = "-- ALL --";
+   tblReturn.Rows.Add(drw);
+
    using (SqlConnection cn = new SqlConnection(HRMSCore.HrmsConnectionString))
    {
     SqlCommand cmd = cn.CreateCommand();
-    cmd.CommandText = "SELECT cluscode AS pvalue, clusname AS ptext FROM HR.Cluster WHERE penabled='1' ORDER BY clusname";
-    SqlDataAdapter da = new SqlDataAdapter(cmd);
-    da.Fill(tblReturn);
+    cmd.CommandText = "SELECT cluscode AS pvalue, clusname AS ptext, clusdesc AS pclusdesc FROM HR.Cluster WHERE penabled='1' ORDER BY clusname";
+    cn.Open();
+    SqlDataReader dr = cmd.ExecuteReader();
+    while(dr.Read())
+    {
+        drw = tblReturn.NewRow();
+        drw["pvalue"] = dr["pvalue"].ToString();
+        drw["ptext"] = dr["ptext"].ToString();
+        drw["pclusdesc"] = dr["pclusdesc"].ToString();
+        tblReturn.Rows.Add(drw);
+    }
+    dr.Close();
+    //SqlDataAdapter da = new SqlDataAdapter(cmd);
+    //da.Fill(tblReturn);
    }
    return tblReturn;
   }
-  
-        //ADDED BY CALVIN CAVITE DATE: 4/10/2018
-  public static string getClusterName(string clustname) 
+  public static string getBioMetricCluster(string cluscode) 
   {
+            string Returncluster = "";
+            using (SqlConnection cn = new SqlConnection(HRMSCore.HrmsConnectionString))
+            {
+                SqlCommand cmd = cn.CreateCommand();
+                cmd.CommandText = "SELECT clusdesc FROM HR.Cluster WHERE cluscode='" + cluscode + "'";
+                cn.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr.Read())
+                {
+                    Returncluster = dr["clusdesc"].ToString();
+                }
+                dr.Close();
+                cn.Close();
+            }
+            return Returncluster;
+  }
+        //ADDED BY CALVIN CAVITE DATE: 4/10/2018
+        // Verify Cluster For PDF Report
+        public static string getClusterName(string clustname)
+        {
             string clustName = "";
-            using (SqlConnection cn = new SqlConnection(HRMSCore.HrmsConnectionString)) {
+            using (SqlConnection cn = new SqlConnection(HRMSCore.HrmsConnectionString))
+            {
                 SqlCommand cmd = cn.CreateCommand();
                 cmd.CommandText = "SELECT clusname FROM HR.Cluster WHERE clusname='" + clustname + "'";
                 cn.Open();
-                SqlDataReader dr = cmd.ExecuteReader();                
+                SqlDataReader dr = cmd.ExecuteReader();
                 if (dr.Read())
                 {
                     clustName = dr["clusname"].ToString();
@@ -214,7 +252,6 @@ namespace HRMS
                 cn.Close();
             }
             return clustName;
-  }
-
- }
+        }
+    }
 }

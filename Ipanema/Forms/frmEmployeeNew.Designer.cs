@@ -132,6 +132,7 @@
             this.chkEnabled.TabIndex = 7;
             this.chkEnabled.Text = "Enable this record";
             this.chkEnabled.UseVisualStyleBackColor = true;
+            this.chkEnabled.CheckedChanged += new System.EventHandler(this.chkEnabled_CheckedChanged);
             // 
             // label89
             // 
@@ -666,12 +667,16 @@
             // chkBillable
             // 
             this.chkBillable.AutoSize = true;
+            this.chkBillable.Checked = true;
+            this.chkBillable.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkBillable.Location = new System.Drawing.Point(223, 157);
             this.chkBillable.Name = "chkBillable";
             this.chkBillable.Size = new System.Drawing.Size(67, 19);
             this.chkBillable.TabIndex = 9;
             this.chkBillable.Text = "Billable";
             this.chkBillable.UseVisualStyleBackColor = true;
+            this.chkBillable.Visible = false;
+            this.chkBillable.CheckedChanged += new System.EventHandler(this.chkBillable_CheckedChanged);
             // 
             // btnGenerateEmployeeNumber
             // 

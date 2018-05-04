@@ -170,34 +170,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblUsername = new System.Windows.Forms.Label();
-            this.pnlNotificationoffleave = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.dgOffense = new System.Windows.Forms.DataGridView();
-            this.offensecode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usernameviolation = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastnameviolation = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.firstnameviolation = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.btnRefreshOffense = new System.Windows.Forms.Button();
-            this.label11 = new System.Windows.Forms.Label();
-            this.panel16 = new System.Windows.Forms.Panel();
-            this.panel18 = new System.Windows.Forms.Panel();
-            this.dgLeave = new System.Windows.Forms.DataGridView();
-            this.leavecode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usernameleave = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastnameleave = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.firstnameleave = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel17 = new System.Windows.Forms.Panel();
-            this.btnRefreshLeave = new System.Windows.Forms.Button();
-            this.label12 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.btnClose1 = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
             this.pnlNotifyLeaveBalance = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -227,6 +199,34 @@
             this.panel11 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.pnlNotificationoffleave = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.dgOffense = new System.Windows.Forms.DataGridView();
+            this.offensecode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usernameviolation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastnameviolation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.firstnameviolation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.btnRefreshOffense = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.panel18 = new System.Windows.Forms.Panel();
+            this.dgLeave = new System.Windows.Forms.DataGridView();
+            this.leavecode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usernameleave = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastnameleave = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.firstnameleave = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.btnRefreshLeave = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.btnClose1 = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
             this.menuStrip.SuspendLayout();
             this.ssMain.SuspendLayout();
             this.tsMain.SuspendLayout();
@@ -238,19 +238,6 @@
             this.pnlUser.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.pnlNotificationoffleave.SuspendLayout();
-            this.tableLayoutPanel5.SuspendLayout();
-            this.panel14.SuspendLayout();
-            this.panel12.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgOffense)).BeginInit();
-            this.panel15.SuspendLayout();
-            this.panel16.SuspendLayout();
-            this.panel18.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgLeave)).BeginInit();
-            this.panel17.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            this.panel13.SuspendLayout();
             this.pnlNotifyLeaveBalance.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -268,6 +255,19 @@
             this.panel5.SuspendLayout();
             this.panel11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.pnlNotificationoffleave.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
+            this.panel14.SuspendLayout();
+            this.panel12.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgOffense)).BeginInit();
+            this.panel15.SuspendLayout();
+            this.panel16.SuspendLayout();
+            this.panel18.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgLeave)).BeginInit();
+            this.panel17.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.panel13.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip
@@ -289,7 +289,7 @@
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.MdiWindowListItem = this.windowsMenu;
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(974, 24);
+            this.menuStrip.Size = new System.Drawing.Size(971, 24);
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "MenuStrip";
             this.menuStrip.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip_ItemClicked);
@@ -463,9 +463,9 @@
             this.tmiOffense,
             this.employeeLeaveOffenseToolStripMenuItem,
             this.toolStripMenuItem1,
-            this.tmiDepartmentList,
             this.tmiDivisionList,
             this.tmiGroupList,
+            this.tmiDepartmentList,
             this.tmiRCList,
             this.toolStripMenuItem2,
             this.tmiJGCodeList,
@@ -634,6 +634,7 @@
             this.mnuTimeAttendance.Name = "mnuTimeAttendance";
             this.mnuTimeAttendance.Size = new System.Drawing.Size(133, 20);
             this.mnuTimeAttendance.Text = "Time and Attendance";
+            this.mnuTimeAttendance.Click += new System.EventHandler(this.mnuTimeAttendance_Click);
             // 
             // tmiHoliday
             // 
@@ -996,9 +997,9 @@
             this.sslDate,
             this.sslTime});
             this.ssMain.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
-            this.ssMain.Location = new System.Drawing.Point(0, 708);
+            this.ssMain.Location = new System.Drawing.Point(0, 704);
             this.ssMain.Name = "ssMain";
-            this.ssMain.Size = new System.Drawing.Size(974, 25);
+            this.ssMain.Size = new System.Drawing.Size(971, 25);
             this.ssMain.TabIndex = 2;
             // 
             // sslFormInfo
@@ -1085,7 +1086,7 @@
             this.tsbCalculator});
             this.tsMain.Location = new System.Drawing.Point(0, 24);
             this.tsMain.Name = "tsMain";
-            this.tsMain.Size = new System.Drawing.Size(974, 25);
+            this.tsMain.Size = new System.Drawing.Size(971, 25);
             this.tsMain.TabIndex = 6;
             // 
             // tsbLogout
@@ -1181,7 +1182,7 @@
             this.tbtnPAEmployee});
             this.tsMainTimesheet.Location = new System.Drawing.Point(0, 49);
             this.tsMainTimesheet.Name = "tsMainTimesheet";
-            this.tsMainTimesheet.Size = new System.Drawing.Size(974, 25);
+            this.tsMainTimesheet.Size = new System.Drawing.Size(971, 25);
             this.tsMainTimesheet.TabIndex = 9;
             this.tsMainTimesheet.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.tsMainTimesheet_ItemClicked);
             // 
@@ -1291,7 +1292,7 @@
             this.pnlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlLeft.Location = new System.Drawing.Point(0, 74);
             this.pnlLeft.Name = "pnlLeft";
-            this.pnlLeft.Size = new System.Drawing.Size(210, 634);
+            this.pnlLeft.Size = new System.Drawing.Size(125, 630);
             this.pnlLeft.TabIndex = 10;
             this.pnlLeft.Visible = false;
             this.pnlLeft.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlLeft_Paint);
@@ -1305,7 +1306,7 @@
             this.pnlActiveForm.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlActiveForm.Location = new System.Drawing.Point(0, 138);
             this.pnlActiveForm.Name = "pnlActiveForm";
-            this.pnlActiveForm.Size = new System.Drawing.Size(210, 182);
+            this.pnlActiveForm.Size = new System.Drawing.Size(125, 182);
             this.pnlActiveForm.TabIndex = 5;
             this.pnlActiveForm.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlActiveForm_Paint);
             // 
@@ -1324,7 +1325,7 @@
             this.pnlTimesheetPeriod.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTimesheetPeriod.Location = new System.Drawing.Point(0, 32);
             this.pnlTimesheetPeriod.Name = "pnlTimesheetPeriod";
-            this.pnlTimesheetPeriod.Size = new System.Drawing.Size(210, 106);
+            this.pnlTimesheetPeriod.Size = new System.Drawing.Size(125, 106);
             this.pnlTimesheetPeriod.TabIndex = 3;
             // 
             // lnkActiveTimesheet
@@ -1392,7 +1393,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(206, 30);
+            this.panel2.Size = new System.Drawing.Size(121, 30);
             this.panel2.TabIndex = 3;
             // 
             // pictureBox3
@@ -1427,7 +1428,7 @@
             this.pnlUser.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlUser.Location = new System.Drawing.Point(0, 0);
             this.pnlUser.Name = "pnlUser";
-            this.pnlUser.Size = new System.Drawing.Size(210, 32);
+            this.pnlUser.Size = new System.Drawing.Size(125, 32);
             this.pnlUser.TabIndex = 0;
             // 
             // panel3
@@ -1438,8 +1439,9 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(206, 30);
+            this.panel3.Size = new System.Drawing.Size(121, 30);
             this.panel3.TabIndex = 1;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // pictureBox1
             // 
@@ -1457,11 +1459,415 @@
             this.lblUsername.BackColor = System.Drawing.Color.Transparent;
             this.lblUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsername.ForeColor = System.Drawing.Color.White;
-            this.lblUsername.Location = new System.Drawing.Point(29, 8);
+            this.lblUsername.Location = new System.Drawing.Point(32, 10);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(53, 13);
             this.lblUsername.TabIndex = 1;
             this.lblUsername.Text = "username";
+            // 
+            // pnlNotifyLeaveBalance
+            // 
+            this.pnlNotifyLeaveBalance.BackColor = System.Drawing.Color.White;
+            this.pnlNotifyLeaveBalance.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlNotifyLeaveBalance.Controls.Add(this.tableLayoutPanel1);
+            this.pnlNotifyLeaveBalance.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnlNotifyLeaveBalance.Location = new System.Drawing.Point(727, 74);
+            this.pnlNotifyLeaveBalance.Name = "pnlNotifyLeaveBalance";
+            this.pnlNotifyLeaveBalance.Size = new System.Drawing.Size(244, 630);
+            this.pnlNotifyLeaveBalance.TabIndex = 17;
+            this.pnlNotifyLeaveBalance.Visible = false;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.panel7, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.panel4, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.panel6, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.panel5, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.panel11, 0, 1);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 5;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(244, 630);
+            this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.AliceBlue;
+            this.panel7.BackgroundImage = global::Ipanema.Properties.Resources.panelheader;
+            this.panel7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel7.Controls.Add(this.tableLayoutPanel2);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel7.Location = new System.Drawing.Point(0, 251);
+            this.panel7.Margin = new System.Windows.Forms.Padding(0);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(244, 189);
+            this.panel7.TabIndex = 41;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 1;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Controls.Add(this.dgNotify1, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.panel8, 0, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 2;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(240, 185);
+            this.tableLayoutPanel2.TabIndex = 2;
+            // 
+            // dgNotify1
+            // 
+            this.dgNotify1.AllowUserToAddRows = false;
+            this.dgNotify1.AllowUserToDeleteRows = false;
+            this.dgNotify1.AllowUserToOrderColumns = true;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.AliceBlue;
+            this.dgNotify1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgNotify1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgNotify1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgNotify1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgNotify1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2});
+            this.dgNotify1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgNotify1.Location = new System.Drawing.Point(0, 27);
+            this.dgNotify1.Margin = new System.Windows.Forms.Padding(0);
+            this.dgNotify1.MultiSelect = false;
+            this.dgNotify1.Name = "dgNotify1";
+            this.dgNotify1.ReadOnly = true;
+            this.dgNotify1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgNotify1.RowHeadersWidth = 20;
+            this.dgNotify1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dgNotify1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgNotify1.Size = new System.Drawing.Size(240, 158);
+            this.dgNotify1.TabIndex = 44;
+            this.dgNotify1.DoubleClick += new System.EventHandler(this.dgNotify1_DoubleClick);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "Last Name";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 105;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "First Name";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 110;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel8.Controls.Add(this.label3);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel8.Location = new System.Drawing.Point(0, 0);
+            this.panel8.Margin = new System.Windows.Forms.Padding(0);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(240, 27);
+            this.panel8.TabIndex = 0;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(4, 5);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(100, 15);
+            this.label3.TabIndex = 36;
+            this.label3.Text = "Vacation leave";
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.AliceBlue;
+            this.panel4.BackgroundImage = global::Ipanema.Properties.Resources.panelheader3;
+            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel4.Controls.Add(this.tableLayoutPanel3);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(0, 62);
+            this.panel4.Margin = new System.Windows.Forms.Padding(0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(244, 189);
+            this.panel4.TabIndex = 39;
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 1;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.Controls.Add(this.dgNotify, 0, 1);
+            this.tableLayoutPanel3.Controls.Add(this.panel9, 0, 0);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 2;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(240, 185);
+            this.tableLayoutPanel3.TabIndex = 0;
+            // 
+            // dgNotify
+            // 
+            this.dgNotify.AllowUserToAddRows = false;
+            this.dgNotify.AllowUserToDeleteRows = false;
+            this.dgNotify.AllowUserToOrderColumns = true;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.AliceBlue;
+            this.dgNotify.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgNotify.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgNotify.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgNotify.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgNotify.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.lastname,
+            this.firname});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgNotify.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgNotify.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgNotify.Location = new System.Drawing.Point(0, 27);
+            this.dgNotify.Margin = new System.Windows.Forms.Padding(0);
+            this.dgNotify.MultiSelect = false;
+            this.dgNotify.Name = "dgNotify";
+            this.dgNotify.ReadOnly = true;
+            this.dgNotify.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgNotify.RowHeadersWidth = 20;
+            this.dgNotify.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dgNotify.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgNotify.Size = new System.Drawing.Size(240, 158);
+            this.dgNotify.TabIndex = 39;
+            this.dgNotify.DoubleClick += new System.EventHandler(this.dgNotify_DoubleClick);
+            // 
+            // lastname
+            // 
+            this.lastname.HeaderText = "Last Name";
+            this.lastname.Name = "lastname";
+            this.lastname.ReadOnly = true;
+            this.lastname.Width = 105;
+            // 
+            // firname
+            // 
+            this.firname.HeaderText = "First Name";
+            this.firname.Name = "firname";
+            this.firname.ReadOnly = true;
+            this.firname.Width = 110;
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel9.Controls.Add(this.label7);
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel9.Location = new System.Drawing.Point(0, 0);
+            this.panel9.Margin = new System.Windows.Forms.Padding(0);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(240, 27);
+            this.panel9.TabIndex = 0;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(5, 6);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(116, 15);
+            this.label7.TabIndex = 21;
+            this.label7.Text = "Emergency leave";
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.AliceBlue;
+            this.panel6.BackgroundImage = global::Ipanema.Properties.Resources.panelheader2;
+            this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel6.Controls.Add(this.tableLayoutPanel4);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel6.Location = new System.Drawing.Point(0, 440);
+            this.panel6.Margin = new System.Windows.Forms.Padding(0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(244, 190);
+            this.panel6.TabIndex = 40;
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 1;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel4.Controls.Add(this.dgNotify2, 0, 1);
+            this.tableLayoutPanel4.Controls.Add(this.panel10, 0, 0);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 2;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(240, 186);
+            this.tableLayoutPanel4.TabIndex = 0;
+            // 
+            // dgNotify2
+            // 
+            this.dgNotify2.AllowUserToAddRows = false;
+            this.dgNotify2.AllowUserToDeleteRows = false;
+            this.dgNotify2.AllowUserToOrderColumns = true;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.AliceBlue;
+            this.dgNotify2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgNotify2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgNotify2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgNotify2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgNotify2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4});
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgNotify2.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dgNotify2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgNotify2.Location = new System.Drawing.Point(0, 27);
+            this.dgNotify2.Margin = new System.Windows.Forms.Padding(0);
+            this.dgNotify2.MultiSelect = false;
+            this.dgNotify2.Name = "dgNotify2";
+            this.dgNotify2.ReadOnly = true;
+            this.dgNotify2.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgNotify2.RowHeadersWidth = 20;
+            this.dgNotify2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dgNotify2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgNotify2.Size = new System.Drawing.Size(240, 159);
+            this.dgNotify2.TabIndex = 42;
+            this.dgNotify2.DoubleClick += new System.EventHandler(this.dgNotify2_DoubleClick);
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "Last Name";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Width = 105;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.HeaderText = "First Name";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Width = 110;
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel10.Controls.Add(this.label4);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel10.Location = new System.Drawing.Point(0, 0);
+            this.panel10.Margin = new System.Windows.Forms.Padding(0);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(240, 27);
+            this.panel10.TabIndex = 43;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(7, 5);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(72, 15);
+            this.label4.TabIndex = 41;
+            this.label4.Text = "Sick leave";
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel5.Controls.Add(this.btnClose);
+            this.panel5.Controls.Add(this.label8);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Margin = new System.Windows.Forms.Padding(0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(244, 31);
+            this.panel5.TabIndex = 42;
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.SystemColors.Control;
+            this.btnClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClose.BackgroundImage")));
+            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.Location = new System.Drawing.Point(214, 2);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(24, 24);
+            this.btnClose.TabIndex = 1;
+            this.btnClose.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click_2);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(3, 6);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(178, 15);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Notification Leave Balance";
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel11.Controls.Add(this.pictureBox2);
+            this.panel11.Controls.Add(this.label5);
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel11.Location = new System.Drawing.Point(0, 31);
+            this.panel11.Margin = new System.Windows.Forms.Padding(0);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(244, 31);
+            this.panel11.TabIndex = 38;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(3, 5);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(16, 16);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.TabIndex = 17;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.SteelBlue;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(25, 6);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(194, 15);
+            this.label5.TabIndex = 16;
+            this.label5.Text = "Employees with zero balance";
             // 
             // pnlNotificationoffleave
             // 
@@ -1469,10 +1875,10 @@
             this.pnlNotificationoffleave.Controls.Add(this.panel1);
             this.pnlNotificationoffleave.Controls.Add(this.panel13);
             this.pnlNotificationoffleave.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlNotificationoffleave.Location = new System.Drawing.Point(484, 74);
+            this.pnlNotificationoffleave.Location = new System.Drawing.Point(481, 74);
             this.pnlNotificationoffleave.Margin = new System.Windows.Forms.Padding(0);
             this.pnlNotificationoffleave.Name = "pnlNotificationoffleave";
-            this.pnlNotificationoffleave.Size = new System.Drawing.Size(246, 634);
+            this.pnlNotificationoffleave.Size = new System.Drawing.Size(246, 630);
             this.pnlNotificationoffleave.TabIndex = 18;
             // 
             // tableLayoutPanel5
@@ -1489,7 +1895,7 @@
             this.tableLayoutPanel5.RowCount = 2;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(246, 570);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(246, 566);
             this.tableLayoutPanel5.TabIndex = 2;
             // 
             // panel14
@@ -1500,7 +1906,7 @@
             this.panel14.Location = new System.Drawing.Point(0, 0);
             this.panel14.Margin = new System.Windows.Forms.Padding(0);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(246, 285);
+            this.panel14.Size = new System.Drawing.Size(246, 283);
             this.panel14.TabIndex = 0;
             // 
             // panel12
@@ -1511,7 +1917,7 @@
             this.panel12.Location = new System.Drawing.Point(0, 30);
             this.panel12.Margin = new System.Windows.Forms.Padding(0);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(246, 255);
+            this.panel12.Size = new System.Drawing.Size(246, 253);
             this.panel12.TabIndex = 5;
             // 
             // dgOffense
@@ -1520,8 +1926,8 @@
             this.dgOffense.AllowUserToDeleteRows = false;
             this.dgOffense.AllowUserToOrderColumns = true;
             this.dgOffense.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.AliceBlue;
-            this.dgOffense.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.AliceBlue;
+            this.dgOffense.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgOffense.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgOffense.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgOffense.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -1537,7 +1943,7 @@
             this.dgOffense.ReadOnly = true;
             this.dgOffense.RowHeadersWidth = 20;
             this.dgOffense.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgOffense.Size = new System.Drawing.Size(242, 251);
+            this.dgOffense.Size = new System.Drawing.Size(242, 249);
             this.dgOffense.TabIndex = 20;
             this.dgOffense.DoubleClick += new System.EventHandler(this.dgOffense_DoubleClick);
             // 
@@ -1617,10 +2023,10 @@
             this.panel16.Controls.Add(this.panel18);
             this.panel16.Controls.Add(this.panel17);
             this.panel16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel16.Location = new System.Drawing.Point(0, 285);
+            this.panel16.Location = new System.Drawing.Point(0, 283);
             this.panel16.Margin = new System.Windows.Forms.Padding(0);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(246, 285);
+            this.panel16.Size = new System.Drawing.Size(246, 283);
             this.panel16.TabIndex = 1;
             // 
             // panel18
@@ -1631,7 +2037,7 @@
             this.panel18.Location = new System.Drawing.Point(0, 30);
             this.panel18.Margin = new System.Windows.Forms.Padding(0);
             this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(246, 255);
+            this.panel18.Size = new System.Drawing.Size(246, 253);
             this.panel18.TabIndex = 6;
             // 
             // dgLeave
@@ -1640,8 +2046,8 @@
             this.dgLeave.AllowUserToDeleteRows = false;
             this.dgLeave.AllowUserToOrderColumns = true;
             this.dgLeave.AllowUserToResizeRows = false;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.AliceBlue;
-            this.dgLeave.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.AliceBlue;
+            this.dgLeave.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dgLeave.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgLeave.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgLeave.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -1657,7 +2063,7 @@
             this.dgLeave.ReadOnly = true;
             this.dgLeave.RowHeadersWidth = 20;
             this.dgLeave.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgLeave.Size = new System.Drawing.Size(242, 251);
+            this.dgLeave.Size = new System.Drawing.Size(242, 249);
             this.dgLeave.TabIndex = 21;
             this.dgLeave.DoubleClick += new System.EventHandler(this.dgLeave_DoubleClick);
             // 
@@ -1798,415 +2204,11 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(3, 6);
+            this.label9.Location = new System.Drawing.Point(7, 8);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(203, 15);
             this.label9.TabIndex = 1;
             this.label9.Text = "Offense and Leave Notification";
-            // 
-            // pnlNotifyLeaveBalance
-            // 
-            this.pnlNotifyLeaveBalance.BackColor = System.Drawing.Color.White;
-            this.pnlNotifyLeaveBalance.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnlNotifyLeaveBalance.Controls.Add(this.tableLayoutPanel1);
-            this.pnlNotifyLeaveBalance.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlNotifyLeaveBalance.Location = new System.Drawing.Point(730, 74);
-            this.pnlNotifyLeaveBalance.Name = "pnlNotifyLeaveBalance";
-            this.pnlNotifyLeaveBalance.Size = new System.Drawing.Size(244, 634);
-            this.pnlNotifyLeaveBalance.TabIndex = 17;
-            this.pnlNotifyLeaveBalance.Visible = false;
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.panel7, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.panel4, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.panel6, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.panel5, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.panel11, 0, 1);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 5;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(244, 634);
-            this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.AliceBlue;
-            this.panel7.BackgroundImage = global::Ipanema.Properties.Resources.panelheader;
-            this.panel7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel7.Controls.Add(this.tableLayoutPanel2);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel7.Location = new System.Drawing.Point(0, 252);
-            this.panel7.Margin = new System.Windows.Forms.Padding(0);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(244, 190);
-            this.panel7.TabIndex = 41;
-            // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.ColumnCount = 1;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Controls.Add(this.dgNotify1, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.panel8, 0, 0);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 2;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(240, 186);
-            this.tableLayoutPanel2.TabIndex = 2;
-            // 
-            // dgNotify1
-            // 
-            this.dgNotify1.AllowUserToAddRows = false;
-            this.dgNotify1.AllowUserToDeleteRows = false;
-            this.dgNotify1.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.AliceBlue;
-            this.dgNotify1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgNotify1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgNotify1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dgNotify1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgNotify1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2});
-            this.dgNotify1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgNotify1.Location = new System.Drawing.Point(0, 27);
-            this.dgNotify1.Margin = new System.Windows.Forms.Padding(0);
-            this.dgNotify1.MultiSelect = false;
-            this.dgNotify1.Name = "dgNotify1";
-            this.dgNotify1.ReadOnly = true;
-            this.dgNotify1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dgNotify1.RowHeadersWidth = 20;
-            this.dgNotify1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgNotify1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgNotify1.Size = new System.Drawing.Size(240, 159);
-            this.dgNotify1.TabIndex = 44;
-            this.dgNotify1.DoubleClick += new System.EventHandler(this.dgNotify1_DoubleClick);
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Last Name";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 105;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "First Name";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 110;
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.SteelBlue;
-            this.panel8.Controls.Add(this.label3);
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel8.Location = new System.Drawing.Point(0, 0);
-            this.panel8.Margin = new System.Windows.Forms.Padding(0);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(240, 27);
-            this.panel8.TabIndex = 0;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(4, 5);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 15);
-            this.label3.TabIndex = 36;
-            this.label3.Text = "Vacation leave";
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.AliceBlue;
-            this.panel4.BackgroundImage = global::Ipanema.Properties.Resources.panelheader3;
-            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel4.Controls.Add(this.tableLayoutPanel3);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(0, 62);
-            this.panel4.Margin = new System.Windows.Forms.Padding(0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(244, 190);
-            this.panel4.TabIndex = 39;
-            // 
-            // tableLayoutPanel3
-            // 
-            this.tableLayoutPanel3.ColumnCount = 1;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel3.Controls.Add(this.dgNotify, 0, 1);
-            this.tableLayoutPanel3.Controls.Add(this.panel9, 0, 0);
-            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 2;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(240, 186);
-            this.tableLayoutPanel3.TabIndex = 0;
-            // 
-            // dgNotify
-            // 
-            this.dgNotify.AllowUserToAddRows = false;
-            this.dgNotify.AllowUserToDeleteRows = false;
-            this.dgNotify.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.AliceBlue;
-            this.dgNotify.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgNotify.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgNotify.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dgNotify.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgNotify.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.lastname,
-            this.firname});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgNotify.DefaultCellStyle = dataGridViewCellStyle5;
-            this.dgNotify.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgNotify.Location = new System.Drawing.Point(0, 27);
-            this.dgNotify.Margin = new System.Windows.Forms.Padding(0);
-            this.dgNotify.MultiSelect = false;
-            this.dgNotify.Name = "dgNotify";
-            this.dgNotify.ReadOnly = true;
-            this.dgNotify.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dgNotify.RowHeadersWidth = 20;
-            this.dgNotify.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgNotify.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgNotify.Size = new System.Drawing.Size(240, 159);
-            this.dgNotify.TabIndex = 39;
-            this.dgNotify.DoubleClick += new System.EventHandler(this.dgNotify_DoubleClick);
-            // 
-            // lastname
-            // 
-            this.lastname.HeaderText = "Last Name";
-            this.lastname.Name = "lastname";
-            this.lastname.ReadOnly = true;
-            this.lastname.Width = 105;
-            // 
-            // firname
-            // 
-            this.firname.HeaderText = "First Name";
-            this.firname.Name = "firname";
-            this.firname.ReadOnly = true;
-            this.firname.Width = 110;
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.SteelBlue;
-            this.panel9.Controls.Add(this.label7);
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel9.Location = new System.Drawing.Point(0, 0);
-            this.panel9.Margin = new System.Windows.Forms.Padding(0);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(240, 27);
-            this.panel9.TabIndex = 0;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(5, 6);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(116, 15);
-            this.label7.TabIndex = 21;
-            this.label7.Text = "Emergency leave";
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.AliceBlue;
-            this.panel6.BackgroundImage = global::Ipanema.Properties.Resources.panelheader2;
-            this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel6.Controls.Add(this.tableLayoutPanel4);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(0, 442);
-            this.panel6.Margin = new System.Windows.Forms.Padding(0);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(244, 192);
-            this.panel6.TabIndex = 40;
-            // 
-            // tableLayoutPanel4
-            // 
-            this.tableLayoutPanel4.ColumnCount = 1;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel4.Controls.Add(this.dgNotify2, 0, 1);
-            this.tableLayoutPanel4.Controls.Add(this.panel10, 0, 0);
-            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 2;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(240, 188);
-            this.tableLayoutPanel4.TabIndex = 0;
-            // 
-            // dgNotify2
-            // 
-            this.dgNotify2.AllowUserToAddRows = false;
-            this.dgNotify2.AllowUserToDeleteRows = false;
-            this.dgNotify2.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.AliceBlue;
-            this.dgNotify2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
-            this.dgNotify2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgNotify2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dgNotify2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgNotify2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4});
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgNotify2.DefaultCellStyle = dataGridViewCellStyle7;
-            this.dgNotify2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgNotify2.Location = new System.Drawing.Point(0, 28);
-            this.dgNotify2.Margin = new System.Windows.Forms.Padding(0);
-            this.dgNotify2.MultiSelect = false;
-            this.dgNotify2.Name = "dgNotify2";
-            this.dgNotify2.ReadOnly = true;
-            this.dgNotify2.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dgNotify2.RowHeadersWidth = 20;
-            this.dgNotify2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgNotify2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgNotify2.Size = new System.Drawing.Size(240, 160);
-            this.dgNotify2.TabIndex = 42;
-            this.dgNotify2.DoubleClick += new System.EventHandler(this.dgNotify2_DoubleClick);
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Last Name";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Width = 105;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "First Name";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Width = 110;
-            // 
-            // panel10
-            // 
-            this.panel10.BackColor = System.Drawing.Color.SteelBlue;
-            this.panel10.Controls.Add(this.label4);
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel10.Location = new System.Drawing.Point(0, 0);
-            this.panel10.Margin = new System.Windows.Forms.Padding(0);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(240, 28);
-            this.panel10.TabIndex = 43;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(7, 5);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(72, 15);
-            this.label4.TabIndex = 41;
-            this.label4.Text = "Sick leave";
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.SteelBlue;
-            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel5.Controls.Add(this.btnClose);
-            this.panel5.Controls.Add(this.label8);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Margin = new System.Windows.Forms.Padding(0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(244, 31);
-            this.panel5.TabIndex = 42;
-            // 
-            // btnClose
-            // 
-            this.btnClose.BackColor = System.Drawing.SystemColors.Control;
-            this.btnClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClose.BackgroundImage")));
-            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.Location = new System.Drawing.Point(214, 2);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(24, 24);
-            this.btnClose.TabIndex = 1;
-            this.btnClose.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnClose.UseVisualStyleBackColor = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click_2);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(3, 6);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(178, 15);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Notification Leave Balance";
-            // 
-            // panel11
-            // 
-            this.panel11.BackColor = System.Drawing.Color.SteelBlue;
-            this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel11.Controls.Add(this.pictureBox2);
-            this.panel11.Controls.Add(this.label5);
-            this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel11.Location = new System.Drawing.Point(0, 31);
-            this.panel11.Margin = new System.Windows.Forms.Padding(0);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(244, 31);
-            this.panel11.TabIndex = 38;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(3, 5);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(16, 16);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox2.TabIndex = 17;
-            this.pictureBox2.TabStop = false;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.SteelBlue;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(25, 6);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(194, 15);
-            this.label5.TabIndex = 16;
-            this.label5.Text = "Employees with zero balance";
             // 
             // mdiIpanema
             // 
@@ -2214,8 +2216,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(974, 733);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ClientSize = new System.Drawing.Size(971, 729);
             this.Controls.Add(this.pnlNotificationoffleave);
             this.Controls.Add(this.pnlNotifyLeaveBalance);
             this.Controls.Add(this.pnlLeft);
@@ -2223,6 +2225,7 @@
             this.Controls.Add(this.tsMain);
             this.Controls.Add(this.ssMain);
             this.Controls.Add(this.menuStrip);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip;
@@ -2250,23 +2253,6 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.pnlNotificationoffleave.ResumeLayout(false);
-            this.tableLayoutPanel5.ResumeLayout(false);
-            this.panel14.ResumeLayout(false);
-            this.panel12.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgOffense)).EndInit();
-            this.panel15.ResumeLayout(false);
-            this.panel15.PerformLayout();
-            this.panel16.ResumeLayout(false);
-            this.panel18.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgLeave)).EndInit();
-            this.panel17.ResumeLayout(false);
-            this.panel17.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            this.panel13.ResumeLayout(false);
-            this.panel13.PerformLayout();
             this.pnlNotifyLeaveBalance.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
@@ -2289,6 +2275,23 @@
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.pnlNotificationoffleave.ResumeLayout(false);
+            this.tableLayoutPanel5.ResumeLayout(false);
+            this.panel14.ResumeLayout(false);
+            this.panel12.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgOffense)).EndInit();
+            this.panel15.ResumeLayout(false);
+            this.panel15.PerformLayout();
+            this.panel16.ResumeLayout(false);
+            this.panel18.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgLeave)).EndInit();
+            this.panel17.ResumeLayout(false);
+            this.panel17.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.panel13.ResumeLayout(false);
+            this.panel13.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2424,9 +2427,6 @@
   private System.Windows.Forms.ToolStripMenuItem perfectAttendanceToolStripMenuItem;
   private System.Windows.Forms.ToolStripMenuItem employeeLeaveOffenseToolStripMenuItem;
   private System.Windows.Forms.ToolStripMenuItem employeeLeave3DaysToolStripMenuItem;
-  private System.Windows.Forms.Panel pnlNotificationoffleave;
-  private System.Windows.Forms.Panel panel13;
-  private System.Windows.Forms.Label label9;
   private System.Windows.Forms.Panel pnlNotifyLeaveBalance;
   private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
   private System.Windows.Forms.Panel panel7;
@@ -2453,39 +2453,42 @@
   private System.Windows.Forms.Panel panel5;
   private System.Windows.Forms.Button btnClose;
   private System.Windows.Forms.Label label8;
-  private System.Windows.Forms.Button btnClose1;
-  private System.Windows.Forms.Panel panel1;
-  private System.Windows.Forms.PictureBox pictureBox4;
-  private System.Windows.Forms.Label label10;
-  private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
-  private System.Windows.Forms.Panel panel14;
-  private System.Windows.Forms.DataGridView dgOffense;
-  private System.Windows.Forms.Panel panel15;
-  private System.Windows.Forms.Label label11;
-  private System.Windows.Forms.Panel panel16;
-  private System.Windows.Forms.Panel panel17;
-  private System.Windows.Forms.Label label12;
-  private System.Windows.Forms.Panel panel12;
-  private System.Windows.Forms.Panel panel18;
   private System.Windows.Forms.ToolStripMenuItem timexpiredoffleave;
-  private System.Windows.Forms.DataGridViewTextBoxColumn offensecode;
-  private System.Windows.Forms.DataGridViewTextBoxColumn usernameviolation;
-  private System.Windows.Forms.DataGridViewTextBoxColumn lastnameviolation;
-  private System.Windows.Forms.DataGridViewTextBoxColumn firstnameviolation;
-  private System.Windows.Forms.Button btnRefreshOffense;
-  private System.Windows.Forms.Button btnRefreshLeave;
   private System.Windows.Forms.ToolStripMenuItem aCMMigrationToolStripMenuItem;
-        private System.Windows.Forms.DataGridView dgLeave;
-        private System.Windows.Forms.DataGridViewTextBoxColumn leavecode;
-        private System.Windows.Forms.DataGridViewTextBoxColumn usernameleave;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lastnameleave;
-        private System.Windows.Forms.DataGridViewTextBoxColumn firstnameleave;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ToolStripMenuItem runTimeKeepingToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem lateAndAbsencesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem overtimeSummaryReportToolStripMenuItem;
+        private System.Windows.Forms.Panel pnlNotificationoffleave;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
+        private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.DataGridView dgOffense;
+        private System.Windows.Forms.DataGridViewTextBoxColumn offensecode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn usernameviolation;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lastnameviolation;
+        private System.Windows.Forms.DataGridViewTextBoxColumn firstnameviolation;
+        private System.Windows.Forms.Panel panel15;
+        private System.Windows.Forms.Button btnRefreshOffense;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Panel panel16;
+        private System.Windows.Forms.Panel panel18;
+        private System.Windows.Forms.DataGridView dgLeave;
+        private System.Windows.Forms.DataGridViewTextBoxColumn leavecode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn usernameleave;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lastnameleave;
+        private System.Windows.Forms.DataGridViewTextBoxColumn firstnameleave;
+        private System.Windows.Forms.Panel panel17;
+        private System.Windows.Forms.Button btnRefreshLeave;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.Button btnClose1;
+        private System.Windows.Forms.Label label9;
     }
 }
 

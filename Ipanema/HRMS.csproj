@@ -76,6 +76,24 @@
   <PropertyGroup>
     <SignManifests>false</SignManifests>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="CarlosAg.ExcelXmlWriter, Version=1.0.0.6, Culture=neutral">
       <SpecificVersion>False</SpecificVersion>
@@ -169,6 +187,7 @@
     <Compile Include="Class\HRMS\clsDepartmentApprover.cs" />
     <Compile Include="Class\HRMS\clsLeave3Days.cs" />
     <Compile Include="Class\HRMS\clsLeaveSetting.cs" />
+    <Compile Include="Class\HRMS\clsMigrateTimeKeepingData.cs" />
     <Compile Include="Class\HRMS\clsPerfectAttendance.cs" />
     <Compile Include="Class\HRMS\Division.cs" />
     <Compile Include="Class\HRMS\EducationLevel.cs" />
@@ -227,11 +246,9 @@
     </Compile>
     <Compile Include="dsPerfectAttendance.cs">
       <DependentUpon>dsPerfectAttendance.xsd</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="dsPerfectAttendanceDetails.cs">
       <DependentUpon>dsPerfectAttendanceDetails.xsd</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="dsPerfectAttendanceDetails.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -240,7 +257,6 @@
     </Compile>
     <Compile Include="dsPerfectAttendanceOBDetails.cs">
       <DependentUpon>dsPerfectAttendanceOBDetails.xsd</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="dsPerfectAttendanceOBDetails.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -1749,6 +1765,7 @@
     <Content Include="Support\btnClose.jpg" />
     <Content Include="Support\btnLogin.jpg" />
     <None Include="Support\btnSave.jpg" />
+    <None Include="Support\btnSearch.jpg" />
     <Content Include="Support\clock16.png" />
     <Content Include="Support\close.png" />
     <Content Include="Support\close22.png" />
@@ -1764,6 +1781,7 @@
     <Content Include="Support\fileopen16.png" />
     <Content Include="Support\filesearch32.png" />
     <Content Include="Support\filesearch48.png" />
+    <None Include="Support\Find Search.png" />
     <Content Include="Support\ForProcessing.png" />
     <Content Include="Support\fullscreen16.png" />
     <Content Include="Support\hdsearch.png" />
@@ -1845,6 +1863,17 @@
       <Project>{473c0a77-9e5a-43e5-b3d9-b8cc97dd259f}</Project>
       <Name>TimeKeeping</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Interop.Access.Dao">
+      <Guid>{4AC9E1DA-5BAD-4AC7-86E3-24F4CDCECA28}</Guid>
+      <VersionMajor>12</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

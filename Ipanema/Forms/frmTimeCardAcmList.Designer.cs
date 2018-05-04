@@ -29,13 +29,26 @@
   private void InitializeComponent()
   {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTimeCardAcmList));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.dtpTo = new System.Windows.Forms.DateTimePicker();
+            this.cmsTimeCardList = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.pnlBody = new System.Windows.Forms.Panel();
+            this.dgTimeCard = new System.Windows.Forms.DataGridView();
+            this.colUsername = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.empnum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colEventType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDoor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlHeader = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.cmbBranches = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.chkViewFILO = new System.Windows.Forms.CheckBox();
             this.cmbEmployee = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
@@ -49,44 +62,139 @@
             this.tbtnRefresh = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.tbtnClose = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.label5 = new System.Windows.Forms.Label();
+            this.dtpTo = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.dtpFrom = new System.Windows.Forms.DateTimePicker();
-            this.cmsTimeCardList = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tmiAdd = new System.Windows.Forms.ToolStripMenuItem();
             this.tmiEdit = new System.Windows.Forms.ToolStripMenuItem();
             this.tmiDelete = new System.Windows.Forms.ToolStripMenuItem();
             this.tmiRefresh = new System.Windows.Forms.ToolStripMenuItem();
-            this.pnlBody = new System.Windows.Forms.Panel();
-            this.dgTimeCard = new System.Windows.Forms.DataGridView();
-            this.colUsername = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.empnum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colEventType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDoor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pnlHeader.SuspendLayout();
-            this.tsButtons.SuspendLayout();
             this.cmsTimeCardList.SuspendLayout();
             this.pnlBody.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgTimeCard)).BeginInit();
+            this.pnlHeader.SuspendLayout();
+            this.tsButtons.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dtpTo
+            // cmsTimeCardList
             // 
-            this.dtpTo.CustomFormat = "MMM dd, yyyy";
-            this.dtpTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpTo.Location = new System.Drawing.Point(624, 38);
-            this.dtpTo.Name = "dtpTo";
-            this.dtpTo.Size = new System.Drawing.Size(150, 21);
-            this.dtpTo.TabIndex = 2;
-            this.dtpTo.ValueChanged += new System.EventHandler(this.dtpTo_ValueChanged);
+            this.cmsTimeCardList.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tmiAdd,
+            this.tmiEdit,
+            this.tmiDelete,
+            this.tmiRefresh});
+            this.cmsTimeCardList.Name = "cmsTimeCardList";
+            this.cmsTimeCardList.Size = new System.Drawing.Size(114, 92);
+            // 
+            // pnlBody
+            // 
+            this.pnlBody.Controls.Add(this.dgTimeCard);
+            this.pnlBody.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlBody.Location = new System.Drawing.Point(0, 121);
+            this.pnlBody.Name = "pnlBody";
+            this.pnlBody.Size = new System.Drawing.Size(1079, 431);
+            this.pnlBody.TabIndex = 6;
+            // 
+            // dgTimeCard
+            // 
+            this.dgTimeCard.AllowUserToAddRows = false;
+            this.dgTimeCard.AllowUserToDeleteRows = false;
+            this.dgTimeCard.AllowUserToOrderColumns = true;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            this.dgTimeCard.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgTimeCard.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgTimeCard.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgTimeCard.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgTimeCard.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colUsername,
+            this.empnum,
+            this.colName,
+            this.colDate,
+            this.colTime,
+            this.colEventType,
+            this.colDoor});
+            this.dgTimeCard.Cursor = System.Windows.Forms.Cursors.Default;
+            this.dgTimeCard.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgTimeCard.Location = new System.Drawing.Point(0, 0);
+            this.dgTimeCard.MultiSelect = false;
+            this.dgTimeCard.Name = "dgTimeCard";
+            this.dgTimeCard.ReadOnly = true;
+            this.dgTimeCard.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgTimeCard.RowHeadersWidth = 20;
+            this.dgTimeCard.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgTimeCard.Size = new System.Drawing.Size(1079, 431);
+            this.dgTimeCard.TabIndex = 6;
+            this.dgTimeCard.VirtualMode = true;
+            this.dgTimeCard.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgTimeCard_DataBindingComplete);
+            // 
+            // colUsername
+            // 
+            this.colUsername.FillWeight = 200F;
+            this.colUsername.Frozen = true;
+            this.colUsername.HeaderText = "Username";
+            this.colUsername.Name = "colUsername";
+            this.colUsername.ReadOnly = true;
+            this.colUsername.Visible = false;
+            this.colUsername.Width = 150;
+            // 
+            // empnum
+            // 
+            this.empnum.HeaderText = "Employeer No.";
+            this.empnum.Name = "empnum";
+            this.empnum.ReadOnly = true;
+            // 
+            // colName
+            // 
+            dataGridViewCellStyle6.Format = "N2";
+            dataGridViewCellStyle6.NullValue = null;
+            this.colName.DefaultCellStyle = dataGridViewCellStyle6;
+            this.colName.HeaderText = "Employee Name";
+            this.colName.Name = "colName";
+            this.colName.ReadOnly = true;
+            this.colName.Width = 300;
+            // 
+            // colDate
+            // 
+            dataGridViewCellStyle7.Format = "MMM dd, yyyy";
+            dataGridViewCellStyle7.NullValue = null;
+            this.colDate.DefaultCellStyle = dataGridViewCellStyle7;
+            this.colDate.HeaderText = "Date";
+            this.colDate.Name = "colDate";
+            this.colDate.ReadOnly = true;
+            this.colDate.Width = 120;
+            // 
+            // colTime
+            // 
+            dataGridViewCellStyle8.Format = "hh:mm tt";
+            dataGridViewCellStyle8.NullValue = null;
+            this.colTime.DefaultCellStyle = dataGridViewCellStyle8;
+            this.colTime.HeaderText = "Time";
+            this.colTime.Name = "colTime";
+            this.colTime.ReadOnly = true;
+            // 
+            // colEventType
+            // 
+            this.colEventType.HeaderText = "Action";
+            this.colEventType.Name = "colEventType";
+            this.colEventType.ReadOnly = true;
+            // 
+            // colDoor
+            // 
+            this.colDoor.HeaderText = "Door";
+            this.colDoor.Name = "colDoor";
+            this.colDoor.ReadOnly = true;
+            this.colDoor.Width = 150;
             // 
             // pnlHeader
             // 
             this.pnlHeader.BackColor = System.Drawing.Color.White;
             this.pnlHeader.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlHeader.BackgroundImage")));
+            this.pnlHeader.Controls.Add(this.button2);
+            this.pnlHeader.Controls.Add(this.cmbBranches);
+            this.pnlHeader.Controls.Add(this.label1);
+            this.pnlHeader.Controls.Add(this.button1);
             this.pnlHeader.Controls.Add(this.chkViewFILO);
             this.pnlHeader.Controls.Add(this.cmbEmployee);
             this.pnlHeader.Controls.Add(this.label15);
@@ -99,14 +207,68 @@
             this.pnlHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
             this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(1079, 102);
+            this.pnlHeader.Size = new System.Drawing.Size(1079, 121);
             this.pnlHeader.TabIndex = 4;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.White;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(877, 38);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(171, 68);
+            this.button2.TabIndex = 113;
+            this.button2.Text = "MIGRATE TO SQL DATABASE";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // cmbBranches
+            // 
+            this.cmbBranches.DropDownHeight = 200;
+            this.cmbBranches.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbBranches.FormattingEnabled = true;
+            this.cmbBranches.IntegralHeight = false;
+            this.cmbBranches.Location = new System.Drawing.Point(84, 34);
+            this.cmbBranches.Name = "cmbBranches";
+            this.cmbBranches.Size = new System.Drawing.Size(241, 23);
+            this.cmbBranches.TabIndex = 111;
+            this.cmbBranches.SelectedIndexChanged += new System.EventHandler(this.cmbBranches_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(14, 38);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(62, 15);
+            this.label1.TabIndex = 112;
+            this.label1.Text = "Branches:";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FloralWhite;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Image = global::Ipanema.Properties.Resources.filesearch32;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(673, 67);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(101, 39);
+            this.button1.TabIndex = 110;
+            this.button1.Text = "SEARCH";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // chkViewFILO
             // 
             this.chkViewFILO.AutoSize = true;
             this.chkViewFILO.BackColor = System.Drawing.Color.Transparent;
-            this.chkViewFILO.Location = new System.Drawing.Point(78, 71);
+            this.chkViewFILO.Location = new System.Drawing.Point(84, 92);
             this.chkViewFILO.Name = "chkViewFILO";
             this.chkViewFILO.Size = new System.Drawing.Size(166, 19);
             this.chkViewFILO.TabIndex = 109;
@@ -120,7 +282,7 @@
             this.cmbEmployee.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEmployee.FormattingEnabled = true;
             this.cmbEmployee.IntegralHeight = false;
-            this.cmbEmployee.Location = new System.Drawing.Point(78, 42);
+            this.cmbEmployee.Location = new System.Drawing.Point(84, 63);
             this.cmbEmployee.Name = "cmbEmployee";
             this.cmbEmployee.Size = new System.Drawing.Size(241, 23);
             this.cmbEmployee.TabIndex = 0;
@@ -131,7 +293,7 @@
             this.label15.AutoSize = true;
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(8, 46);
+            this.label15.Location = new System.Drawing.Point(14, 67);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(65, 15);
             this.label15.TabIndex = 108;
@@ -150,12 +312,14 @@
             this.toolStripSeparator4,
             this.tbtnRefresh,
             this.toolStripSeparator3,
-            this.tbtnClose});
+            this.tbtnClose,
+            this.toolStripSeparator5});
             this.tsButtons.Location = new System.Drawing.Point(0, 0);
             this.tsButtons.Name = "tsButtons";
             this.tsButtons.Size = new System.Drawing.Size(1079, 29);
             this.tsButtons.TabIndex = 22;
             this.tsButtons.Text = "OB ToolBar";
+            this.tsButtons.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.tsButtons_ItemClicked);
             // 
             // tbtnAdd
             // 
@@ -228,6 +392,11 @@
             this.tbtnClose.ToolTipText = "Close window";
             this.tbtnClose.Click += new System.EventHandler(this.tbtnClose_Click);
             // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 29);
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -237,6 +406,16 @@
             this.label5.Size = new System.Drawing.Size(11, 15);
             this.label5.TabIndex = 10;
             this.label5.Text = "-";
+            // 
+            // dtpTo
+            // 
+            this.dtpTo.CustomFormat = "MMM dd, yyyy";
+            this.dtpTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpTo.Location = new System.Drawing.Point(624, 38);
+            this.dtpTo.Name = "dtpTo";
+            this.dtpTo.Size = new System.Drawing.Size(150, 21);
+            this.dtpTo.TabIndex = 2;
+            this.dtpTo.ValueChanged += new System.EventHandler(this.dtpTo_ValueChanged);
             // 
             // label3
             // 
@@ -257,16 +436,6 @@
             this.dtpFrom.Size = new System.Drawing.Size(150, 21);
             this.dtpFrom.TabIndex = 1;
             this.dtpFrom.ValueChanged += new System.EventHandler(this.dtpFrom_ValueChanged);
-            // 
-            // cmsTimeCardList
-            // 
-            this.cmsTimeCardList.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tmiAdd,
-            this.tmiEdit,
-            this.tmiDelete,
-            this.tmiRefresh});
-            this.cmsTimeCardList.Name = "cmsTimeCardList";
-            this.cmsTimeCardList.Size = new System.Drawing.Size(114, 92);
             // 
             // tmiAdd
             // 
@@ -296,105 +465,6 @@
             this.tmiRefresh.Size = new System.Drawing.Size(113, 22);
             this.tmiRefresh.Text = "Refresh";
             // 
-            // pnlBody
-            // 
-            this.pnlBody.Controls.Add(this.dgTimeCard);
-            this.pnlBody.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlBody.Location = new System.Drawing.Point(0, 102);
-            this.pnlBody.Name = "pnlBody";
-            this.pnlBody.Size = new System.Drawing.Size(1079, 450);
-            this.pnlBody.TabIndex = 6;
-            // 
-            // dgTimeCard
-            // 
-            this.dgTimeCard.AllowUserToAddRows = false;
-            this.dgTimeCard.AllowUserToDeleteRows = false;
-            this.dgTimeCard.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgTimeCard.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgTimeCard.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgTimeCard.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dgTimeCard.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgTimeCard.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colUsername,
-            this.empnum,
-            this.colName,
-            this.colDate,
-            this.colTime,
-            this.colEventType,
-            this.colDoor});
-            this.dgTimeCard.Cursor = System.Windows.Forms.Cursors.Default;
-            this.dgTimeCard.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgTimeCard.Location = new System.Drawing.Point(0, 0);
-            this.dgTimeCard.MultiSelect = false;
-            this.dgTimeCard.Name = "dgTimeCard";
-            this.dgTimeCard.ReadOnly = true;
-            this.dgTimeCard.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dgTimeCard.RowHeadersWidth = 20;
-            this.dgTimeCard.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgTimeCard.Size = new System.Drawing.Size(1079, 450);
-            this.dgTimeCard.TabIndex = 6;
-            this.dgTimeCard.VirtualMode = true;
-            this.dgTimeCard.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgTimeCard_DataBindingComplete);
-            // 
-            // colUsername
-            // 
-            this.colUsername.FillWeight = 200F;
-            this.colUsername.Frozen = true;
-            this.colUsername.HeaderText = "Username";
-            this.colUsername.Name = "colUsername";
-            this.colUsername.ReadOnly = true;
-            this.colUsername.Visible = false;
-            this.colUsername.Width = 150;
-            // 
-            // empnum
-            // 
-            this.empnum.HeaderText = "Employeer No.";
-            this.empnum.Name = "empnum";
-            this.empnum.ReadOnly = true;
-            // 
-            // colName
-            // 
-            dataGridViewCellStyle2.Format = "N2";
-            dataGridViewCellStyle2.NullValue = null;
-            this.colName.DefaultCellStyle = dataGridViewCellStyle2;
-            this.colName.HeaderText = "Employee Name";
-            this.colName.Name = "colName";
-            this.colName.ReadOnly = true;
-            this.colName.Width = 300;
-            // 
-            // colDate
-            // 
-            dataGridViewCellStyle3.Format = "MMM dd, yyyy";
-            dataGridViewCellStyle3.NullValue = null;
-            this.colDate.DefaultCellStyle = dataGridViewCellStyle3;
-            this.colDate.HeaderText = "Date";
-            this.colDate.Name = "colDate";
-            this.colDate.ReadOnly = true;
-            this.colDate.Width = 120;
-            // 
-            // colTime
-            // 
-            dataGridViewCellStyle4.Format = "hh:mm tt";
-            dataGridViewCellStyle4.NullValue = null;
-            this.colTime.DefaultCellStyle = dataGridViewCellStyle4;
-            this.colTime.HeaderText = "Time";
-            this.colTime.Name = "colTime";
-            this.colTime.ReadOnly = true;
-            // 
-            // colEventType
-            // 
-            this.colEventType.HeaderText = "Action";
-            this.colEventType.Name = "colEventType";
-            this.colEventType.ReadOnly = true;
-            // 
-            // colDoor
-            // 
-            this.colDoor.HeaderText = "Door";
-            this.colDoor.Name = "colDoor";
-            this.colDoor.ReadOnly = true;
-            this.colDoor.Width = 150;
-            // 
             // frmTimeCardAcmList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -406,13 +476,13 @@
             this.Text = "Time Card Record (ACM)";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmTimeCardAcmList_Load);
+            this.cmsTimeCardList.ResumeLayout(false);
+            this.pnlBody.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgTimeCard)).EndInit();
             this.pnlHeader.ResumeLayout(false);
             this.pnlHeader.PerformLayout();
             this.tsButtons.ResumeLayout(false);
             this.tsButtons.PerformLayout();
-            this.cmsTimeCardList.ResumeLayout(false);
-            this.pnlBody.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgTimeCard)).EndInit();
             this.ResumeLayout(false);
 
   }
@@ -451,5 +521,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colTime;
         private System.Windows.Forms.DataGridViewTextBoxColumn colEventType;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDoor;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox cmbBranches;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button2;
     }
 }

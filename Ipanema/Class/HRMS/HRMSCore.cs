@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using Ipanema.Forms;
 using System.Drawing;
 using System.IO;
+using System.Data.OleDb;
 
 namespace HRMS
 {
@@ -66,7 +67,24 @@ namespace HRMS
         //public static string HrmsConnectionString { get { return "data source=carlos; initial catalog=MySTIHQ; user id=mystihq; password=sp33do"; } }
         //public static string HrmsConnectionString { get { return "data source=hades; initial catalog=mystihq; user id=usermystihq; password=F0r3v3rho"; } }
         //public static string HrmsConnectionString { get { return "data source=hatshepsut.cnwsjht2ssio.ap-southeast-1.rds.amazonaws.com,1433; initial catalog=db_myphilfirst; user id=mvergara; password=1Mast3rk3y"; } } 
-  public static string HrmsConnectionString { get { return @"data source=W2K12R2-MIS; initial catalog=PFIC_HRMS; user id=sa; password=H1!dm2017"; } }
+
+        //////////PFIC DATABASE Connection string////////////////////
+        public static string HrmsConnectionString { get { return @"data source=W2K12R2-MIS; initial catalog=HR_TEST_DB; user id=sa; password=H1!dm2017"; } }
+        //public static string HrmsConnectionString { get { return @"data source=W2K12R2-MIS; initial catalog=MySTIHQ; user id=sa; password=H1!dm2017"; } }
+
+        //////////BIOMETRIC ACCESS DB Connection string////////////////////
+        ///////////////////// ADDED BY CALVIN /////////////////////////////
+        //public static string BiometricConnectionString { get { return @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=\\Jovelle-pc\eds ars\data.mdb; Password=6eds97"; } }
+        
+        //////////// HQ BIOMETRIC ACCESS DATABASE CONNECTION //////////////
+        public static string BiometricConnectionString { get { return @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=\\JOVELLE-PC\eds ars\data.mdb;Jet OLEDB:Database Password=6eds97"; } }
+       
+        //////////// CEBU & MANILA BRANCH BIOMETRIC ACCESS DATABASE CONNECTION //////////////
+        public static string BranchBiometricConnectionString { get { return @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=\\JOVELLE-PC\TIME MASTER Timekeeping System (X639 - PRO)\TIMEMASTER.MDB;Jet OLEDB:Database Password="; } }
+        //////////////////////////////////////////////////////////////////
+        //////////////////////////////////////////////////////////////////
+
+
         //public static string HrmsConnectionString { get { return "data source=thebar; initial catalog=MySTIHQ2; user id=sa; password=thebar"; } }
         //public static string HrmsConnectionString { get { return "Data Source=203.176.117.204,1433;Network Library=dbmssocn;Initial Catalog=MySTIHQ;User ID=mystihq;Password=sp33do;"; } }
         //public static string HrmsConnectionString { get { return "data source=thebar; initial catalog=MySTIHQ2; user id=sa; password=thebar"; } }
@@ -117,7 +135,6 @@ namespace HRMS
     if (blnCorrectAccount)
     {
      cmd.CommandText = "SELECT * FROM Users.UsersModules WHERE username=@username AND modlcode='012' AND pstatus='1'"; 
-     //cmd.CommandText = "SELECT * FROM users_login WHERE user_login_name=@username";
      cmd.Parameters.Add(new SqlParameter("@username", pUsername));
      dr = cmd.ExecuteReader();
      blnReturn = dr.Read();
